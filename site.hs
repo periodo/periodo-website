@@ -55,7 +55,7 @@ main = hakyll $ do
 
       makeItem ""
         >>= loadAndApplyTemplate "templates/index.html" indexCtx
-        >>= pageCompiler defaultContext
+        >>= pageCompiler indexCtx
 
 
 --------------------------------------------------------------------------------
