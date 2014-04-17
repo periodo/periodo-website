@@ -9,7 +9,7 @@ The site is re-built automatically when any of the source files
 change, so you shouldn't need to build it locally. Just use GitHub to
 edit and commit your files.
 
-Currently the automatic build is [![Build
+Currently status of the automatic build is [![Build
 Status](https://travis-ci.org/periodo/periodo.github.io.svg?branch=source)](https://travis-ci.org/periodo/periodo.github.io)
 
 But if you want to build the site locally, install [the Haskell
