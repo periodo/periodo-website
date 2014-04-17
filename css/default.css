@@ -1,0 +1,68 @@
+body {
+    color: #333333;
+}
+header {
+    font-size: 150%;
+    padding: 20px;
+    background-color: #7acbd2;
+    clear: both;
+}
+h1, h2, p {
+    margin: 0;
+}
+header h1 {
+    margin-bottom: -0.5em;
+}
+aside {
+    margin: 20px 0 0 20px;
+    padding: 20px;
+    display: inline-block;
+    background-color: #f3f3f3;
+    line-height: 1.4em;
+}
+aside ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+p {
+    padding-top: 1em;
+    line-height: 1.6em;
+}
+p a, aside a {
+    color: #52959A;
+    text-decoration: none;
+}
+p a:hover {
+    text-decoration: underline;
+}
+section, .references {
+    padding: 20px;
+    max-width: 750px;
+}
+.references {
+    margin-top: -2.5em;
+}
+.references p {
+    text-indent: -1.2em;
+    margin-left: 1.2em;
+}
+.pure-menu.pure-menu-horizontal>ul {
+    display: inline;
+}
+
+@media (min-width: 48em) {
+    .internal-links {
+        float: left;
+    }
+    .external-links {
+        float: right;
+    }
+}
+
+@media (min-width: 72em) {
+    aside {
+        position: fixed;
+        right: 20px;
+    }
+}

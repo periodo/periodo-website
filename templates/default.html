@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="A gazetteer of period assertions for linking and visualizing data.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PeriodO &ndash; $title$</title>
+<!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/combo?pure/0.5.0-rc-1/base-min.css&pure/0.5.0-rc-1/grids-min.css&pure/0.5.0-rc-1/grids-responsive-old-ie-min.css&pure/0.5.0-rc-1/menus-min.cs">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/combo?pure/0.5.0-rc-1/base-min.css&pure/0.5.0-rc-1/grids-min.css&pure/0.5.0-rc-1/grids-responsive-min.css&pure/0.5.0-rc-1/menus-min.css" />
+<!--<![endif]-->
+    <link rel="stylesheet" type="text/css" href="/css/default.css" />
+  </head>
+  <body>
+    <main>
+
+      <div class="pure-menu pure-menu-open pure-menu-horizontal">
+        <ul class="internal-links">
+          <li $if(home)$ class="pure-menu-selected" $endif$><a href="/">Home</a></li>
+          <li $if(narrative)$ class="pure-menu-selected" $endif$><a href="/narrative.html">Narrative</a></li>
+<!--
+          <li $if(specs)$ class="pure-menu-selected" $endif$><a href="/specs.html">Specifications</a></li>
+          <li $if(contact)$ class="pure-menu-selected" $endif$><a href="/contact.html">Contact</a></li>
+-->
+        </ul>
+
+        <ul class="external-links">
+          <li><a href="https://github.com/periodo">GitHub</a></li>
+        </ul>
+      </div>
+
+      <header>
+        <h1>PeriodO</h1>
+        <p>A gazetteer of period assertions for linking and visualizing data.</p>
+      </header>
+      
+      $if(toc)$
+      <aside role="nav">
+        $toc$
+      </aside>
+      $endif$
+
+      $body$
+
+    </main>
+  </body>
+</html>
