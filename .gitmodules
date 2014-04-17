@@ -1,4 +1,0 @@
-[submodule "_site"]
-	path = _site
-	url = https://github.com/periodo/periodo.github.io.git
-	branch = master
