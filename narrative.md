@@ -1,5 +1,6 @@
 ---
 title: Narrative
+narrative: true
 ---
 
 <!-- note: MUST leave blank lines before </section> end tags -->

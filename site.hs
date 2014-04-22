@@ -1,9 +1,9 @@
 --------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
 import Data.Monoid (mappend, mconcat)
+import System.FilePath.Posix (takeBaseName, takeDirectory, (</>))
 import Text.Pandoc.Options
 import Hakyll
-
 
 --------------------------------------------------------------------------------
 main :: IO ()
@@ -42,7 +42,7 @@ main = hakyll $ do
 
   -- compile pages with citations
   match "narrative.md" $ do
-    route   $ setExtension "html"
+    route   $ niceRoute
     compile $ citeCompiler >>= pageCompiler tocCtx
 
   -- compile index sections
@@ -54,8 +54,10 @@ main = hakyll $ do
     compile $ do
       sections <- loadAll "index-sections/*"
       let indexCtx =
-            listField "sections" defaultContext (return sections) `mappend`
-            constField "title" "Periods, Organized"               `mappend`
+            listField  "sections" defaultContext (return sections) `mappend`
+            mconcat [ constField "title" "Periods, Organized"
+                    , constField "home"  "true"
+                    ]                                              `mappend`
             defaultContext
 
       makeItem ""
@@ -64,11 +66,13 @@ main = hakyll $ do
 
 
 --------------------------------------------------------------------------------
+-- standard page compiler
 pageCompiler :: Context String -> Item String -> Compiler (Item String)
 pageCompiler ctx item =
   loadAndApplyTemplate "templates/default.html" ctx item
   >>= relativizeUrls
 
+-- compiler for Markdown files with citations
 citeCompiler :: Compiler (Item String)
 citeCompiler = do
   csl <- load "chicago-author-date.csl"
@@ -77,9 +81,18 @@ citeCompiler = do
     >>= readPandocBiblio defaultHakyllReaderOptions csl bib
     >>= return . writePandoc
 
+-- template context with a TOC variable
 tocCtx :: Context String
 tocCtx = mconcat [ field "toc" $ \item ->
                     loadBody ((itemIdentifier item) { identifierVersion = Just "toc" })
                  , defaultContext
                  ]
 
+-- replace a foo/bar.md by foo/bar/index.html
+-- this way the url looks like: foo/bar in most browsers
+niceRoute :: Routes
+niceRoute = customRoute createIndexRoute
+  where
+    createIndexRoute ident =
+      takeDirectory p </> takeBaseName p </> "index.html"
+      where p=toFilePath ident
