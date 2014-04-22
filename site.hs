@@ -45,6 +45,16 @@ main = hakyll $ do
     route   $ niceRoute
     compile $ citeCompiler >>= pageCompiler tocCtx
 
+  -- compile other pages
+  match "*.md" $ do
+    route   $ niceRoute
+    compile $
+      pandocCompiler
+      -- pandocCompilerWith defaultHakyllReaderOptions
+      --                    defaultHakyllWriterOptions {
+      --                      writerEmailObfuscation = NoObfuscation }
+      >>= pageCompiler defaultContext
+
   -- compile index sections
   match "index-sections/*" $ compile pandocCompiler
 

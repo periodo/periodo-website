@@ -25,11 +25,14 @@ aside ul {
     margin: 0;
     list-style: none;
 }
-p {
+p, dt {
     padding-top: 1em;
     line-height: 1.6em;
 }
-p a, aside a {
+dd {
+    line-height: 1.6em;
+}
+p a, aside a, dd a {
     color: #52959A;
     text-decoration: none;
 }
