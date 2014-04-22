@@ -9,6 +9,11 @@ import Hakyll
 main :: IO ()
 main = hakyll $ do
 
+  -- copy CNAME file to build directory
+  match "CNAME" $ do
+    route   idRoute
+    compile copyFileCompiler
+
   -- copy image files to build directory
   match "images/*" $ do
     route   idRoute
