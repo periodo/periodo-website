@@ -28,7 +28,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="4.4267224"
-     inkscape:cx="152.03122"
+     inkscape:cx="196.98547"
      inkscape:cy="36"
      inkscape:document-units="px"
      inkscape:current-layer="layer2"
@@ -38,8 +38,8 @@
      showguides="false"
      inkscape:window-width="1730"
      inkscape:window-height="928"
-     inkscape:window-x="52"
-     inkscape:window-y="88"
+     inkscape:window-x="60"
+     inkscape:window-y="46"
      inkscape:window-maximized="0"
      fit-margin-left="2.7755576e-17"
      fit-margin-top="0"
@@ -62,13 +62,15 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(196.76401,-182.33093)"
-     style="display:inline" />
+     style="display:inline"
+     sodipodi:insensitive="true" />
   <g
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="O"
      style="display:inline"
-     transform="translate(-0.5,-49.22656)">
+     transform="translate(-0.5,-49.22656)"
+     sodipodi:insensitive="true">
     <path
        inkscape:connector-curvature="0"
        id="path3020"
@@ -101,7 +103,7 @@
        d="m 218.67458,49.22656 9.477,0 0,72.00101 -9.477,0.003 0,-5.45508 c -3.71815,3.63425 -7.92548,5.45137 -12.62201,5.45137 -5.59117,0 -10.23182,-2.04077 -13.92196,-6.1223 -3.66221,-4.1654 -5.49331,-9.36516 -5.49331,-15.599306 0,-6.094326 1.8311,-11.182265 5.49331,-15.263832 3.63423,-4.109455 8.20499,-6.1642 13.71229,-6.164242 4.7804,4.2e-5 9.05762,1.956944 12.83168,5.870705 l 0,-34.721025 m -22.39254,50.278394 c -2e-5,3.913826 1.04832,7.100766 3.14501,9.560866 2.15258,2.48807 4.86428,3.73209 8.13513,3.73209 3.49443,0 6.31796,-1.20209 8.47058,-3.60629 2.15256,-2.48805 3.22885,-5.64705 3.22889,-9.476999 -4e-5,-3.829909 -1.07633,-6.988904 -3.22889,-9.476992 -2.15262,-2.432122 -4.94819,-3.648195 -8.38672,-3.648225 -3.24288,3e-5 -5.95459,1.230082 -8.13512,3.690157 -2.1526,2.488088 -3.2289,5.563213 -3.22888,9.225393"
        sodipodi:nodetypes="cccccscsccccccscccccc" />
     <g
-       transform="matrix(0.59638906,0,0,0.59638906,117.8479,-30.453624)"
+       transform="matrix(0.59638906,0,0,-0.59638906,117.8479,205.77104)"
        id="g3041"
        inkscape:export-filename="/Users/ryanshaw/Code/periodo.github.io/images/sundial.png"
        inkscape:export-xdpi="132.97707"
@@ -125,7 +127,7 @@
          style="color:#000000;fill:none;stroke:#000000;stroke-width:1.5;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
       <path
          transform="translate(3.4315046,2.6103535)"
-         d="m 253.45706,195.66048 c 0,0.46505 -0.377,0.84205 -0.84205,0.84205 -0.46506,0 -0.84205,-0.377 -0.84205,-0.84205 0,-0.46505 0.37699,-0.84205 0.84205,-0.84205 0.46505,0 0.84205,0.377 0.84205,0.84205 z"
+         d="m 253.45706,195.66048 a 0.84205002,0.84205002 0 1 1 -1.6841,0 0.84205002,0.84205002 0 1 1 1.6841,0 z"
          sodipodi:ry="0.84205002"
          sodipodi:rx="0.84205002"
          sodipodi:cy="195.66048"

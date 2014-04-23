@@ -28,15 +28,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.2912621"
-     inkscape:cx="-20.230932"
+     inkscape:cx="-75.004238"
      inkscape:cy="51.5"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1150"
      inkscape:window-height="676"
-     inkscape:window-x="431"
-     inkscape:window-y="333"
+     inkscape:window-x="172"
+     inkscape:window-y="111"
      inkscape:window-maximized="0" />
   <metadata
      id="metadata3012">
@@ -46,7 +46,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -57,7 +57,7 @@
      transform="translate(0,-953.36218)">
     <g
        style="display:inline"
-       transform="matrix(0.84593147,0,0,0.84593147,-166.84003,835.32903)"
+       transform="matrix(0.84593147,0,0,-0.84593147,-166.84003,1170.3953)"
        id="g3041"
        inkscape:export-filename="/Users/ryanshaw/Code/periodo.github.io/images/sundial.png"
        inkscape:export-xdpi="132.97707"
