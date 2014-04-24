@@ -3,6 +3,9 @@ body {
     background-color: #f3f3f3;
     counter-reset: figure;
 }
+.mark {
+    margin-bottom: -0.1875em;
+}
 header {
     font-size: 150%;
     padding: 20px;
