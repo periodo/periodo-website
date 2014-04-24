@@ -70,9 +70,18 @@ section, .references {
 .pure-menu.pure-menu-horizontal>ul {
     display: inline;
 }
+.pure-menu li a {
+    padding: 5px 10px;
+}
 footer {
     padding: 20px; 
     background-color: #f3f3f3;
+}
+
+@media (min-width: 35.5em) {
+    .pure-menu li a {
+        padding: 5px 20px;
+    }
 }
 
 @media (min-width: 48em) {
