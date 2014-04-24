@@ -20,9 +20,7 @@
         <ul class="internal-links">
           <li $if(home)$ class="pure-menu-selected" $endif$><a href="/">Home</a></li>
           <li $if(narrative)$ class="pure-menu-selected" $endif$><a href="/narrative/">Narrative</a></li>
-<!--
-          <li $if(specs)$ class="pure-menu-selected" $endif$><a href="/specs.html">Specifications</a></li>
--->
+          <li $if(specs)$ class="pure-menu-selected" $endif$><a href="/specs/">Specifications</a></li>
           <li $if(contact)$ class="pure-menu-selected" $endif$><a href="/contact/">Contact</a></li>
         </ul>
 
@@ -33,8 +31,7 @@
 
       <header>
         <h1>
-          <!--[if gte IE 9]><!--><img alt="PeriodO" src="/images/logo.svg" onerror="this.src=/images/logo.png;this.onerror=null;" /><!--<![endif]-->
-          <!--[if lt IE 9]><img alt="PeriodO" src="/images/logo.png" /><![endif]-->
+§svg(logo, PeriodO, logo)§
         </h1>
         <p>A gazetteer of period assertions for linking and visualizing data.</p>
       </header>
@@ -47,6 +44,9 @@
 
       $body$
 
+      <footer>
+§svg(logo, National Endownment for the Humanities, neh-logo)§
+      </footer>
     </main>
   </body>
-</html>
+</html

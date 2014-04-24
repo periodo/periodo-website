@@ -3,7 +3,7 @@ title: Narrative
 narrative: true
 ---
 
-<!-- note: MUST leave blank lines before </section> end tags -->
+<!-- note: MUST leave blank lines after paragraphs -->
 
 <section>
 ## Linked Data for the Humanities

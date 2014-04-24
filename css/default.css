@@ -1,5 +1,7 @@
 body {
     color: #333333;
+    background-color: #f3f3f3;
+    counter-reset: figure;
 }
 header {
     font-size: 150%;
@@ -13,6 +15,9 @@ h1, h2, p {
 header h1 {
     margin-bottom: -0.5em;
 }
+main {
+    background-color: #ffffff;
+}
 aside {
     margin: 20px 0 0 20px;
     padding: 20px;
@@ -25,9 +30,18 @@ aside ul {
     margin: 0;
     list-style: none;
 }
-p, dt {
+p, dt, .figure, .gist {
     padding-top: 1em;
     line-height: 1.6em;
+}
+figcaption {
+    font-style: italic;
+    text-align: center;
+    margin-top: 0.5em;
+}
+figcaption:before {
+    counter-increment: figure;
+    content: "Figure " counter(figure) ": ";
 }
 dd {
     line-height: 1.6em;
@@ -52,6 +66,10 @@ section, .references {
 }
 .pure-menu.pure-menu-horizontal>ul {
     display: inline;
+}
+footer {
+    padding: 20px; 
+    background-color: #f3f3f3;
 }
 
 @media (min-width: 48em) {
