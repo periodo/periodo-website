@@ -21,14 +21,14 @@ header h1 {
 main {
     background-color: #ffffff;
 }
-aside {
+nav.toc {
     margin: 20px 0 0 20px;
     padding: 20px;
     display: inline-block;
     background-color: #f3f3f3;
     line-height: 1.4em;
 }
-aside ul {
+nav.toc ul {
     padding: 0;
     margin: 0;
     list-style: none;
@@ -62,7 +62,7 @@ figcaption:before {
 dd {
     line-height: 1.6em;
 }
-p a, aside a, dd a {
+p a, nav.toc a, dd a {
     color: #52959A;
     text-decoration: none;
 }
@@ -107,7 +107,7 @@ footer {
 }
 
 @media (min-width: 72em) {
-    aside {
+    nav.toc {
         position: fixed;
         right: 20px;
     }
