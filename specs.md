@@ -50,15 +50,12 @@ boundaries, since these reflect the current context of scholarship,
 but where assertions refer to archaeological remains at individual
 sites, we will characterize these with URIs from Pleiades.
 
-
-
 As the dataset grows, we will also encode information about the
 relationship between period assertions, both in terms of [Allen
 temporal operators][ato] (equals, during, before, after, overlaps) and
 in terms of subsets within the same source citations (*Late Helladic
 III* is a subset of *Late Helladic*, which is itself a subset of *Late
 Bronze Age*).
-
 
 </section>
 
@@ -70,18 +67,51 @@ Period assertions in the PeriodO gazetteer will be published as
 Format][rdf] (RDF) used to describe Linked Data. The entire dataset
 will also be available for download as a single [CSV][csv] or
 [JSON][json] file, so that it can be more easily reused by other
-projects.
+projects. The assertion above, for example, would appear as follows:
+
+<script src="https://gist.github.com/rybesh/11234337.js"></script>
+</section>
+
+<section>
+## Date Normalization
 
 Date ranges will be entered in the form in which they appear in the
 original assertion, but in order to normalize them within the dataset
-and account for different levels of precision, start and end dates
-will also be represented as a number of [Julian Days][jday] in
-scientific notation, with the number of significant digits indicating
-the degree of precision (two significant digits would indicate a
-precision of +/- 150 years, four significant digits a precision of +/-
-1.5 years). The assertion above, for example, would appear as follows:
+start and end dates will also be represented as [Julian Day
+Numbers][jday]. A Julian Day Number is the number of days which have
+elapsed since the start of the Julian era (1st January of year 4713
+b.c.e. in the Julian calendar). It is used by astronomers as a simple
+way to normalize dates. It is ideal for calculations and comparisons,
+and can be easily converted into other calendar systems. To account
+for different levels of precision, we plan to record Julian Day
+Numbers in scientific notation, with the number of significant digits
+indicating the degree of precision (two significant digits would
+indicate a precision of +/- 150 years, four significant digits a
+precision of +/- 1.5 years). For example:
 
-<script src="https://gist.github.com/rybesh/11234337.js"></script>
+<table class="pure-table">
+  <thead>
+    <tr>
+      <th>Normalized value
+      <th>Significant digits
+      <th colspan="2">Imprecise date interpretation
+  <tbody>
+    <tr>
+      <td class="right">1.3E6
+      <td class="center">2
+      <td>Sometime between JDN 1,250,000 and JDN 1,350,000
+      <td>1150BC ±150 years
+    <tr>
+      <td class="right">1.30E6
+      <td class="center">3
+      <td>Sometime between JDN 1,295,000 and JDN 1,305,000
+      <td>1150BC ±15 years
+    <tr>
+      <td class="right">1.300E6
+      <td class="center">4
+      <td>Sometime between JDN 1,299,500 and JDN 1,300,500
+      <td>1150BC ±1.5 years
+</table>
 </section>
 
 <section>

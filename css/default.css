@@ -37,6 +37,19 @@ p, dt, .figure, .gist {
     padding-top: 1em;
     line-height: 1.6em;
 }
+table {
+    margin-top: 1em;
+}
+th {
+    text-align: center;
+    vertical-align: middle;
+}
+td.right {
+    text-align: right;
+}
+td.center {
+    text-align: center;
+}
 figcaption {
     font-style: italic;
     text-align: center;
