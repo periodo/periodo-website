@@ -8,4 +8,4 @@ PeriodO developments, follow us on Twitter:
 [\@perio_do](https://twitter.com/perio_do). Or [contact us](/contact/)
 and ask whatever you want!
 
-[law]: http://sfsheath.github.io/lawdi-publication/rabinowitz/
+[law]: http://dlib.nyu.edu/awdl/isaw/isaw-papers/7/rabinowitz/
