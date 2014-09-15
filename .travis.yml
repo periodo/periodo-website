@@ -6,6 +6,7 @@ env:
   global:
     - secure: "CD8TwhPJLnhiFI+yHrxgdQfiBJkcmdxofSjrKlWJV6IbHPsBVoeheU/Lp3ufhZkFCVh4a1hBhw0dmRriSgKnJS6/Rap5M436BgDnxiWavznleTKSLTeyc41mr6MxXHlYgPA9MwEwJjOuE/QRCgSi+uExIbDZYmW8MFNnYCDEKmY="
 install:
+  - cabal install -j pandoc -fhttps
   - cabal install -j hakyll --max-backjumps=-1
   - ghc --make site.hs
 before_script:
