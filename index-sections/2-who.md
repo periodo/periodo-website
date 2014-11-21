@@ -3,15 +3,17 @@
 The PeriodO project is being led by [Adam Rabinowitz][adm] (University
 of Texas at Austin), [Ryan Shaw][ryn] (University of North Carolina at
 Chapel Hill), and [Eric Kansa][erc] ([OpenContext][ctx]). Our partners
-and data contributors include the [British Museum][bri], the [German
-Archaeological Institute][gai], the [Archaeology Data Service][ads]
-(UK), [English Heritage][eng], the [Hypermedia Research Unit][hru] at
-the University of South Wales, the [Pleiades][ple] spatial gazetteer,
-the [Pelagios][pel] project, [Fasti Online][fas], the [ArcheoInf][arc]
-project, the University of Oxford's [CLAROS][cla] project, and the
-UCLA [Encyclopedia of Egyptology][uee]. Our work is funded by a
-Digital Humanities Start-Up Grant from the [Office of Digital
-Humanities][odh] at the National Endowment for the Humanities.
+and data contributors include the [British Museum][bri], the
+[German Archaeological Institute][gai], the
+[Archaeology Data Service][ads] (UK), [English Heritage][eng], the
+[Hypermedia Research Unit][hru] at the University of South Wales, the
+[Pleiades][ple] spatial gazetteer, the [Pelagios][pel] project,
+[Fasti Online][fas], the [ArcheoInf][arc] project, the University of
+Oxford's [CLAROS][cla] project, the UCLA
+[Encyclopedia of Egyptology][uee], and the
+[Levantine Ceramics Project][lcp]. Our work is funded by a Digital
+Humanities Start-Up Grant from the [Office of Digital Humanities][odh]
+at the National Endowment for the Humanities.
 
 [adm]: http://www.utexas.edu/cola/depts/classics/faculty/atr253
 [ryn]: http://aeshin.org/
@@ -28,4 +30,5 @@ Humanities][odh] at the National Endowment for the Humanities.
 [arc]: http://www.ub.tu-dortmund.de/archeoinf/
 [cla]: http://www.clarosnet.org/
 [uee]: http://www.uee.ucla.edu/
+[lcp]: http://www.levantineceramics.org/
 [odh]: http://www.neh.gov/divisions/odh
