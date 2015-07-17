@@ -1,5 +1,9 @@
 # This is the configuration file for circleci.com (CI which builds the site)
 
+machine:
+  ghc:
+    version: 7.8.4
+
 # Manually install to avoid install conflicts
 # cf. https://github.com/jaspervdj/hakyll/issues/340#issuecomment-96101869
 dependencies:
