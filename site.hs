@@ -3,7 +3,7 @@
 import Control.Applicative ((<$>))
 import Control.Monad (void)
 import Data.Monoid (mappend, mconcat)
-import System.FilePath.Posix (takeBaseName, takeDirectory, (</>))
+import System.FilePath (takeBaseName, takeDirectory, (</>))
 import Text.Pandoc.Options
 import Text.Parsec
 import Text.Parsec.String
