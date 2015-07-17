@@ -1,0 +1,18 @@
+# This is the configuration file for circleci.com (CI which builds the site)
+
+# Manually install to avoid install conflicts
+# cf. https://github.com/jaspervdj/hakyll/issues/340#issuecomment-96101869
+dependencies:
+  override:
+    - cabal install --dependencies-only --avoid-reinstalls
+
+# Compile pages during the test stage
+test:
+  post:
+    - make
+
+deployment:
+  production:
+    branch: source
+    commands:
+    - "make deploy"
