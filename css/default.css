@@ -3,6 +3,9 @@ body {
     background-color: #f3f3f3;
     counter-reset: figure;
 }
+.hide {
+    display: none;
+}
 .mark {
     margin-bottom: -0.1875em;
 }
@@ -33,6 +36,9 @@ nav.toc ul {
     margin: 0;
     list-style: none;
 }
+.download {
+    font-size: 1.1em;
+}
 p, dt, .figure, .gist {
     padding-top: 1em;
     line-height: 1.6em;
@@ -49,6 +55,11 @@ td.right {
 }
 td.center {
     text-align: center;
+}
+.figure {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 figcaption {
     font-style: italic;
@@ -68,6 +79,16 @@ p a, nav.toc a, dd a {
 }
 p a:hover {
     text-decoration: underline;
+}
+.button {
+    color: white;
+    background-color: #7acbd2;
+    font-weight: bold;
+    border-radius: 0px;
+    margin: 5px;
+}
+.button:hover {
+    text-decoration: none;
 }
 section, .references {
     padding: 20px;

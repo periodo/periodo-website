@@ -36,7 +36,9 @@ main = hakyll $ do
   match "templates/*" $ compile templateCompiler
 
   -- compile TOCs for pages that have multiple sections
-  match (fromList ["narrative.md", "specs.md"]) $ version "toc" $
+  match (fromList ["motivation.md",
+                   "data-model.md",
+                   "technical-overview.md"]) $ version "toc" $
     compile $ pandocCompilerWith defaultHakyllReaderOptions
                                  defaultHakyllWriterOptions {
                                    writerTableOfContents = True
@@ -45,7 +47,10 @@ main = hakyll $ do
                                  }
 
   -- compile pages with citations (optional) and TOCs
-  match (fromList ["narrative.md", "specs.md"]) $ do
+  match (fromList ["motivation.md",
+                   "data-model.md",
+                   "publications.md",
+                   "technical-overview.md"]) $ do
     route   $ niceRoute
     compile $ citeCompiler >>= pageCompiler tocCtx
 
@@ -117,7 +122,7 @@ niceRoute = customRoute createIndexRoute
 newtype Keywords = Keywords
     { unKeyword :: [KeywordElement]
     } deriving (Show, Eq)
-    
+
 data KeywordElement
     = Chunk String
     | SVG String String String
@@ -151,7 +156,7 @@ applyKeywords :: Item String -> Compiler (Item String)
 applyKeywords item = do
   body <- applyKeywords' $ readKeywords $ itemBody item
   return $ itemSetBody body item
-                 
+
 applyKeywords' :: Keywords -> Compiler String
 applyKeywords' kws = do
   items <- mapM applyKWs $ unKeyword kws
@@ -166,6 +171,3 @@ svgCompiler cls alt file = makeItem "" >>= loadAndApplyTemplate "templates/svg.h
           , constField "alt" alt
           , constField "file" file
           ])
-
-
-

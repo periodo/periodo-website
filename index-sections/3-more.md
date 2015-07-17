@@ -1,11 +1,4 @@
 ## Tell me more.
 
-You may be interested in reading the [narrative](/narrative/) and
-[technical specifications](/specs/) from the project proposal, or this
-article by Adam Rabinowitz: ["It's about time: historical
-periodization and Linked Ancient World Data."][law] To keep up with
-PeriodO developments, follow us on Twitter:
-[\@perio_do](https://twitter.com/perio_do). Or [contact us](/contact/)
-and ask whatever you want!
+You may be interested in reading about the [motivation](/motivation/) for the project or getting a [technical overview](/technical-overview/). Further information can be found in our [publications](/publications/). To keep up with PeriodO developments, follow us on Twitter: [\@perio_do](https://twitter.com/perio_do). Or [contact us](/contact/) and ask whatever you want!
 
-[law]: http://dlib.nyu.edu/awdl/isaw/isaw-papers/7/rabinowitz/
