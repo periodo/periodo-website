@@ -38,6 +38,7 @@ nav.toc ul {
 }
 .download {
     font-size: 1.1em;
+    font-weight: bold;
 }
 p, dt, .figure, .gist {
     padding-top: 1em;
