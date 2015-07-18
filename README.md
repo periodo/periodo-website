@@ -9,18 +9,13 @@ The site is re-built automatically when any of the source files
 change, so you shouldn't need to build it locally. Just use GitHub to
 edit and commit your files.
 
-Currently the status of the automatic build is [![Build
-Status](https://travis-ci.org/periodo/periodo.github.io.svg?branch=source)](https://travis-ci.org/periodo/periodo.github.io)
+Currently the status of the automatic build is [![Circle CI](https://circleci.com/gh/periodo/periodo.github.io/tree/source.svg?style=svg&circle-token=d84bd91e89ed051d844b4d8e679830155aec81cf)](https://circleci.com/gh/periodo/periodo.github.io/tree/source)
 
-But if you want to build the site locally, install [the Haskell
-platform](http://www.haskell.org/platform/) and [install
-Hakyll](http://jaspervdj.be/hakyll/tutorials/01-installation.html),
-then:
+But if you want to build the site locally, install [stack](https://www.stackage.org), run `stack setup` and then:
 
 ```
-$ ghc --make site.hs
-$ ./site build
-$ ./site watch
+$ stack build
+$ stack exec site watch
 ```
 
-Then open <http://localhost:8000>.
+Then open <http://127.0.0.1:8000>.
