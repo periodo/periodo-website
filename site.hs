@@ -59,6 +59,26 @@ main = hakyll $ do
     route   $ niceRoute
     compile $ pandocCompiler >>= pageCompiler defaultContext
 
+  -- compile guide articles
+  match "guide/*.md" $  compile pandocCompiler
+
+  -- generate guide page from index sections
+  create ["guide/index.html"] $ do
+    route idRoute
+    compile $ do
+      sections <- loadAll "guide/*.md"
+      let indexCtx =
+            listField  "sections" defaultContext (return sections) `mappend`
+            mconcat [ constField "title" "Guide to using PeriodO"
+                    , constField "guide"  "true"
+                    ]                                              `mappend`
+            defaultContext
+
+      makeItem ""
+        >>= loadAndApplyTemplate "templates/guide.html" indexCtx
+        >>= pageCompiler indexCtx
+
+
   -- compile index sections
   match "index-sections/*" $ compile pandocCompiler
 

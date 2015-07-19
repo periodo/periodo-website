@@ -1,7 +1,5 @@
 dist
-site
-site.hi
-site.o
 _site
 _cache
 .stack-work
+.DS_Store

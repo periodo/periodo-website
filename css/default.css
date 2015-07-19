@@ -102,6 +102,9 @@ section, .references {
     text-indent: -1.2em;
     margin-left: 1.2em;
 }
+.screenshot {
+    border: 1px solid #c1c1c1;
+}
 footer {
     padding: 20px; 
     background-color: #f3f3f3;
