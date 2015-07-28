@@ -22,7 +22,7 @@ A period definition is a [`skos:Concept`](http://www.w3.org/TR/skos-reference/#c
     1. <p>a three-character [primary language subtag](http://tools.ietf.org/html/bcp47#section-2.2.1), as defined in [ISO 639-2](https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes) or [ISO 639-3](https://en.wikipedia.org/wiki/ISO_639-3), and</p>
     2. <p>a four-character [script subtag](http://tools.ietf.org/html/bcp47#section-2.2.3), as defined in [ISO 15924](http://www.unicode.org/iso15924/codelists.html).</p>
 
-    There will always be at least one `skos:altLabel`, with the language tag `eng-latn`. If the source definition was not written in English, there will always be another `skos:altLabel` with a language tag indicating the language and script of the source definition.
+    There will always be at least one `skos:altLabel`, with the language tag `eng-latn`. If the source definition was not written in English, there will always be another `skos:altLabel` with a language tag indicating the language and script of the source definition. The language of the source definition is indicated via a [`dc:language`](http://dublincore.org/documents/dcmi-terms/#terms-language) property, the value of which is a language tag as described above.
 
 * [`skos:note`](http://www.w3.org/TR/skos-reference/#note) is used for notes about the period definition that appeared in the original source. For example, the original Pleiades definition of “Ottoman Rise (AD 1300-1453)” includes the note “ends with the conquest of Constantinople.” The value of this property is a simple literal [`xsd:string`](http://www.w3.org/TR/xmlschema11-2/#string), with no language tag.
 
