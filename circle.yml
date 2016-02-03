@@ -2,7 +2,7 @@
 
 machine:
   ghc:
-    version: 7.8.4
+    version: 7.10.3
 
 # Manually install to avoid install conflicts
 # cf. https://github.com/jaspervdj/hakyll/issues/340#issuecomment-96101869
