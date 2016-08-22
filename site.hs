@@ -38,7 +38,8 @@ main = hakyll $ do
   -- compile TOCs for pages that have multiple sections
   match (fromList ["motivation.md",
                    "data-model.md",
-                   "technical-overview.md"]) $ version "toc" $
+                   "technical-overview.md",
+                   "2016-workshop.md"]) $ version "toc" $
     compile $ pandocCompilerWith defaultHakyllReaderOptions
                                  defaultHakyllWriterOptions {
                                    writerTableOfContents = True
@@ -50,7 +51,8 @@ main = hakyll $ do
   match (fromList ["motivation.md",
                    "data-model.md",
                    "publications.md",
-                   "technical-overview.md"]) $ do
+                   "technical-overview.md",
+                   "2016-workshop.md"]) $ do
     route   $ niceRoute
     compile $ citeCompiler >>= pageCompiler tocCtx
 

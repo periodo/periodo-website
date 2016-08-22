@@ -74,11 +74,11 @@ figcaption:before {
 dd {
     line-height: 1.6em;
 }
-p a, nav.toc a, dd a {
+p a, nav.toc a, dd a, li a {
     color: #52959A;
     text-decoration: none;
 }
-p a:hover {
+p a:hover, li a:hover {
     text-decoration: underline;
 }
 .button {
