@@ -51,7 +51,7 @@ All sessions in the [Perry-Castañeda Library](http://www.lib.utexas.edu/about/
 <section>
 ## Day 2: Tuesday, August 23, 2016
 
-All sessions in the Perry-Castañeda Library, room 1.124.
+All sessions in the [Perry-Castañeda Library]((http://www.lib.utexas.edu/about/librarymap/pcl.html)), room 1.124.
 
 **9:00am** Discussion of existing implementations 
 
