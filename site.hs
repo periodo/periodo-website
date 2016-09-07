@@ -23,6 +23,11 @@ main = hakyll $ do
     route   idRoute
     compile copyFileCompiler
 
+  -- copy PDF files to build directory
+  match "pdfs/*" $ do
+    route   idRoute
+    compile copyFileCompiler
+
   -- compress CSS files
   match "css/*" $ do
     route   idRoute
