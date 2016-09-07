@@ -36,6 +36,9 @@ nav.toc ul {
     margin: 0;
     list-style: none;
 }
+nav.toc li ul {
+    margin-left: 1.1em;
+}
 .download {
     font-size: 1.1em;
     font-weight: bold;

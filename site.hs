@@ -105,6 +105,18 @@ main = hakyll $ do
         >>= loadAndApplyTemplate "templates/index.html" indexCtx
         >>= pageCompiler indexCtx
 
+  create ["data-model/index.html"] $ do
+    route idRoute
+    compile $ do
+      let ctx =
+            mconcat [ constField "title" "Data Model"
+                    , constField "location"  "/technical-overview/#period-definitions"
+                    ] `mappend`
+            defaultContext
+
+      makeItem ""
+        >>= loadAndApplyTemplate "templates/redirect.html" ctx
+
 
 -- utilities -------------------------------------------------------------------
 
