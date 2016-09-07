@@ -13,22 +13,22 @@ All sessions in the [Perry-Castañeda Library](http://www.lib.utexas.edu/about/
 
 **9:15am** Introduction to PeriodO: project history and goals ([Adam Rabinowitz](http://liberalarts.utexas.edu/classics/faculty/profile.php?id=atr253))
 
-**9:30am** Introduction to PeriodO: data model and information architecture ([Ryan Shaw](https://aeshin.org) and [Patrick Golden](https://ptgolden.org))
+**9:30am** Introduction to PeriodO: data model and information architecture ([Ryan Shaw](https://aeshin.org) and [Patrick Golden](https://ptgolden.org)) [slides](/pdfs/Shaw-2016-PeriodO-data-model.pdf)
 
 **9:45am** Participant Projects and Temporal Data
 
-* **9:45am** [Frank Grieshaber](https://twitter.com/wenamun), University of Heidelberg: calendar gazetteer 
-* **10:00am** [Laura Mandell](https://www.english.tamu.edu/people/mandell), Texas A&M: Advanced Research Consortium
-* **10:15am** [Denné Reed](http://www.dennereed.org), UT Austin: PaleoCore (by Skype)
+* **9:45am** [Frank Grieshaber](https://twitter.com/wenamun), University of Heidelberg: calendar gazetteer [slides](/pdfs/Grieshaber-2016-GODOT.pdf)
+* **10:00am** [Laura Mandell](https://www.english.tamu.edu/people/mandell), Texas A&M: Advanced Research Consortium [slides](/pdfs/Mandell-2016-ARC.pdf)
+* **10:15am** [Denné Reed](http://www.dennereed.org), UT Austin: PaleoCore (by Skype) [slides](/pdfs/Reed-2016-PaleoCore.pdf)
 
 **10:30am** Coffee break
 
 **10:45am** Participant Projects and Temporal Data
 
-* **10:45am** [Hugo Manguinhas](http://pro.europeana.eu/person/hugo-manguinhas), Europeana
-* **11:00am** [Gretchen Gueguen](http://gretchengueguen.com), DPLA
-* **11:15am** [Shawn Averkamp](https://twitter.com/saverkamp), NYPL
-* **11:30am** [Dennis Wuthrich](https://twitter.com/dwuthrich), Getty Arches Project
+* **10:45am** [Hugo Manguinhas](http://pro.europeana.eu/person/hugo-manguinhas), Europeana [slides](/pdfs/Manguinhas-2016-Europeana.pdf)
+* **11:00am** [Gretchen Gueguen](http://gretchengueguen.com), DPLA [slides](/pdfs/Gueguen-2016-DPLA.pdf)
+* **11:15am** [Shawn Averkamp](https://twitter.com/saverkamp), NYPL [slides](/pdfs/Averkamp-2016-NYPL-and-temporal-data.pdf)
+* **11:30am** [Dennis Wuthrich](https://twitter.com/dwuthrich), Getty Arches Project [slides](/pdfs/Wuthrich-2016-Arches.pdf)
 
 **11:45am** Discussion and questions
 
@@ -56,12 +56,12 @@ All sessions in the [Perry-Castañeda Library]((http://www.lib.utexas.edu/about
 **9:00am** Discussion of existing implementations 
 
 * **9:00am** [Tom Elliott](http://isaw.nyu.edu/people/staff/tom-elliott), Pleiades
-* **9:30am** [Eric Kansa](https://twitter.com/ekansa), Open Context
+* **9:30am** [Eric Kansa](https://twitter.com/ekansa), Open Context [slides](/pdfs/Kansa-2016-Open-Context-PeriodO-use-cases.pdf)
 * **10:00am** [Franco Niccolucci](http://vast-lab.org/en/en/team-members/), ARIADNE (by Skype) 
 
 **10:30am** Coffee break
 
-**10:45am** Successful LD Aggregation: [Leif Isaksen](https://twitter.com/leifuss), Lessons from Pelagios and Pelagios Commons
+**10:45am** Successful LD Aggregation: [Leif Isaksen](https://twitter.com/leifuss), Lessons from Pelagios and Pelagios Commons [slides](/pdfs/Isaksen-2016-Lessons-from-Pelagios.pdf)
 
 **11:15am** Introduction of “cataloguer’s toolkit” concept for PeriodO
 
