@@ -1,5 +1,6 @@
 ---
 title: 2016-workshop
+workshops: true
 ---
 
 <!-- note: MUST leave blank lines after paragraphs -->
