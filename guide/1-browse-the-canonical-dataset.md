@@ -11,13 +11,13 @@ When you first load the client, you are prompted to select a *backend*. A backen
   
   * A *file* backend loads data from a local file. Data loaded from a file backend is also browse-only.
   
-  * An *IndexedDB* backend loads data from a [local database](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API) running in your browser. Data in an IndexedDB backend can be edited as well as browsed. (Note that Safari does not yet have full support for IndexedDB.)
+  * An *IndexedDB* backend loads data from a [local database](#creating-a-local-database) running in your browser. Data in an IndexedDB backend can be edited as well as browsed. (Note that Safari does not yet have full support for IndexedDB.)
 
 Initially you should see only one backend, a web backend pointing to the canonical PeriodO dataset (at [`http://n2t.net/ark:/99152/p0d.json`](http://n2t.net/ark:/99152/p0d.json)).
 
-<img class="screenshot" alt="Selecting a backend for the PeriodO client." src="/images/select-backends.png" width="768">
+<img class="screenshot center" alt="Selecting a backend for the PeriodO client." src="/images/select-backends.png" width="738">
 
-Clicking on the "disc with a down arrow" icon will download the data from the canonical web backend to a local file. Clicking on the name of the backend (which here is just "web") will load the data from the canonical backend into the client, and you should see a browsing interface like this:
+Clicking on the "disc with a down arrow" icon will download the data from the canonical web backend to a local file. Clicking on the name of the backend ("Canonical") will load the data from the canonical backend into the client, and you should see a browsing interface like this:
 
 <img class="screenshot" alt="Selecting a backend for the PeriodO client." src="/images/browse-canonical-dataset.png" width="768">
 

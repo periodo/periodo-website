@@ -107,6 +107,20 @@ section, .references {
 }
 .screenshot {
     border: 1px solid #c1c1c1;
+    margin: 20px 0;
+}
+.left {
+    float: left;
+    margin-right: 20px;
+}
+.right {
+    float: right;
+    margin-left: 20px;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 footer {
     padding: 20px; 
