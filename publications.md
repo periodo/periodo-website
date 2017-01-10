@@ -9,6 +9,7 @@ publications: true
 <span class="hide">[@Shaw2015]</span>
 <span class="hide">[@Golden2015]</span>
 <span class="hide">[@Golden2016]</span>
+<span class="hide">[@Rabinowitz2016]</span>
 
 <section>
 ## Publications
