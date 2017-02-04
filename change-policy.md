@@ -40,7 +40,7 @@ There must be one `time:intervalStartedBy` value and one `time:intervalFinishedB
 
 ### `periodo:spatialCoverageDescription`
 
-There must be one `skos:spatialCoverageDescription` value. The value of `skos:prefLabel` should change only if it is determined that a spelling, punctuation, or other clerical error was made when transcribing the spatial extent of the period exactly as given in the original source.
+There may be one `skos:spatialCoverageDescription` value. If there is not a `skos:spatialCoverageDescription` value, one may be added at any time. The value of `skos:spatialCoverageDescription` should change only if it is determined that a spelling, punctuation, or other clerical error was made when transcribing the spatial coverage description from the original source.
 
 ### `dcterms:spatial`
 
