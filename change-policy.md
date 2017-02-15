@@ -58,4 +58,4 @@ There must be one `time:hasDateTimeDescription` value. This value must be a date
 
 ## Changes to date-time descriptions of temporal intervals
 
-The values of `time:year`, `periodo:earliestYear`, and `periodo:latestYear` may change at any time that a PeriodO curator decides it necessary to change the structured interpretation of a temporal interval.
+Typically the values of `time:year`, `periodo:earliestYear`, and `periodo:latestYear` will not change. However, in the future PeriodO curators may decide that it necessary to make a systematic change to the way textual descriptions of temporal intervals are interpreted as structured date-time descriptions. Such a systematic change could cause these values to change. However, the PeriodO curators will not make such a change without first consulting with the PeriodO board of advisors and other interested parties.
