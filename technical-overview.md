@@ -43,7 +43,7 @@ A period definition is a [`skos:Concept`](http://www.w3.org/TR/skos-reference/#c
 
     There will always be at least one `skos:altLabel`, with the language tag `eng-latn`. If the source definition was not written in English, there will always be another `skos:altLabel` with a language tag indicating the language and script of the source definition. The language of the source definition is indicated via a [`dc:language`](http://dublincore.org/documents/dcmi-terms/#terms-language) property, the value of which is a language tag as described above.
 
-* [`skos:note`](http://www.w3.org/TR/skos-reference/#note) is used for notes about the period definition that appeared in the original source. For example, the original Pleiades definition of “Ottoman Rise (AD 1300-1453)” includes the note “ends with the conquest of Constantinople.” The value of this property is a simple literal [`xsd:string`](http://www.w3.org/TR/xmlschema11-2/#string), with no language tag.
+* [`skos:note`](http://www.w3.org/TR/skos-reference/#note) is used for notes about the period definition taken from or attributed to the original source. For example, the original Pleiades definition of “Ottoman Rise (AD 1300-1453)” includes the note “ends with the conquest of Constantinople.” The value of this property is a simple literal [`xsd:string`](http://www.w3.org/TR/xmlschema11-2/#string), with no language tag.
 
 * [`skos:editorialNote`](http://www.w3.org/TR/skos-reference/#editorialNote) is used for administrative or editorial notes added by the PeriodO curators; these do *not* appear in the original source. The value of this property is a simple literal [`xsd:string`](http://www.w3.org/TR/xmlschema11-2/#string), with no language tag.
 
