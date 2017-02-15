@@ -20,7 +20,7 @@ There must be one or more `skos:altLabel` values. New `skos:altLabel` values may
 
 ### `skos:note`
 
-There may be one `skos:note` value. If there is not a `skos:note` value, one may be added at any time. The value of `skos:note` should change only if it is determined that a spelling, punctuation, or other clerical error was made when transcribing the note from the original source.
+There may be one `skos:note` value. If there is not a `skos:note` value, one may be added at any time. The value of `skos:note` should change only if it is determined that a spelling, punctuation, or other clerical error was made.
 
 ### `skos:editorialNote`
 
