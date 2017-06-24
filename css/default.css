@@ -77,6 +77,17 @@ figcaption:before {
 dd {
     line-height: 1.6em;
 }
+pre {
+    border: 1px solid;
+    padding: 1em;
+}
+p > code {
+    background-color: #f3f3f3
+}
+blockquote {
+    background-color: #f3f3f3;
+    padding: 0 1em 1em;
+}
 p a, nav.toc a, dd a, li a {
     color: #52959A;
     text-decoration: none;
