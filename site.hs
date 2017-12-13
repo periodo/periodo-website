@@ -45,7 +45,7 @@ main = hakyll $ do
                    "data-model.md",
                    "technical-overview.md",
                    "notes/getting-into-shapes-with-shacl.md",
-                   "2016-workshop.md"]) $ version "toc" $
+                   "2016-workshop.md", "2017-workshop.md"]) $ version "toc" $
     compile $ pandocCompilerWith defaultHakyllReaderOptions
                                  defaultHakyllWriterOptions {
                                    writerTableOfContents = True
@@ -59,7 +59,7 @@ main = hakyll $ do
                    "publications.md",
                    "technical-overview.md",
                    "notes/getting-into-shapes-with-shacl.md",
-                   "2016-workshop.md"]) $ do
+                   "2016-workshop.md", "2017-workshop.md"]) $ do
     route   $ niceRoute
     compile $ citeCompiler >>= pageCompiler tocCtx
 
