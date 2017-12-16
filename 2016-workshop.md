@@ -1,5 +1,5 @@
 ---
-title: 2016-workshop
+title: 2016 Workshop
 workshops: true
 ---
 
