@@ -36,7 +36,7 @@ The Hampton Inn serves a complimentary breakfast. Other nearby options include [
 
 **10:30–11am** Coffee break
 
-**11–12:30am** Reconciliation and reconciliation tools. Participants who have built reconciliation tools and who do reconciliation in their work will be asked to talk about their experiences. What are the different ways people are already doing spatiotemporal reconciliation?
+**11–12:30pm** Reconciliation and reconciliation tools. Participants who have built reconciliation tools and who do reconciliation in their work will be asked to talk about their experiences. What are the different ways people are already doing spatiotemporal reconciliation?
 
 **12:30–1:30pm** Lunch
 
@@ -67,7 +67,7 @@ _When we have large collections of artifact descriptions that employ some combin
 
 **10:30–11am** Coffee break
 
-**11–12:30am** What's been done already? Existing examples of analyzing large collections of descriptions of spatiotemporally located artifacts.
+**11–12:30pm** What's been done already? Existing examples of analyzing large collections of descriptions of spatiotemporally located artifacts.
 
 **12:30–1:30pm** Lunch
 
