@@ -112,7 +112,7 @@ main = hakyll $ do
     compile $ do
       let ctx =
             mconcat [ constField "title" "Data Model"
-                    , constField "location"  "/technical-overview/#period-definitions"
+                    , constField "location"  "/technical-overview/#periods"
                     ] `mappend`
             defaultContext
 

@@ -1,14 +1,14 @@
 # Kinds of changes
 
-This document describes the kinds of changes that may be made to the canonical PeriodO dataset. Note that any of these allowed changes will trigger new versions of the period collections or period definitions that they modify. In addition to the changes described below, new properties using predicates *not* listed below may be added at any time. 
+This document describes the kinds of changes that may be made to the canonical PeriodO dataset. Note that any of these allowed changes will trigger new versions of the authorities or periods that they modify. In addition to the changes described below, new properties using predicates *not* listed below may be added at any time. 
 
-## Changes to period collections
+## Changes to authorities
 
 ### `dcterms:source`
 
 There must be one `dcterms:source` value. The value of `dcterms:source` must be a bibliographic description. It should change only if it is determined that a spelling, punctuation, or other clerical error was made when creating the bibliographic description of the original source, or if additional bibliographic information is added (e.g. a DOI is assigned to a journal article that previously did not have one).
 
-## Changes to period definitions
+## Changes to periods
 
 ### `skos:prefLabel`
 
@@ -32,7 +32,7 @@ There must be one `skos:inScheme` value, and it must never change.
 
 ### `dcterms:source`
 
-There may be one `dcterms:source` value. The value of `dcterms:source` should change only if it is determined that a spelling, punctuation, or other clerical error was made when specifying bibliographic information specific to an individual definition.
+There may be one `dcterms:source` value. The value of `dcterms:source` should change only if it is determined that a spelling, punctuation, or other clerical error was made when specifying bibliographic information specific to an individual period.
 
 ### `time:intervalStartedBy` and `time:intervalFinishedBy`
 
@@ -46,7 +46,7 @@ There may be one `skos:spatialCoverageDescription` value. If there is not a `sko
 
 There must be at least one `dcterms:spatial` value.  New `dcterms:spatial` values may be added, and existing ones may be removed, at any time.
 
-## Changes to temporal intervals of period definitions
+## Changes to temporal intervals of periods
 
 ### `skos:prefLabel`
 
