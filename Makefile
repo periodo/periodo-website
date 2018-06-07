@@ -1,5 +1,5 @@
 CNAME := perio.do
-REPO := git@github.com:periodo/periodo.github.io.git
+REPO := git@github.com:periodo/periodo-website.git
 
 EXE := dist/build/site/site
 
