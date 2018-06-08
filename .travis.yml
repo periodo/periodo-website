@@ -1,36 +1,43 @@
-# Use new container infrastructure to enable caching
-sudo: false
+# Enable virtual machine node, not container
+sudo: true
 
-# Do not choose a language; we provide our own build tools.
-language: generic
+language: haskell
 
-# Caching so the next build will be fast too.
 cache:
   directories:
-  - "$HOME/.stack"
+    - "$HOME/.stack"
+    - "$HOME/build/periodo/periodo-website/.stack-work"
 
-# Ensure necessary system libraries are present
 addons:
   apt:
+    sources:
+      - sourceline: 'ppa:hvr/ghc' # PPA of Haskell packages
     packages:
-      - libgmp-dev
+      - libgmp-dev           # required by cabal
+      - cabal-install-2.0    # required by GHC 8.x
+
+ghc:
+  - 7.10
+
+git:
+  depth: 5
 
 before_install:
-# Download and unpack the stack executable
-- mkdir -p ~/.local/bin
-- export PATH=$HOME/.local/bin:$PATH
-- travis_retry curl -L https://get.haskellstack.org/stable/linux-x86_64.tar.gz | tar xz --wildcards --strip-components=1 -C ~/.local/bin '*/stack'
+- mkdir -p "$HOME/.local/bin"
+- travis_retry curl -L https://www.stackage.org/stack/linux-x86_64 | tar xz --wildcards --strip-components=1 -C "$HOME/.local/bin" '*/stack'
+- export PATH="$HOME/.local/bin:$PATH"
+- stack --version
 
 install:
-# Build dependencies
-- stack --no-terminal --install-ghc build --only-dependencies
+- travis_wait 30 stack setup --no-terminal
+- stack ghc -- --version
+- travis_wait 40 stack build --only-dependencies --no-terminal
+- travis_wait 40 stack build --no-terminal
 
 script:
-# Build the package, its tests, and its docs and run the tests
-- stack --no-terminal build
+- travis_wait 40 stack exec site build --no-terminal 
 
 after_success:
-# Deploy to GitHub
 - openssl aes-256-cbc
   -K $encrypted_807b3344b921_key
   -iv $encrypted_807b3344b921_iv

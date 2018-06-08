@@ -1,7 +1,6 @@
-flags: {}
-packages:
-- '.'
-extra-deps:
-- hfsevents-0.1.6
+# Resolver to choose a 'specific' stackage snapshot or a compiler version.
+resolver: lts-6.35
 
-resolver: lts-5.1
+# User packages to be built.
+packages:
+- .
