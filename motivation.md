@@ -1,6 +1,8 @@
 ---
 title: Motivation
 motivation: true
+language: en
+translations: es|/motivacion/
 ---
 
 <!-- note: MUST leave blank lines after paragraphs -->
@@ -12,8 +14,8 @@ In the last few years, the possibilities for digital humanities research have ex
 
 </section>
 
-[uri]: http://en.wikipedia.org/wiki/Uniform_resource_identifier
-[ldata]: http://www.w3.org/DesignIssues/LinkedData.html
+[uri]: https://en.wikipedia.org/wiki/Uniform_Resource_Identifier
+[ldata]: https://en.wikipedia.org/wiki/Linked_data
 
 <section>
 ## The Problem of Time
@@ -22,7 +24,7 @@ Linked Data approaches have already been very successful in creating tools for t
 
 </section>
 
-[pel]: http://pelagios-project.blogspot.com/p/about-pelagios.html
+[pel]: http://commons.pelagios.org/about/
 
 <section>
 ## A Gazetteer of Period Definitions
@@ -32,9 +34,6 @@ The PeriodO project proposes a solution to this problem through the creation of 
 The PeriodO gazetteer of period definitions provides a middle ground between general and specific period vocabularies. Period definitions in the gazetteer are modeled in a way that corresponds closely to traditional scholarly practice, which differs significantly from the use of controlled vocabularies favored by libraries and archives. Careful scholarship will generally qualify the use of a period term like "the Early Iron Age" with either a spatio-temporal definition ("that is, the period between roughly 1100 and 750 BCE in the Aegean area") or a reference to a previous study ("as defined by Mazarakis Ainian [1997]"). A period definition therefore consists of a statement by an authoritative source, in print or online, that associates a period name or term ("Archaic") with chronological coordinates of greater or less precision ("700-480 BCE", "late eighth to early fifth century BC") and with particular modern geographic boundaries ("Greece", "Turkey", "Sicily", etc.) or ancient or modern sites ("Athens").
 
 </section>
-
-[doi]: http://en.wikipedia.org/wiki/Digital_object_identifier
-[ezid]: http://ezid.cdlib.org/
 
 <section>
 ## Contributing Partners
