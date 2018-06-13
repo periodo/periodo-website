@@ -41,7 +41,8 @@ main = hakyll $ do
   match "templates/*" $ compile templateCompiler
 
   -- compile TOCs for pages that have multiple sections
-  match (fromList ["motivation.md",
+  match (fromList ["motivation.md", -- en
+                   "motivacion.md", -- es
                    "data-model.md",
                    "technical-overview.md",
                    "notes/getting-into-shapes-with-shacl.md",
@@ -54,7 +55,8 @@ main = hakyll $ do
                                  }
 
   -- compile pages with citations (optional) and TOCs
-  match (fromList ["motivation.md",
+  match (fromList ["motivation.md", -- en
+                   "motivacion.md", -- es
                    "data-model.md",
                    "publications.md",
                    "technical-overview.md",
