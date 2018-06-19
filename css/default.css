@@ -47,6 +47,13 @@ p, dt, .figure, .gist {
     padding-top: 1em;
     line-height: 1.6em;
 }
+ul {
+    list-style-type: none;
+}
+li {
+    line-height: 1.2em;
+    height: 1.6em;
+}
 table {
     margin-top: 1em;
 }
