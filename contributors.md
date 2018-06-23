@@ -3,6 +3,17 @@ title: Contributors
 contact: true
 ---
 
+<style>
+ul {
+    list-style-type: none;
+}
+li {
+    line-height: 1.2em;
+    height: 1.6em;
+}
+</style>
+
+
 <!-- note: MUST leave blank lines before </section> end tags -->
 
 <section>
