@@ -1,6 +1,7 @@
 ---
 title: Technical Overview
 technical-overview: true
+es: /resumen-tecnico/
 ---
 
 <!-- note: MUST leave blank lines after paragraphs -->
@@ -76,7 +77,7 @@ We use properties from the [Time Ontology](http://www.w3.org/TR/owl-time/) to de
 * [`time:intervalFinishedBy`](http://www.w3.org/TR/owl-time/#relations) links the period definition to an (anonymous) time interval that has the same (unknown) end point as the period, and an (unknown) beginning point that comes after the beginning point of the period. We call this the *stop* interval for the period.
 
 <figure>
-§svg(figure, Diagram showing the relation between a period's temporal extent and its start and stop intervals, start-stop-intervals)§
+§svg(figure, Diagram showing the relation between a period's temporal extent and its start and stop intervals, start-stop-intervals-en)§
 <figcaption>The relation between a period's temporal extent and its start and stop intervals</figcaption>
 </figure>
 

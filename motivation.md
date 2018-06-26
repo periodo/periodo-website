@@ -1,8 +1,7 @@
 ---
 title: Motivation
 motivation: true
-language: en
-translations: es|/motivacion/
+es: /motivacion/
 ---
 
 <!-- note: MUST leave blank lines after paragraphs -->

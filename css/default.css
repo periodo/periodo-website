@@ -9,6 +9,9 @@ body {
 .mark {
     margin-bottom: -0.1875em;
 }
+.choose-language {
+    background-color: #f3f3f3;
+}
 header {
     font-size: 150%;
     padding: 20px;
@@ -107,7 +110,7 @@ p a:hover, li a:hover {
 }
 section, .references {
     padding: 20px;
-    max-width: 750px;
+    max-width: 815px;
 }
 .references {
     margin-top: -2.5em;
@@ -137,7 +140,7 @@ footer {
     padding: 20px; 
     background-color: #f3f3f3;
 }
-@media (min-width: 72em) {
+@media (min-width: 80em) {
     nav.toc {
         position: fixed;
         right: 20px;

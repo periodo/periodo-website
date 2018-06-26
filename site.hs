@@ -1,8 +1,8 @@
 --------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
-import Control.Applicative ((<$>))
+import Control.Applicative ()
 import Control.Monad (void)
-import Data.Monoid (mappend, mconcat)
+import Data.Monoid ()
 import System.FilePath (takeBaseName, takeDirectory, (</>))
 import Text.Pandoc.Options
 import Text.Parsec
@@ -12,6 +12,11 @@ import Hakyll
 --------------------------------------------------------------------------------
 main :: IO ()
 main = hakyll $ do
+
+  -- copy index.html to build directory (only for GH pages)
+  match "index.html" $ do
+    route   idRoute
+    compile copyFileCompiler
 
   -- copy CNAME file to build directory
   match "CNAME" $ do
@@ -43,8 +48,8 @@ main = hakyll $ do
   -- compile TOCs for pages that have multiple sections
   match (fromList ["motivation.md", -- en
                    "motivacion.md", -- es
-                   "data-model.md",
-                   "technical-overview.md",
+                   "technical-overview.md", -- en
+                   "resumen-tecnico.md",    -- es
                    "notes/getting-into-shapes-with-shacl.md",
                    "2016-workshop.md", "2017-workshop.md"]) $ version "toc" $
     compile $ pandocCompilerWith defaultHakyllReaderOptions
@@ -54,26 +59,30 @@ main = hakyll $ do
                                  , writerStandalone = True
                                  }
 
-  -- compile pages with citations (optional) and TOCs
-  match (fromList ["motivation.md", -- en
-                   "motivacion.md", -- es
-                   "data-model.md",
+  -- compile English pages with citations (optional) and TOCs
+  match (fromList ["motivation.md",
                    "publications.md",
                    "technical-overview.md",
                    "notes/getting-into-shapes-with-shacl.md",
                    "2016-workshop.md", "2017-workshop.md"]) $ do
     route   $ niceRoute
-    compile $ citeCompiler >>= pageCompiler tocCtx
+    compile $ citeCompiler >>= enPageCompiler tocCtx
+
+  -- compile Spanish pages with citations (optional) and TOCs
+  match (fromList ["motivacion.md",
+                   "resumen-tecnico.md"]) $ do
+    route   $ niceRoute
+    compile $ citeCompiler >>= esPageCompiler tocCtx
 
   -- compile other pages
   match "*.md" $ do
     route   $ niceRoute
-    compile $ pandocCompiler >>= pageCompiler defaultContext
+    compile $ pandocCompiler >>= enPageCompiler defaultContext
 
   -- compile guide articles
   match "guide/*.md" $  compile pandocCompiler
 
-  -- generate guide page from index sections
+  -- generate guide page from guide sections
   create ["guide/index.html"] $ do
     route idRoute
     compile $ do
@@ -87,17 +96,18 @@ main = hakyll $ do
 
       makeItem ""
         >>= loadAndApplyTemplate "templates/guide.html" indexCtx
-        >>= pageCompiler indexCtx
+        >>= enPageCompiler indexCtx
 
 
-  -- compile index sections
-  match "index-sections/*" $ compile pandocCompiler
+  -- compile index sections in English and Spanish
+  match "index-sections-en/*" $ compile pandocCompiler
+  match "index-sections-es/*" $ compile pandocCompiler
 
-  -- generate index page from index sections
-  create ["index.html"] $ do
+  -- generate English index page from index sections
+  create ["en/index.html"] $ do
     route idRoute
     compile $ do
-      sections <- loadAll "index-sections/*"
+      sections <- loadAll "index-sections-en/*"
       let indexCtx =
             listField  "sections" defaultContext (return sections) `mappend`
             mconcat [ constField "title" "Periods, Organized"
@@ -106,16 +116,33 @@ main = hakyll $ do
             defaultContext
 
       makeItem ""
-        >>= loadAndApplyTemplate "templates/index.html" indexCtx
-        >>= pageCompiler indexCtx
+        >>= loadAndApplyTemplate "templates/index-en.html" indexCtx
+        >>= enPageCompiler indexCtx
+
+  -- generate Spanish index page from index sections
+  create ["es/index.html"] $ do
+    route idRoute
+    compile $ do
+      sections <- loadAll "index-sections-es/*"
+      let indexCtx =
+            listField  "sections" defaultContext (return sections) `mappend`
+            mconcat [ constField "title" "Periodos, Organizados"
+                    , constField "home"  "true"
+                    ]                                              `mappend`
+            defaultContext
+
+      makeItem ""
+        >>= loadAndApplyTemplate "templates/index-es.html" indexCtx
+        >>= esPageCompiler indexCtx
 
   create ["data-model/index.html"] $ do
     route idRoute
     compile $ do
       let ctx =
-            mconcat [ constField "title" "Data Model"
-                    , constField "location"  "/technical-overview/#period-definitions"
-                    ] `mappend`
+            mconcat
+            [ constField "title" "Data Model"
+            , constField "location"  "/technical-overview/#period-definitions"
+            ] `mappend`
             defaultContext
 
       makeItem ""
@@ -124,10 +151,17 @@ main = hakyll $ do
 
 -- utilities -------------------------------------------------------------------
 
--- standard page compiler
-pageCompiler :: Context String -> Item String -> Compiler (Item String)
-pageCompiler ctx item =
-    loadAndApplyTemplate "templates/default.html" ctx item
+-- standard English page compiler
+enPageCompiler :: Context String -> Item String -> Compiler (Item String)
+enPageCompiler ctx item =
+    loadAndApplyTemplate "templates/default-en.html" ctx item
+    >>= applyKeywords
+    >>= relativizeUrls
+
+-- standard Spanish page compiler
+esPageCompiler :: Context String -> Item String -> Compiler (Item String)
+esPageCompiler ctx item =
+    loadAndApplyTemplate "templates/default-es.html" ctx item
     >>= applyKeywords
     >>= relativizeUrls
 
@@ -209,7 +243,10 @@ applyKeywords' kws = do
       applyKWs (SVG cls alt file) = svgCompiler cls alt file
 
 svgCompiler :: String -> String -> String -> Compiler (Item String)
-svgCompiler cls alt file = makeItem "" >>= loadAndApplyTemplate "templates/svg.html" (
+empty :: String
+empty = ""
+svgCompiler cls alt file =
+  makeItem empty >>= loadAndApplyTemplate "templates/svg.html" (
   mconcat [ constField "cls" cls
           , constField "alt" alt
           , constField "file" file

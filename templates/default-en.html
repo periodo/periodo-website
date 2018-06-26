@@ -17,14 +17,22 @@
   <body>
     <main>
 
+      <nav class=" choose-language pure-menu pure-menu-horizontal">
+        <ul class="pure-menu-list internal-links">
+          <li class="pure-menu-item">
+            <a class="pure-menu-link"
+               href="$if(es)$ $es$ $else$ /es/ $endif$">Español</a>
+          </li>
+        </ul>
+      </nav>
+
       <nav class="pure-menu pure-menu-horizontal pure-menu-scrollable">
         <ul class="pure-menu-list internal-links">
-          <li class="pure-menu-item$if(home)$ pure-menu-selected$endif$"><a class="pure-menu-link" href="/">Download</a></li>
+          <li class="pure-menu-item$if(home)$ pure-menu-selected$endif$"><a class="pure-menu-link" href="/en/">Download</a></li>
           <li class="pure-menu-item$if(guide)$ pure-menu-selected$endif$"><a class="pure-menu-link" href="/guide/">Guide</a></li>
           <li class="pure-menu-item$if(motivation)$ pure-menu-selected$endif$"><a class="pure-menu-link" href="/motivation/">Motivation</a></li>
           <li  class="pure-menu-item$if(technical-overview)$ pure-menu-selected$endif$"><a class="pure-menu-link" href="/technical-overview/">Technical overview</a></li>
           <li  class="pure-menu-item$if(publications)$ pure-menu-selected$endif$"><a class="pure-menu-link" href="/publications/">Publications</a></li>
-          <li  class="pure-menu-item$if(workshops)$ pure-menu-selected$endif$"><a class="pure-menu-link" href="/2017-workshop/">Workshops</a></li>
           <li class="pure-menu-item$if(contact)$ pure-menu-selected$endif$"><a class="pure-menu-link" href="/contact/">Contact</a></li>
         </ul>
 
@@ -39,14 +47,14 @@
       </nav>
 
       <header>
-        <a href="/">
+        <a href="/en/">
         <h1>
 §svg(logo, PeriodO, logo)§
         </h1>
         </a>
         <p>A gazetteer of period definitions for linking and visualizing data.</p>
       </header>
-      
+
       $if(toc)$
       <nav class="toc" role="navigation">
         $toc$

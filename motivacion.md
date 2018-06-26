@@ -1,14 +1,13 @@
 ---
 title: Motivación
 motivation: true
-language: es
-translations: en|/motivation/
+en: /motivation/
 ---
 
 <!-- note: MUST leave blank lines after paragraphs -->
 
 <section>
-## Datos enlazados (Linked Data) para las ciencias humanas
+## Linked Data para las ciencias humanas
 
 En los últimos años, las posibilidades de investigación en las ciencias humanas se han expandido enormemente, no solo como resultado del incremento exponencial de datos disponibles en línea, sino que también a través del desarrollo de herramientas digitales que permiten la extracción automática, mediada a través de computadoras, y la visualización de información proveniente de textos y bases de datos. Aun así, las ciencias humanas son, por lo general, mucho más diversas e idiosincráticas en cuanto a terminologías y ontologías que otras áreas de investigación, y conforme los datos se incrementan, se hace más y más difícil encontrar la información que necesitamos. Una solución a esta proliferación de datos ha sido el esfuerzo de establecer vocabularios y listas estandarizadas de entidades como gente o lugares que sean generalmente aceptadas. La creación de índices de topónimos que listan locaciones geográficas junto con coordenadas y nombres alternos, por ejemplo, ha permitido extraer mapas de referencias textuales a lugares [@Grover2010]. Mientras que dicha centralización ha sido exitosa dentro de la geografía, ha sido difícil implementarla en muchas otras áreas de las ciencias humanas, en especial aquellas que tratan conjuntos de datos extremadamente diversos y heterogéneos a través de fronteras internacionales. En algunas disciplinas, como la arqueología, la adaptación a terminologías estandarizadas ha sido especialmente lenta, a pesar inclusive de la emergencia de sistemas de manejo de datos. Por ende, ha habido un esfuerzo reciente que busca desarrollar acercamientos que involucren el "loose coupling" de conjuntos de datos arqueológicos, o sea, el uso de formatos semánticos para describir información con el fin de que se puedan observar relaciones entre objetos inclusive si las terminologías y esquemas de metadatos que se utilizan para describirlos son distintos. Las relaciones se establecen no a través de vocabularios compartidos sino más bien puntos de referencia en común. La información que se describe de esta manera se conoce como [Linked Data][ldata]. Los puntos de referencia los proveen identificadores de recursos uniformes ([Uniform Resource Identifiers][uri], o URIs).
 
