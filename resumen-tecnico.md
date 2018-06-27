@@ -87,7 +87,7 @@ Describimos los intervalos de inicio y fin de dos maneras. Ambas maneras de desc
 
 1. [`skos:prefLabel`](http://www.w3.org/TR/skos-reference/#prefLabel) se usa para describir textualmente el intervalo exactamente como se da en la fuente original, por ejemplo “final del siglo uno a.C.” El valo de esta propiedad es un [xsd:string](http://www.w3.org/TR/xmlschema11-2/#string) simple y literal sin etiqueta de idioma.
 
-2. [`time:hasDateTimeDescripion`](https://www.w3.org/TR/owl-time/#time:hasDateTimeDescription) se usa para describir el intervalo de una manera más estructurada. Esta propiedad vincula el intervalo a un [`time:DateTimeDescripion`](https://www.w3.org/TR/owl-time/#time:DateTimeDescription) (anónimo). Estas descripciones estructuradas son creadas por curadores de PeriodO.
+2. [`time:hasDateTimeDescription`](https://www.w3.org/TR/owl-time/#time:hasDateTimeDescription) se usa para describir el intervalo de una manera más estructurada. Esta propiedad vincula el intervalo a un [`time:DateTimeDescripion`](https://www.w3.org/TR/owl-time/#time:DateTimeDescription) (anónimo). Estas descripciones estructuradas son creadas por curadores de PeriodO.
 
 Actualmente utilizamos las siguientes propiedades en nuestras descripciones datetime:
 
