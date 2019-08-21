@@ -1,41 +1,26 @@
-# Enable virtual machine node, not container
-sudo: true
+dist: xenial
 
-language: haskell
+language: generic
 
 cache:
   directories:
     - "$HOME/.stack"
-    - "$HOME/build/periodo/periodo-website/.stack-work"
 
 addons:
   apt:
-    sources:
-      - sourceline: 'ppa:hvr/ghc' # PPA of Haskell packages
     packages:
       - libgmp-dev           # required by cabal
-      - cabal-install-2.0    # required by GHC 8.x
-
-ghc:
-  - 7.10
-
-git:
-  depth: 5
 
 before_install:
 - mkdir -p "$HOME/.local/bin"
-- travis_retry curl -L https://www.stackage.org/stack/linux-x86_64 | tar xz --wildcards --strip-components=1 -C "$HOME/.local/bin" '*/stack'
 - export PATH="$HOME/.local/bin:$PATH"
-- stack --version
+- travis_retry curl -L https://get.haskellstack.org/stable/linux-x86_64.tar.gz | tar xz --wildcards --strip-components=1 -C "$HOME/.local/bin" '*/stack'
 
 install:
-- travis_wait 30 stack setup --no-terminal
-- stack ghc -- --version
-- travis_wait 40 stack build --only-dependencies --no-terminal
-- travis_wait 40 stack build --no-terminal
+- stack --no-terminal --install-ghc test --only-dependencies
 
 script:
-- travis_wait 40 stack exec site build --no-terminal 
+- stack  --no-terminal exec site build
 
 after_success:
 - openssl aes-256-cbc
