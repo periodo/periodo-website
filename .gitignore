@@ -1,4 +1,5 @@
 _site
 _cache
+stack.yaml.lock
 .stack-work
 .DS_Store
