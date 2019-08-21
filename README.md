@@ -9,9 +9,7 @@ The site is re-built automatically when any of the source files
 change, so you shouldn't need to build it locally. Just use GitHub to
 edit and commit your files.
 
-<!--
-Currently the status of the automatic build is [![Circle CI](https://circleci.com/gh/periodo/periodo-website/tree/source.svg?style=svg&circle-token=d84bd91e89ed051d844b4d8e679830155aec81cf)](https://circleci.com/gh/periodo/periodo-website/tree/source)
--->
+Currently the status of the automatic build is [![Travis CI status](https://travis-ci.com/periodo/periodo-website.svg?branch=source)](https://travis-ci.com/periodo/periodo-website)
 
 But if you want to build the site locally, install [stack](https://www.stackage.org), run `stack setup` and then:
 
