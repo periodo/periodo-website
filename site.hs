@@ -139,10 +139,9 @@ main = hakyll $ do
     route idRoute
     compile $ do
       let ctx =
-            mconcat
-            [ constField "title" "Data Model"
-            , constField "location"  "/technical-overview/#period-definitions"
-            ] `mappend`
+            mconcat [ constField "title" "Data Model"
+                    , constField "location"  "/technical-overview/#periods"
+                    ] `mappend`
             defaultContext
 
       makeItem ""
