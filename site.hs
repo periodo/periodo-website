@@ -81,6 +81,7 @@ main = hakyll $ do
 
   -- compile guide articles
   match "guide/*.md" $  compile pandocCompiler
+  match "old-guide/*.md" $  compile pandocCompiler
 
   -- generate guide page from guide sections
   create ["guide/index.html"] $ do
@@ -91,6 +92,20 @@ main = hakyll $ do
             listField  "sections" defaultContext (return sections) `mappend`
             mconcat [ constField "title" "Guide to using PeriodO"
                     , constField "guide"  "true"
+                    ]                                              `mappend`
+            defaultContext
+
+      makeItem ""
+        >>= loadAndApplyTemplate "templates/guide.html" indexCtx
+        >>= enPageCompiler indexCtx
+  create ["old-guide/index.html"] $ do
+    route idRoute
+    compile $ do
+      sections <- loadAll "old-guide/*.md"
+      let indexCtx =
+            listField  "sections" defaultContext (return sections) `mappend`
+            mconcat [ constField "title" "Old guide to using PeriodO"
+                    , constField "old-guide"  "true"
                     ]                                              `mappend`
             defaultContext
 
