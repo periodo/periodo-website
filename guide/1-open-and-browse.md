@@ -37,7 +37,7 @@ Browsing the canonical PeriodO dataset
 </figcaption>
 </figure>
 
-At the bottom you will see a scrollable list of periods. Initially, this list will include all of the periods in the dataset. The periods in the list can be sorted by clicking on the column headers. Hovering over or clicking on a period in the list will display, below the list, detailed information about the selected period and the authority that defined it.
+At the bottom you will see a scrollable list of periods. Initially, this list will include all of the periods in the dataset. The periods in the list can be sorted by clicking on the column headers. Hovering over a period in the list will display, below the list, detailed information about the selected period and the authority that defined it. Clicking on a period to select it will keep the detailed view focused on it. You can use the up and down arrow keys to change the selected period.
 
 <figure>
 <img class="screenshot"
