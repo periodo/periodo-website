@@ -9,31 +9,31 @@ es: /resumen-tecnico/
 <section>
 ## Linked Data
 
-The PeriodO period gazetteer documents definitions of historical period names. Each entry of the gazetteer identifies the definition of a single period. To be included in the gazetteer, a definition must
+The PeriodO period gazetteer documents definitions of historical periods. Each entry of the gazetteer identifies the definition of a single period. To be included in the gazetteer, a period must
 
 * give the period a name,
 * impose some temporal bounds on the period,
 * have some implicit or explicit association with a geographical region, and
 * have been formally or informally published in some citable source.
 
-Much care has been put into giving period definitions stable identifiers that can be resolved to [RDF representations](/data-model/) of period definitions. PeriodO models period definitions as [SKOS][skos] concepts. These are grouped into concept schemes sharing the same bibliographic source. Temporal extent is expressed via a direct textual quotation from the source, as well as via a structured approximation of this expression modeled using the [OWL-Time][owltime] ontology. Similarly spatial extent is represented both by a textual quote (where one was given) and a set of identifiers referring to spatial entities in external resources such as [DBpedia][dbpedia].
+Much care has been put into giving periods stable identifiers that can be resolved to [RDF representations](/data-model/) of periods. PeriodO models periods as [SKOS][skos] concepts. These are grouped into concept schemes sharing the same bibliographic source. Temporal extent is expressed via a direct textual quotation from the source, as well as via a structured approximation of this expression modeled using the [OWL-Time][owltime] ontology. Similarly spatial extent is represented both by a textual quote (where one was given) and a set of identifiers referring to spatial entities in external resources such as [DBpedia][dbpedia].
 
 Examples:
 
-* <p>[`http://n2t.net/ark:/99152/p05krdxmkzt`](http://n2t.net/ark:/99152/p05krdxmkzt) identifies the "Dark Age" as defined by Davis and Alcock on page 97 of [*Sandy Pylos: an archaeological history from Nestor to Navarino*](http://www.worldcat.org/oclc/37663433) (see the [JSON representation](http://n2t.net/ark:/99152/p05krdxmkzt.json)). This is an example of a *period definition*.</p>
-* <p>[`http://n2t.net/ark:/99152/p06v8w4`](http://n2t.net/ark:/99152/p06v8w4) identifies all the period definitions from the [FastiOnline](http://fastionline.org) database of archaeological excavations (see the [JSON representation](http://n2t.net/ark:/99152/p06v8w4.json)). This is an example of a *period collection*.</p>
+* <p>[`http://n2t.net/ark:/99152/p05krdxmkzt`](http://n2t.net/ark:/99152/p05krdxmkzt) identifies the "Dark Age" as defined by Davis and Alcock on page 97 of [*Sandy Pylos: an archaeological history from Nestor to Navarino*](http://www.worldcat.org/oclc/37663433) (see the [JSON representation](http://n2t.net/ark:/99152/p05krdxmkzt.json)). This is an example of a *period*.</p>
+* <p>[`http://n2t.net/ark:/99152/p06v8w4`](http://n2t.net/ark:/99152/p06v8w4) identifies all the periods from the [FastiOnline](http://fastionline.org) database of archaeological excavations (see the [JSON representation](http://n2t.net/ark:/99152/p06v8w4.json)). This is an example of an *authority*.</p>
 
 </section>
 
 <section>
-## Period definitions
+## Periods
 
-The PeriodO dataset is essentially a collection of period definitions.
+The PeriodO dataset is essentially a collection of periods.
 
 <section>
 ### Labels and documentation
 
-A period definition is a [`skos:Concept`](http://www.w3.org/TR/skos-reference/#concepts), “an idea or notion,” as the SKOS Reference puts it. We use a number of SKOS properties to describe period definitions:
+A period is a [`skos:Concept`](http://www.w3.org/TR/skos-reference/#concepts), “an idea or notion,” as the SKOS Reference puts it. We use a number of SKOS properties to describe periods:
 
 * [`skos:prefLabel`](http://www.w3.org/TR/skos-reference/#prefLabel) is used for the name of the period exactly as given in the original source. The value of this property is a simple literal [xsd:string](http://www.w3.org/TR/xmlschema11-2/#string), with no language tag.
 
@@ -42,20 +42,20 @@ A period definition is a [`skos:Concept`](http://www.w3.org/TR/skos-reference/#c
     1. <p>a three-character [primary language subtag](http://tools.ietf.org/html/bcp47#section-2.2.1), as defined in [ISO 639-2](https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes) or [ISO 639-3](https://en.wikipedia.org/wiki/ISO_639-3), and</p>
     2. <p>a four-character [script subtag](http://tools.ietf.org/html/bcp47#section-2.2.3), as defined in [ISO 15924](http://www.unicode.org/iso15924/codelists.html).</p>
 
-    There will always be at least one `skos:altLabel`, with the language tag `eng-latn`. If the source definition was not written in English, there will always be another `skos:altLabel` with a language tag indicating the language and script of the source definition. The language of the source definition is indicated via a [`dc:language`](http://dublincore.org/documents/dcmi-terms/#terms-language) property, the value of which is a language tag as described above.
+    There will always be at least one `skos:altLabel`, with the language tag `eng-latn`. If the source of the period was not written in English, there will always be another `skos:altLabel` with a language tag indicating the language and script of the source of the period. The language of the source of the period is indicated via a [`dc:language`](http://dublincore.org/documents/dcmi-terms/#terms-language) property, the value of which is a language tag as described above.
 
-* [`skos:note`](http://www.w3.org/TR/skos-reference/#note) is used for notes about the period definition taken from or attributed to the original source. For example, the original Pleiades definition of “Ottoman Rise (AD 1300-1453)” includes the note “ends with the conquest of Constantinople.” The value of this property is a simple literal [`xsd:string`](http://www.w3.org/TR/xmlschema11-2/#string), with no language tag.
+* [`skos:note`](http://www.w3.org/TR/skos-reference/#note) is used for notes about the period taken from or attributed to the original source. For example, the original Pleiades definition of “Ottoman Rise (AD 1300-1453)” includes the note “ends with the conquest of Constantinople.” The value of this property is a simple literal [`xsd:string`](http://www.w3.org/TR/xmlschema11-2/#string), with no language tag.
 
 * [`skos:editorialNote`](http://www.w3.org/TR/skos-reference/#editorialNote) is used for administrative or editorial notes added by the PeriodO curators; these do *not* appear in the original source. The value of this property is a simple literal [`xsd:string`](http://www.w3.org/TR/xmlschema11-2/#string), with no language tag.
 
-* [`skos:inScheme`](http://www.w3.org/TR/skos-reference/#inScheme) is used to link a period definition to the [period collection](#period-collections) of which it is a part.
+* [`skos:inScheme`](http://www.w3.org/TR/skos-reference/#inScheme) is used to link a period to the [authority](#authorities) of which it is a part.
 
 </section>
 
 <section>
 ### Source
 
-Usually the bibliographic information about the source of a period definition is provided through properties of the [period collection](#period-collections) to which it belongs. However, in some cases there may be additional bibliographic information that is specific to an individual definition. In these cases, we use a [`dcterms:source`](http://dublincore.org/documents/dcmi-terms/#terms-source) to provide this additional information, and [`dcterms:isPartOf`](http://dublincore.org/documents/dcmi-terms/#terms-isPartOf) to link the source of the definition to the source of the collection to which it belongs. For example, we might use the following to indicate that the specific book page from which a definition was sourced:
+Usually the bibliographic information about the source of a period is provided through properties of the [authority](#authorities) to which it belongs. However, in some cases there may be additional bibliographic information that is specific to an individual period. In these cases, we use a [`dcterms:source`](http://dublincore.org/documents/dcmi-terms/#terms-source) to provide this additional information, and [`dcterms:isPartOf`](http://dublincore.org/documents/dcmi-terms/#terms-isPartOf) to link the source of the period to the source of the authority to which it belongs. For example, we might use the following to indicate that the specific book page from which a period was sourced:
 
     <p0tns5v4kdf>
         dcterms:source [
@@ -70,11 +70,11 @@ Usually the bibliographic information about the source of a period definition is
 <section>
 ### Temporal extent
 
-We use properties from the [Time Ontology](http://www.w3.org/TR/owl-time/) to describe the temporal extent of period definitions. A period definition is a [`time:ProperInterval`](http://www.w3.org/TR/owl-time/#relations), an interval of time with different beginning and end points. We assume that these (instantaneous) beginning and end points can never be precisely identified, hence our descriptions focus on describing the intervals that start and finish the period:
+We use properties from the [Time Ontology](http://www.w3.org/TR/owl-time/) to describe the temporal extent of periods. A period is a [`time:ProperInterval`](http://www.w3.org/TR/owl-time/#relations), an interval of time with different beginning and end points. We assume that these (instantaneous) beginning and end points can never be precisely identified, hence our descriptions focus on describing the intervals that start and finish the period:
 
-* [`time:intervalStartedBy`](http://www.w3.org/TR/owl-time/#relations) links the period definition to an (anonymous) time interval that has the same (unknown) beginning point as the period, and an (unknown) end point that comes before the end point of the period. We call this the *start* interval for the period.
+* [`time:intervalStartedBy`](http://www.w3.org/TR/owl-time/#relations) links the period to an (anonymous) time interval that has the same (unknown) beginning point as the period, and an (unknown) end point that comes before the end point of the period. We call this the *start* interval for the period.
 
-* [`time:intervalFinishedBy`](http://www.w3.org/TR/owl-time/#relations) links the period definition to an (anonymous) time interval that has the same (unknown) end point as the period, and an (unknown) beginning point that comes after the beginning point of the period. We call this the *stop* interval for the period.
+* [`time:intervalFinishedBy`](http://www.w3.org/TR/owl-time/#relations) links the period to an (anonymous) time interval that has the same (unknown) end point as the period, and an (unknown) beginning point that comes after the beginning point of the period. We call this the *stop* interval for the period.
 
 <figure>
 §svg(figure, Diagram showing the relation between a period's temporal extent and its start and stop intervals, start-stop-intervals-en)§
@@ -106,30 +106,30 @@ We may use additional properties in our datetime descriptions in the future, for
 <section>
 ### Spatial extent
 
-We use the following properties to describe the spatial extent of period definitions:
+We use the following properties to describe the spatial extent of periods:
 
 * [`periodo:spatialCoverageDescription`](http://n2t.net/ark:/99152/p0v#spatialCoverageDescription) is used to textually describe the spatial extent exactly as given in the original source, for example “Near East and Greece”. The value of this property is a simple literal [xsd:string](http://www.w3.org/TR/xmlschema11-2/#string), with no language tag.
 
-* [`dcterms:spatial`](http://dublincore.org/documents/dcmi-terms/#terms-spatial) is used to link a period definition to descriptions of locations in gazetteers such as DBpedia/Wikidata, GeoNames, or Pleiades.
+* [`dcterms:spatial`](http://dublincore.org/documents/dcmi-terms/#terms-spatial) is used to link a period to descriptions of locations in gazetteers such as DBpedia/Wikidata, GeoNames, or Pleiades.
 
 </section>
 </section>
 
 <section>
-## Period collections
+## Authorities
 
-A period collection is simply a set of period definitions that share a source. We use [`dcterms:source`](http://dublincore.org/documents/dcmi-terms/#terms-source) to link period collections to bibliographic descriptions of their sources. Where possible we rely on external bibliographic databases such as WorldCat and CrossRef for bibliographic metadata.
+An authority is simply a set of periods that share a source. We use [`dcterms:source`](http://dublincore.org/documents/dcmi-terms/#terms-source) to link authorities to bibliographic descriptions of their sources. Where possible we rely on external bibliographic databases such as WorldCat and CrossRef for bibliographic metadata.
 
-A period collection is a [`skos:ConceptScheme`](http://www.w3.org/TR/skos-reference/#schemes), “an aggregation of one or more SKOS concepts”. Belonging to the same period collection does not imply any semantic relationship between period definitions, other than sharing a source. In particular, the period definitions belonging to a period collection do not constitute a *periodization*, meaning a single coherent, continuous division of historical time. In the future we plan to add additional properties for indicating when a set of period definitions constitute a periodization.
+An authority is a [`skos:ConceptScheme`](http://www.w3.org/TR/skos-reference/#schemes), “an aggregation of one or more SKOS concepts”. Belonging to the same authority does not imply any semantic relationship between periods, other than sharing a source. In particular, the periods belonging to an authority do not constitute a *periodization*, meaning a single coherent, continuous division of historical time. In the future we plan to add additional properties for indicating when a set of periods constitute a periodization.
 
-The [root resource](http://www.w3.org/TR/void/#root-resource) of the PeriodO dataset is an [`rdf:Bag`](http://www.w3.org/TR/rdf-schema/#ch_bag) (unordered collection) of period collections.
+The [root resource](http://www.w3.org/TR/void/#root-resource) of the PeriodO dataset is an [`rdf:Bag`](http://www.w3.org/TR/rdf-schema/#ch_bag) (unordered collection) of authorities.
 
 </section>
 
 <section>
 ## Identifiers
 
-Each period definition is given its own Web-based, resolvable [Uniform Resource Identifier][uri] (URI) in the form of a [Archival Resource Key][ark] (ARK), minted through the [EZID][ezid] system of the California Digital Library. These ARKs are resolvable to structured, machine-readable representations of individual period definitions.
+Each period is given its own Web-based, resolvable [Uniform Resource Identifier][uri] (URI) in the form of a [Archival Resource Key][ark] (ARK), minted through the [EZID][ezid] system of the California Digital Library. These ARKs are resolvable to structured, machine-readable representations of individual periods.
 
 Wherever possible bibliographic sources are identified with [WorldCat][worldcat] URIs or [CrossRef][crossref] DOIs, and creators are identified with [Virtual International Authority File][viaf] URIs. 
 
@@ -138,7 +138,7 @@ Wherever possible bibliographic sources are identified with [WorldCat][worldcat]
 <section>
 ## Data Serialization
 
-Period definitions in the PeriodO gazetteer are published as [JSON-LD][jsonld], a serialized form of the [Resource Description Format][rdf] (RDF) used to describe Linked Data. The [entire dataset](http://n2t.net/ark:/99152/p0d.json) is available for download as a single JSON file, so that it can be more easily reused by other projects.
+Periods in the PeriodO gazetteer are published as [JSON-LD][jsonld], a serialized form of the [Resource Description Format][rdf] (RDF) used to describe Linked Data. The [entire dataset](http://n2t.net/ark:/99152/p0d.json) is available for download as a single JSON file, so that it can be more easily reused by other projects.
 
 </section>
 

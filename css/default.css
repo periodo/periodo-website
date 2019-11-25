@@ -1,6 +1,6 @@
 body {
-    color: #333333;
     background-color: #f3f3f3;
+    color: #333333;
     counter-reset: figure;
 }
 .hide {
@@ -13,13 +13,17 @@ body {
     background-color: #f3f3f3;
 }
 header {
-    font-size: 150%;
-    padding: 20px;
     background-color: #7acbd2;
     clear: both;
+    font-size: 150%;
+    padding: 20px;
 }
 h1, h2, p {
     margin: 0;
+}
+h3 {
+    margin: 0;
+    padding-top: 1em;
 }
 header h1 {
     margin-bottom: -0.5em;
@@ -28,16 +32,16 @@ main {
     background-color: #ffffff;
 }
 nav.toc {
+    background-color: #f3f3f3;
+    display: inline-block;
+    line-height: 1.4em;
     margin: 20px 0 0 20px;
     padding: 20px;
-    display: inline-block;
-    background-color: #f3f3f3;
-    line-height: 1.4em;
 }
 nav.toc ul {
-    padding: 0;
-    margin: 0;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 nav.toc li ul {
     margin-left: 1.1em;
@@ -47,8 +51,8 @@ nav.toc li ul {
     font-weight: bold;
 }
 p, dt, .figure, .gist {
-    padding-top: 1em;
     line-height: 1.6em;
+    padding-top: 1em;
 }
 table {
     margin-top: 1em;
@@ -63,19 +67,26 @@ td.right {
 td.center {
     text-align: center;
 }
+figure {
+    margin: 1.5em 0 1em;
+}
 .figure {
+    display: block;
     margin-left: auto;
     margin-right: auto;
-    display: block;
 }
 figcaption {
+    font-size: smaller;
     font-style: italic;
-    text-align: center;
     margin-top: 0.5em;
+    text-align: center;
 }
-figcaption:before {
-    counter-increment: figure;
+code {
+    font-style: normal;
+}
+.figure figcaption:before {
     content: "Figure " counter(figure) ": ";
+    counter-increment: figure;
 }
 dd {
     line-height: 1.6em;
@@ -99,29 +110,28 @@ p a:hover, li a:hover {
     text-decoration: underline;
 }
 .button {
-    color: white;
     background-color: #7acbd2;
+    border-radius: 0;
+    color: white;
     font-weight: bold;
-    border-radius: 0px;
     margin: 5px;
 }
 .button:hover {
     text-decoration: none;
 }
 section, .references {
-    padding: 20px;
     max-width: 815px;
+    padding: 20px;
 }
 .references {
     margin-top: -2.5em;
 }
 .references p {
-    text-indent: -1.2em;
     margin-left: 1.2em;
+    text-indent: -1.2em;
 }
 .screenshot {
     border: 1px solid #c1c1c1;
-    margin: 20px 0;
 }
 .left {
     float: left;
@@ -136,9 +146,16 @@ section, .references {
     margin-left: auto;
     margin-right: auto;
 }
+.clear {
+    clear: both;
+}
+.anchor {
+    clear: both;
+    margin-bottom: 1em;
+}
 footer {
-    padding: 20px; 
     background-color: #f3f3f3;
+    padding: 20px;
 }
 @media (min-width: 80em) {
     nav.toc {
