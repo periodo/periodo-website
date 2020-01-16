@@ -3,7 +3,7 @@ title: Open and browse the canonical periods
 slug: open-and-browse
 ---
 
-The [PeriodO client](http://n2t.net/ark:/99152/p0) runs in your browser. You can use it to browse or edit any dataset that conforms to the PeriodO data model. But most people are probably interested in looking at the *canonical* dataset of periods curated by the PeriodO project.
+The [PeriodO client](https://client.perio.do) runs in your browser. You can use it to browse or edit any dataset that conforms to the PeriodO data model. But most people are probably interested in looking at the *canonical* dataset of periods curated by the PeriodO project.
 
 When you first open the client, you are prompted to select an existing data source or specify the location of a new data source. The client supports loading data from three kinds of sources:
 

@@ -145,7 +145,7 @@ Periods in the PeriodO gazetteer are published as [JSON-LD][jsonld], a serialize
 <section>
 ## User Interface
 
-A [browser-based client](http://n2t.net/ark:/99152/p0) provides search, visualization, and data entry tools. It also provides an interface for managing distributed versioning and collaborative development of the PeriodO dataset. The entire editorial history of the PeriodO gazetteer is published as a separate dataset using the [PROV][prov] ontology.
+A [browser-based client](https://client.perio.do) provides search, visualization, and data entry tools. It also provides an interface for managing distributed versioning and collaborative development of the PeriodO dataset. The entire editorial history of the PeriodO gazetteer is published as a separate dataset using the [PROV][prov] ontology.
 
 </section>
 

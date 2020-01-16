@@ -149,7 +149,7 @@ Las definiciones de períodos en el índice PeriodO se publican como [JSON-LD][j
 <section>
 ## Interfaz de usuario
 
-Un [browser-based client](http://n2t.net/ark:/99152/p0) provee herramientas de búsqueda, visualización e ingreso de datos. También provee una interfaz para administrar las versiones distribuidas y el desarrollo colaborativo del conjunto de datos PeriodO. Toda la historia editorial del índice PerodO se publica como un conjunto de datos separado utilizando la ontología [PROV][prov].
+Un [browser-based client](https://client.perio.do) provee herramientas de búsqueda, visualización e ingreso de datos. También provee una interfaz para administrar las versiones distribuidas y el desarrollo colaborativo del conjunto de datos PeriodO. Toda la historia editorial del índice PerodO se publica como un conjunto de datos separado utilizando la ontología [PROV][prov].
 
 </section>
 

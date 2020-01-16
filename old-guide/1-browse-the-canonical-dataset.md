@@ -3,7 +3,7 @@ title: Browse the canonical dataset
 slug: browse-the-canonical-dataset
 ---
 
-The [PeriodO client](http://n2t.net/ark:/99152/p0) is an application that runs in your browser. It can be used to browse and edit any dataset that conforms to the PeriodO data model. But most people are probably interested in looking at the *canonical* dataset curated by the PeriodO project.
+The [PeriodO client](https://test.perio.do) is an application that runs in your browser. It can be used to browse and edit any dataset that conforms to the PeriodO data model. But most people are probably interested in looking at the *canonical* dataset curated by the PeriodO project.
 
 When you first load the client, you are prompted to select a *backend*. A backend is simply a location from which the client will load data. The client supports three kinds of backends:
 
