@@ -102,16 +102,20 @@ blockquote {
     padding: 0 1em 1em;
 }
 p a, nav.toc a, dd a, li a {
-    color: #52959A;
+    color: #2d6a6f;
+}
+nav.toc a, dd a {
     text-decoration: none;
 }
-p a:hover, li a:hover {
-    text-decoration: underline;
+p a:hover, dd a:hover, li a:hover {
+    background-color: #2d6a6f;
+    color: white;
+    text-decoration: none;
 }
 .button {
     background-color: #7acbd2;
     border-radius: 0;
-    color: white;
+    color: #000;
     font-weight: bold;
     margin: 5px;
 }
