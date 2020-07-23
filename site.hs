@@ -4,7 +4,7 @@ import Control.Applicative ()
 import Control.Monad (void)
 import Data.Monoid ()
 import System.FilePath (takeBaseName, takeDirectory, (</>))
-import Text.Pandoc.Options
+import Text.Pandoc
 import Text.Parsec
 import Text.Parsec.String
 import Hakyll
@@ -55,8 +55,15 @@ main = hakyll $ do
     compile $ pandocCompilerWith defaultHakyllReaderOptions
                                  defaultHakyllWriterOptions {
                                    writerTableOfContents = True
-                                 , writerTemplate = "$toc$"
-                                 , writerStandalone = True
+                                 , writerTemplate = Just (
+                                     -- all this insanity to turn a string
+                                     -- literal into a pandoc Template...
+                                     either error id $
+                                       either (error . show) id $
+                                       Text.Pandoc.runPure $
+                                       Text.Pandoc.runWithDefaultPartials $
+                                       Text.Pandoc.compileTemplate "" "$toc$"
+                                     )
                                  }
 
   -- compile English pages with citations (optional) and TOCs
