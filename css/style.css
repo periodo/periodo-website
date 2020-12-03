@@ -113,7 +113,7 @@ figure {
     margin: 1.5rem 0 1rem;
 }
 figure img {
-    max-width: calc(100% - 16px);
+    max-width: calc(100vw - 40px);
     height: auto;
 }
 figcaption {
@@ -130,7 +130,10 @@ pre {
     border: 1px solid;
     padding: 1rem;
     overflow-x: scroll;
-    max-width: calc(100vw - 100px);
+    max-width: calc(100vw - 104px);
+}
+li pre {
+    max-width: calc(100vw - 120px);
 }
 blockquote {
     background-color: #f3f3f3;
