@@ -4,10 +4,10 @@ thanks: true
 ---
 
 <style>
-ul {
+section ul {
     list-style-type: none;
 }
-li {
+section li {
     line-height: 1.2em;
     height: 1.6em;
 }
@@ -32,7 +32,7 @@ li {
   [Seta Štuhec](https://uni-lj.academia.edu/SetaŠtuhec),
   [Stefanie Carter](https://orcid.org/0000-0002-0773-6139),
   [Thomas Rover](https://orcid.org/0000-0003-1524-6006), and
-  [Will Hanley](https://history.fsu.edu/person/will-hanley) submitted patches to the dataset.
+  [Will Hanley](https://history.fsu.edu/person/will-hanley) submitted early patches to the dataset.
   
 </section>
 

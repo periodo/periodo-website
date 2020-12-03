@@ -2,71 +2,81 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="description" content="Un índice de definiciones de períodos para enlazar y vizualizar datos.">
+    <meta name="description"
+          content="Un índice de definiciones de períodos para enlazar y vizualizar datos.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PeriodO &ndash; $title$</title>
-    <link rel="stylesheet" type="text/css" href="/css/lib.css" />
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
     <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
   </head>
   <body>
-    <main>
-
-      <nav class=" choose-language pure-menu pure-menu-horizontal">
-        <ul class="pure-menu-list internal-links">
-          <li class="pure-menu-item">
-            <a class="pure-menu-link"
-               href="$if(en)$ $en$ $else$ /en/ $endif$">English</a>
-          </li>
-        </ul>
-      </nav>
-
-      <nav class="pure-menu pure-menu-horizontal pure-menu-scrollable">
-        <ul class="pure-menu-list internal-links">
-          <li class="pure-menu-item$if(home)$ pure-menu-selected$endif$"><a class="pure-menu-link" href="/es/">Descargar</a></li>
-          <li class="pure-menu-item$if(guide)$ pure-menu-selected$endif$"><a class="pure-menu-link" href="/guide/">Guide</a></li>
-          <li class="pure-menu-item$if(motivation)$ pure-menu-selected$endif$"><a class="pure-menu-link" href="/motivacion/">Motivación</a></li>
-          <li  class="pure-menu-item$if(technical-overview)$ pure-menu-selected$endif$"><a class="pure-menu-link" href="/resumen-tecnico/">Resumen técnico</a></li>
-          <li  class="pure-menu-item$if(publications)$ pure-menu-selected$endif$"><a class="pure-menu-link" href="/publications/">Publications</a></li>
-          <li class="pure-menu-item$if(contact)$ pure-menu-selected$endif$"><a class="pure-menu-link" href="/contact/">Contact</a></li>
-          <li class="pure-menu-item$if(thanks)$ pure-menu-selected$endif$"><a class="pure-menu-link" href="/contributors/">Thanks</a></li>
-        </ul>
-
-        <ul class="pure-menu-list external-links">
-          <li class="pure-menu-item"><a class="pure-menu-link" href="https://twitter.com/perio_do">
-§svg(mark, PeriodO tweeter account, tweeter-mark)§
-</a></li>
-          <li class="pure-menu-item"><a class="pure-menu-link" href="https://github.com/periodo">
-§svg(mark, PeriodO repositories at GitHub, github-mark)§
-</a></li>
-        </ul>
-      </nav>
-
-      <header>
-        <a href="/en/">
+    <nav class="choose-language">
+      <ul class="menu-list">
+        <li>
+          <a href="$if(en)$ $en$ $else$ /en/ $endif$">English</a>
+        </li>
+      </ul>
+    </nav>
+    <nav>
+      <ul class="menu-list">
+        <li class="$if(home)$menu-selected$endif$">
+          <a href="/es/">Descargar</a>
+        </li>
+        <li class="$if(guide)$menu-selected$endif$">
+          <a href="/guide/">Guide</a>
+        </li>
+        <li class="$if(motivation)$menu-selected$endif$">
+          <a href="/motivacion/">Motivación</a>
+        </li>
+        <li class="$if(technical-overview)$menu-selected$endif$">
+          <a href="/resumen-tecnico/">Resumen técnico</a>
+        </li>
+        <li  class="$if(publications)$menu-selected$endif$">
+          <a href="/publications/">Publications</a>
+        </li>
+        <li class="$if(contact)$menu-selected$endif$">
+          <a href="/contact/">Contact</a>
+        </li>
+        <li class="$if(thanks)$menu-selected$endif$">
+          <a href="/contributors/">Thanks</a>
+        </li>
+        <li>
+          <a href="https://twitter.com/perio_do">
+            §svg(mark, PeriodO tweeter account, tweeter-mark)§
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/periodo">
+            §svg(mark, PeriodO repositories at GitHub, github-mark)§
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <header>
+      <a href="/es/">
         <h1>
-§svg(logo, PeriodO, logo)§
+          §svg(logo, PeriodO, logo)§
         </h1>
-        </a>
-        <p>Un índice de definiciones de períodos para enlazar y vizualizar datos.</p>
-      </header>
+      </a>
+      <p>Un índice de definiciones de períodos para enlazar y vizualizar datos.</p>
+    </header>
 
+    <main>
       $if(toc)$
       <nav class="toc" role="navigation">
         $toc$
       </nav>
       $endif$
-
       $body$
+    </main>
 
-      <footer>
+    <footer>
       <a href="http://www.neh.gov/">
-§svg(logo, National Endownment for the Humanities, neh-logo)§
+        §svg(logo, National Endownment for the Humanities, neh-logo)§
       </a>
       <a style="float: right" href="http://www.imls.gov/">
-§svg(logo, Institute of Museum and Library Services, imls-logo)§
+        §svg(logo, Institute of Museum and Library Services, imls-logo)§
       </a>
-      </footer>
-    </main>
+    </footer>
   </body>
 </html
