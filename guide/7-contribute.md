@@ -11,7 +11,8 @@ You will be prompted to select a web-based data source to submit your changes to
 <img class="screenshot"
      src="/images/orcid-login.png"
      alt="The ORCID login form"
-     width="500">
+     width="612"
+     height="700">
 <figcaption>
 The ORCID login form
 </figcaption>
@@ -27,7 +28,8 @@ Click **Continue** to see a list of the differences or “changes” between the
 <img class="screenshot center"
      src="/images/submit-changes.png"
      alt="Confirming selected changes before submission"
-     width="800">
+     width="800"
+     height="380">
 <figcaption>
 Confirming selected changes before submission
 </figcaption>
@@ -41,7 +43,8 @@ To check on the status of your submission, navigate to **Home > Data sources** a
 <img class="screenshot center"
      src="/images/submitted-changes.png"
      alt="Viewing comments on submitted changes to the canonical periods"
-     width="800">
+     width="800"
+     height="909">
 <figcaption>
 Viewing comments on submitted changes to the canonical periods
 </figcaption>

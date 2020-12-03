@@ -9,7 +9,8 @@ To find and view specific authorities, use the **Browse authorities** page. The 
 <img class="screenshot"
      src="/images/browse-authorities.png"
      alt="Browsing the list of authorities"
-     width="800">
+     width="800"
+     height="664">
 <figcaption>
 Looking at authorities with the word `cultural` in their names, ordered by publication year
 </figcaption>
@@ -21,7 +22,8 @@ Following the **view** link for an authority in the list will take you to the **
 <img class="screenshot"
      src="/images/authority-view.png"
      alt="Viewing an authority"
-     width="800">
+     width="800"
+     height="600">
 <figcaption>
 Viewing an individual authority
 </figcaption>

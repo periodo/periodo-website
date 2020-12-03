@@ -9,7 +9,8 @@ The currently selected set of periods is displayed both as regions on a map and 
 <img class="screenshot"
      src="/images/map-view.png"
      alt="Seeing the spatial coverage of a set of periods"
-     width="800">
+     width="800"
+     height="537">
 <figcaption>
 Looking at the combined spatial coverage of periods defined by the Levantine Ceramics Project
 </figcaption>
@@ -25,7 +26,8 @@ The map can be zoomed using the **+** and **-** buttons or keys and panned by dr
 <img class="screenshot"
      src="/images/timeline-styles.png"
      alt="Comparing timeline styles"
-     width="800">
+     width="800"
+     height="410">
 <figcaption>
 Comparing periods' temporal extents as a histogram (top) or stacked bars (bottom)
 </figcaption>
@@ -39,7 +41,8 @@ Hide the timeline by clicking the **Temporal coverage** header.
 <img class="screenshot"
      src="/images/browse-period-list.png"
      alt="Browsing a list of selected periods"
-     width="800">
+     width="800"
+     height="370">
 <figcaption>
 Browsing periods linked to the Wikidata record for Syria
 </figcaption>
@@ -51,7 +54,8 @@ Below the timeline you will see a scrollable list of the currently selected **Pe
 <img class="screenshot"
      src="/images/period-details.png"
      alt="Viewing detailed information about a selected period"
-     width="800">
+     width="800"
+     height="748">
 <figcaption>
 Selecting the “Доба пізньої бронзи” (Late Bronze Age) period to view its details
 </figcaption>
@@ -63,7 +67,8 @@ Selecting the “Доба пізньої бронзи” (Late Bronze Age) perio
 <img class="screenshot"
      src="/images/map-focus.png"
      alt="Focusing on the spatial extent of a period"
-     width="800">
+     width="800"
+     height="540">
 <figcaption>
 Looking at the spatial extent of the “Early Urnfield” period in Hungary (highlighted in red), in the context of the spatial extents of other periods from the same authority (highlighted in purple)
 </figcaption>
@@ -75,7 +80,8 @@ When you have a period selected in the period list, it will be highlighted in re
 <img class="screenshot"
      src="/images/timeline-focus.png"
      alt="Focusing on the temporal extent of a period"
-     width="800">
+     width="800"
+     height="374">
 <figcaption>
 Looking at the temporal extent of the “Early Urnfield” period in Hungary (highlighted in red), in the context of the temporal extents of other periods from the same authority
 </figcaption>
@@ -87,7 +93,8 @@ Following the **view** link for a period in the **Periods** list will take you t
 <img class="screenshot"
      src="/images/period-view.png"
      alt="Viewing an individual period"
-     width="800">
+     width="800"
+     height="600">
 <figcaption>
 Viewing an individual period
 </figcaption>

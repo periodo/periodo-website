@@ -19,7 +19,8 @@ Initially you should see only one data source: the canonical PeriodO dataset (th
 <img class="screenshot"
      src="/images/select-data-source.png"
      alt="Selecting a data source"
-     width="800">
+     width="800"
+     height="280">
 <figcaption>
 
 </figcaption>

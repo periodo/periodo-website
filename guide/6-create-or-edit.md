@@ -7,7 +7,8 @@ slug: create-or-edit
 <img class="screenshot"
      src="/images/add-editable-data-source.png"
      alt="Adding an editable in-browser dataset"
-     width="800">
+     width="800"
+     height="395">
 <figcaption>
 Adding an editable data source in which to create a description of<br>the period “Age of Fracture”—also the title of historian<br>Daniel Rodgers' 2011 book, in which he defines it
 </figcaption>
@@ -23,7 +24,8 @@ First you need to provide some a citable description of the authoritative source
 <img class="screenshot"
      src="/images/copy-permalink.png"
      alt="Copying a permalink from WorldCat catalog"
-     width="550">
+     width="672"
+     height="256">
 <figcaption>
 Copying the permalink for <span style="font-style: normal">Age of Fracture</span> from the WorldCat catalog
 </figcaption>
@@ -35,7 +37,8 @@ If the source is a book or some other kind of artifact held by a library anywher
 <img class="screenshot"
      src="/images/linked-data-1.png"
      alt="Loading a citable description of a source from WorldCat"
-     width="800">
+     width="800"
+     width="395">
 <figcaption>
 Pasting the permalink for <span style="font-style: normal">Age of Fracture</span>into the PeriodO client
 </figcaption>
@@ -47,7 +50,8 @@ Paste the link you copied from WorldCat into the **Most published sources** tab 
 <img class="screenshot"
      src="/images/linked-data-2.png"
      alt="Loading a citable description of a source from WorldCat"
-     width="800">
+     width="800"
+     height="338">
 <figcaption>
 Confirming a citable description loaded from WorldCat
 </figcaption>
@@ -61,7 +65,8 @@ If the source is something less formally published, such as a web page, you'll n
 <img class="screenshot"
      src="/images/not-linked-data.png"
      alt="Manually entering a citable description of an authority"
-     width="800">
+     width="800"
+     height="720">
 <figcaption>
 Manually entering a citable description of an authority
 </figcaption>
@@ -77,7 +82,8 @@ Press **Save** to create your new authority. You will be navigated to **Authorit
 <img class="screenshot"
      src="/images/new-empty-authority.png"
      alt="Viewing a new, empty authority"
-     width="800">
+     width="800"
+     height="413">
 <figcaption>
 Viewing a new, empty authority
 </figcaption>
@@ -89,7 +95,8 @@ To add a period to the empty authority, navigate to **Authority > Add period**.
 <img class="screenshot"
      src="/images/edit-period-labels.png"
      alt="Editing period labels"
-     width="800">
+     width="800"
+     height="275">
 <figcaption>
 Editing period labels
 </figcaption>
@@ -103,7 +110,8 @@ If the original label is not in English, you should add at least one alternate l
 <img class="screenshot"
      src="/images/broader-narrower-periods.png"
      alt="Specifying relations to broader and narrower periods"
-     width="800">
+     width="800"
+     height="554">
 <figcaption>
 Specifying relations to broader and narrower periods:<br>
 the Early Minoan Period is part of the Bronze Age Period and has parts I, II, and III
@@ -122,7 +130,8 @@ To remove any related period, click the **X** beside its name.
 <img class="screenshot"
      src="/images/spatial-coverage.png"
      alt="Describing the spatial coverage of a period"
-     width="800">
+     width="800"
+     height="692">
 <figcaption>
 Describing the spatial coverage of a period
 </figcaption>
@@ -138,7 +147,8 @@ If you cannot find a place you would like to add to the coverage area, please [c
 <img class="screenshot"
      src="/images/parsed-dates.png"
      alt="Describing the temporal coverage of a period"
-     width="800">
+     width="800"
+     height="444">
 <figcaption>
 These descriptions of when the period starts and stops<br>have been automatically parsed into standardized forms.
 </figcaption>
@@ -154,7 +164,8 @@ Depending on what the label is, the interface may not be able to translate it in
 <img class="screenshot"
      src="/images/temporal-coverage.png"
      alt="Describing the temporal coverage of a period"
-     width="800">
+     width="800"
+     height="444">
 <figcaption>
 Manually entering standardized year values<br>inferred from a description of temporal coverage.
 </figcaption>
@@ -170,7 +181,8 @@ Finally, you can add explanatory notes about the period. The **Note** field is f
 <img class="screenshot"
      src="/images/edit-note.png"
      alt="Text excerpted from a source document into a note"
-     width="800">
+     width="800"
+     height="242">
 <figcaption>
 Text excerpted from a source document<br>that helps one better understand the period definition
 </figcaption>
@@ -194,7 +206,8 @@ After you've made your selection, you will see a list of the differences or *cha
 <img class="screenshot"
      src="/images/selecting-changes.png"
      alt="Importing authorities and periods from the canonical dataset"
-     width="800">
+     width="800"
+     height="884">
 <figcaption>
 Importing authorities and periods from the canonical dataset.<br>
 The “Life in biblical Israel” authority is selected to be imported,<br>

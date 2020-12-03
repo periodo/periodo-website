@@ -11,7 +11,8 @@ To select periods by name or label, enter some text in the search box under **Fi
 <img class="screenshot"
      src="/images/search-by-name.png"
      alt="Selecting periods by label"
-     width="800">
+     width="800"
+     height="178">
 <figcaption>
 Selecting periods with <code>bronz</code> in their labels
 </figcaption>
@@ -23,7 +24,8 @@ You can also use regular expressions to select periods by label.
 <img class="screenshot"
      src="/images/search-by-name-regex.png"
      alt="Selecting periods using a regular expression"
-     width="800">
+     width="800"
+     height="124.5">
 <figcaption>
 Selecting periods with either <code>plague</code> or <code>pandemic</code> in their labels
 </figcaption>
@@ -35,7 +37,8 @@ To select periods that start within a specific range of time, you can use the **
 <img class="screenshot"
      src="/images/select-by-time.png"
      alt="Selecting periods that start within a specific range"
-     width="800">
+     width="800"
+     height="146">
 <figcaption>
 Selecting periods that start between 0 and 1950 AD
 </figcaption>
@@ -49,7 +52,8 @@ To select periods that PeriodO curators have linked to Wikidata places, click or
 <img class="screenshot"
      src="/images/filter-by-place.png"
      alt="Selecting periods by linked place"
-     width="800">
+     width="800"
+     height="681">
 <figcaption>
 Selecting periods linked with the Wikidata records for Spain or France
 </figcaption>
@@ -65,7 +69,8 @@ The number or *count* before each value shows the number of periods in the curre
 <img class="screenshot"
      src="/images/using-facet-lists.png"
      alt="Selecting periods using facet lists"
-     width="800">
+     width="800"
+     height="268">
 <figcaption>
 Looking at Priestley's descriptions of his periods' spatial coverages
 </figcaption>
@@ -77,7 +82,8 @@ For example, if `Joseph Priestley. A new chart of history` is selected in the **
 <img class="screenshot"
      src="/images/spatial-coverage-no-value.png"
      alt="Some periods do not have a spatial coverage description"
-     width="800">
+     width="800"
+     height="265.5">
 <figcaption>
 The British Museum does not specify the spatial coverage of most of its periods
 </figcaption>
@@ -93,7 +99,8 @@ The **Spatial coverage** facet can also be used to select periods that PeriodO c
 <img class="screenshot"
      src="/images/filter-by-authority.png"
      alt="Selecting periods by authority"
-     width="800">
+     width="800"
+     height="267">
 <figcaption>
 Selecting periods from the ARIADNE and FASTI authorities
 </figcaption>
@@ -107,7 +114,8 @@ If you just want to look at the periods from a single authority, it is easier to
 <img class="screenshot"
      src="/images/filter-by-language.png"
      alt="Selecting periods by language"
-     width="800">
+     width="800"
+     height="265">
 <figcaption>
 Selecting periods with Turkish or Ukrainian names
 </figcaption>
@@ -121,7 +129,8 @@ Multiple filters can be set simultaneously, and only periods that match *all* of
 <img class="screenshot"
      src="/images/multiple-selection-criteria.png"
      alt="Using multiple criteria to select periods"
-     width="800">
+     width="800"
+     height="679">
 <figcaption>
 Using multiple criteria to select periods 
 </figcaption>
