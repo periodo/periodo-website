@@ -27,6 +27,9 @@ h3 {
 header h1 {
     margin-bottom: -0.5rem;
 }
+header span {
+    white-space: nowrap;
+}
 main {
     background-color: #ffffff;
 }
