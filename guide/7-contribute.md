@@ -7,8 +7,8 @@ Anyone can submit new periods or corrections to existing periods to be considere
 
 You will be prompted to select a web-based data source to submit your changes to. Typically this will be the canonical data source. After you've made your selection, you will see a **Log in with your ORCID** link. 
 
-<figure class="left">
-<img class="screenshot"
+<figure>
+<img class="center"
      src="/images/orcid-login.png"
      alt="The ORCID login form"
      width="612"
@@ -25,7 +25,7 @@ After successfully logging into the ORCID site, you should see the message **Cur
 Click **Continue** to see a list of the differences or “changes” between the data source that contains your new or corrected periods and the data source to which you want to submit them.
 
 <figure>
-<img class="screenshot center"
+<img class="screenshot"
      src="/images/submit-changes.png"
      alt="Confirming selected changes before submission"
      width="800"
@@ -40,7 +40,7 @@ Select the changes you would like to submit, scroll down to the bottom, and clic
 To check on the status of your submission, navigate to **Home > Data sources** and select the web data source to which you submitted your changes (again, typically this will be the canonical data source). Then navigate to **Data source > Review submitted changes** to see a list of all the submissions that have been made. Your new submission should be on top (unless someone else submitted changes in the meantime). Each submission shows the date and time it was made, who made it, and its status: **Open** means no decision has been made, **Merged** means the changes were accepted, and **Rejected** means the changes were rejected.
 
 <figure class="center">
-<img class="screenshot center"
+<img class="screenshot"
      src="/images/submitted-changes.png"
      alt="Viewing comments on submitted changes to the canonical periods"
      width="800"
@@ -51,6 +51,4 @@ Viewing comments on submitted changes to the canonical periods
 </figure>
 
 Click on a submission's status to see any comments that have been made about the submission, or to download the submitted changes as JSON. (You may also see controls to accept or reject the changes, but unless you are authorized to make changes to the web data source to which the changes were submitted, your acceptance or rejection will fail.)
-
-<div class="clear"></div>
 

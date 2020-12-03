@@ -20,8 +20,8 @@ You will see the **Browse periods** page, but there will be no periods to browse
 
 First you need to provide some a citable description of the authoritative source—information that could be used to find it online or in a library. 
 
-<figure class="right">
-<img class="screenshot"
+<figure>
+<img class="screenshot center"
      src="/images/copy-permalink.png"
      alt="Copying a permalink from WorldCat catalog"
      width="672"
