@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="A gazetteer of periods for linking and visualizing data.">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PeriodO &ndash; Getting into shapes with SHACL</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../images/favicon.ico" />
+  </head>
+  <body>
+    <nav class="choose-language">
+      <ul class="menu-list">
+        <li>
+          <a href=" /es/ ">Español</a>
+        </li>
+      </ul>
+    </nav>
+    <nav>
+      <ul class="menu-list">
+        <li class>
+          <a href="../../en/">Download</a>
+        </li>
+        <li class>
+          <a href="../../guide/">Guide</a>
+        </li>
+        <li class>
+          <a href="../../motivation/">Motivation</a>
+        </li>
+        <li class>
+          <a href="../../technical-overview/">Technical overview</a>
+        </li>
+        <li class>
+          <a href="../../publications/">Publications</a>
+        </li>
+        <li class>
+          <a href="../../contact/">Contact</a>
+        </li>
+        <li class>
+          <a href="../../contributors/">Thanks</a>
+        </li>
+        <li>
+          <a href="https://twitter.com/perio_do">
+            <!--[if gte IE 9]><!-->
+<img class="mark" alt="PeriodO tweeter account" src="../../images/tweeter-mark.svg" onerror="this.src='/images/tweeter-mark.png';this.onerror=null;">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<img class="mark" alt="PeriodO tweeter account" src="/images/tweeter-mark.png">
+<![endif]-->
+
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/periodo">
+            <!--[if gte IE 9]><!-->
+<img class="mark" alt="PeriodO repositories at GitHub" src="../../images/github-mark.svg" onerror="this.src='/images/github-mark.png';this.onerror=null;">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<img class="mark" alt="PeriodO repositories at GitHub" src="/images/github-mark.png">
+<![endif]-->
+
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <header>
+      <a href="../../en/">
+        <h1>
+          <!--[if gte IE 9]><!-->
+<img class="logo" alt="PeriodO" src="../../images/logo.svg" onerror="this.src='/images/logo.png';this.onerror=null;">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<img class="logo" alt="PeriodO" src="/images/logo.png">
+<![endif]-->
+
+        </h1>
+      </a>
+      <p>
+        <span>A gazetteer of periods for linking</span>
+        <span>and visualizing data.</span>
+      </p>
+    </header>
+
+    <main>
+      
+      <nav class="toc" role="navigation">
+        <ul>
+<li><a href="#getting-into-shapes-with-shacl">Getting into shapes 💪 with SHACL</a>
+<ul>
+<li><a href="#defining-shapes">Defining shapes</a></li>
+<li><a href="#validating-a-dataset">Validating a dataset</a></li>
+</ul></li>
+</ul>
+      </nav>
+      
+      <section>
+<h1 id="getting-into-shapes-with-shacl">Getting into shapes 💪 with SHACL</h1>
+<blockquote>
+<p>Those of us in libraries have always focused on the record – essentially a complex document that acts as a catalog surrogate for a complex thing, such as a book or a piece of recorded music. RDF says nothing about records.</p>
+<p>– <cite>Karen Coyle, <a href="http://kcoyle.blogspot.com/2009/07/yee-on-rdf-and-bibliographic-data.html">Yee on RDF and Bibliographic Data</a></cite></p>
+</blockquote>
+<p>The “complex things” that PeriodO is concerned with are definitions of historical periods, and the records we create are complex documents that act as surrogates for those definitions. We call those records <a href="http://perio.do/technical-overview/#periods">periods</a> which we group into other records we call <a href="http://perio.do/technical-overview/#authorities">authorities</a>, but until recently the only way we could express what we meant by those terms was through our documentation. Fortunately, we now have another option, in the form of a recommendation from the World Wide Web Consortium called the <a href="https://www.w3.org/TR/shacl/">Shapes Constraint Language</a>, or SHACL. The above-cited Karen Coyle recognized the usefulness of SHACL a couple of years ago, and wrote a very nice <a href="http://kcoyle.blogspot.com/2015/10/shacl-shapes-constraint-language.html">introduction to SHACL</a> that I recommend you read. But basically, what SHACL allows us to do is define “shapes” that capture expectations we have about about our records. We can then automatically check whether some RDF graph conforms to those expectations. This note is about how we’re using SHACL to check our assumptions about the PeriodO dataset.</p>
+</section>
+<section>
+<h2 id="defining-shapes">Defining shapes</h2>
+<p>Let’s look at how we define a shape for periods. The following RDF statements (written here in Turtle) assert some of the things we assume about periods. The <code>sh:</code> prefix indicates terms that come from the SHACL vocabulary, and the <code>periodo:</code> prefix indicates terms we’re defining for PeriodO:</p>
+<pre><code>periodo:PeriodShape
+  rdf:type sh:NodeShape ;
+  rdfs:label &quot;Period shape&quot; ;
+  sh:targetClass skos:Concept ;
+  sh:closed &quot;true&quot;^^xsd:boolean ;
+  sh:ignoredProperties (
+    rdf:type
+    ) ;
+  sh:property
+    periodo:PeriodPreferredLabelShape ,
+    periodo:PeriodLocalizedLabelShape ,
+    periodo:PeriodNoteShape ,
+    periodo:PeriodEditorialNoteShape ,
+    periodo:PeriodAuthorityShape ,
+    periodo:PeriodSourceShape ,
+    periodo:PeriodSourceIsPartOfShape ,
+    periodo:PeriodSourceLocatorShape ,
+    periodo:PeriodStartShape ,
+    periodo:PeriodStopShape ,
+    periodo:PeriodSpatialCoverageDescriptionShape ,
+    periodo:PeriodSpatialCoverageShape ,
+    periodo:PeriodSameAsShape ,
+    periodo:PeriodURLShape ,
+    periodo:PeriodLanguageShape
+  .</code></pre>
+<p>So, <code>periodo:PeriodShape rdf:type sh:NodeShape</code> says that we’re defining a “shape” that we call a <code>PeriodShape</code>, and <code>sh:targetClass skos:Concept</code> means that we expect anything in the PeriodO dataset that is a SKOS concept (as <a href="http://perio.do/technical-overview/#periods">our periods are</a>) to have this shape. Each of the things listed under <code>sh:property</code> is a separate assumption we are making about a property that a period may have. For example, here is the first assumption in that list, <code>PeriodPreferredLabelShape</code>:</p>
+<pre><code>periodo:PeriodPreferredLabelShape
+  rdf:type sh:PropertyShape ;
+  sh:path skos:prefLabel ;
+  sh:name &quot;preferred label&quot; ;
+  sh:description &quot;Name of the period as given in the source&quot; ;
+  sh:datatype xsd:string ;
+  sh:minCount 1 ;
+  sh:maxCount 1 ;
+  sh:message &quot;Problem with period preferred label&quot; ;
+  .</code></pre>
+<p>This expresses what we assume about periods: that they all have a preferred label (<code>sh:minCount 1</code>), that none of them have more than one preferred label (<code>sh:maxCount 1</code>), and that the value of the preferred label is a string with no language tag (<code>sh:datatype xsd:string</code>).</p>
+<p>Further down the list of assumptions is <code>PeriodStartShape</code>, which expresses our assumptions about <a href="http://perio.do/technical-overview/#temporal-extent">start intervals of temporal extents of periods</a>:</p>
+<pre><code>periodo:PeriodStartShape
+  rdf:type sh:PropertyShape ;
+  sh:path time:intervalStartedBy ;
+  sh:name &quot;start&quot; ;
+  sh:description &quot;Start interval for the period&quot; ;
+  sh:nodeKind sh:BlankNode ;
+  sh:node periodo:IntervalShape ;
+  sh:minCount 1 ;
+  sh:maxCount 1 ;
+  sh:message &quot;Problem with period start interval&quot; ;
+  .</code></pre>
+<p>Again, we expect that all periods have a start interval, and that none of them have more than one start interval. But here <code>sh:nodeKind sh:BlankNode</code> means that we expect the value of the start interval to be a <a href="https://en.wikipedia.org/w/index.php?title=Blank_node&amp;oldid=766352469#Usability">blank node</a>. (That just means we don’t bother assigning identifiers to start intervals, since they have a one-to-one relationship with periods, and so every start interval is already implicitly identified by its period’s identifier.) So the value of the start interval is just a grouping of statements about the start interval, but (using shapes) we can also now conceive of it as another kind of record: an interval record. <code>sh:node periodo:IntervalShape</code> means that we expect the the value of the start interval to conform to the shape identified as <code>periodo:IntervalShape</code>. This refers to another SHACL node shape that we’ve defined:</p>
+<pre><code>periodo:IntervalShape
+  rdf:type sh:NodeShape ;
+  rdfs:label &quot;Interval shape&quot; ;
+  sh:closed &quot;true&quot;^^xsd:boolean ;
+  sh:ignoredProperties (
+    rdf:type
+    ) ;
+  sh:property
+    periodo:IntervalPreferredLabelShape ,
+    periodo:IntervalDateTimeDescriptionShape
+  .</code></pre>
+<p>In this way we can build up definitions of more complex records (e.g. periods) out of definitions of simpler records (e.g. intervals).</p>
+<p>As we see above, each <code>sh:property</code> value in a node shape points to a separate assumption we are making about a property that the node may have. In the example above, the “node” was what we call a period. But do we intend this list of assumptions to comprehensive? What if a period has other properties that do not appear in this list? Is that OK?</p>
+<p>For PeriodO, we decided that it is not OK: we want every property to be explicitly documented. Thus we included the following in the definition of our period shape:</p>
+<pre><code>  sh:closed &quot;true&quot;^^xsd:boolean ;
+  sh:ignoredProperties (
+    rdf:type
+    ) ;
+</code></pre>
+<p><code>sh:closed "true"</code> means that this shape is not “open” in the sense of allowing unlisted properties: membership is closed. However, closing membership means that we’re now forced to state our assumptions about every single property that a period has (that was the whole point). But checking the <code>rdf:type</code> of each period is a bit silly, because we’ve already said that we expect the <code>PeriodShape</code> to apply to all SKOS concepts: effectively we’re already checking that the <code>rdf:type</code> value is <code>skos:Concept</code>. So, we include <code>rdf:type</code> in a collection of ignored properties.</p>
+<p>The full set of PeriodO shapes are now published in the <a href="http://n2t.net/ark:/99152/p0v">PeriodO vocabulary</a> and are in a <a href="https://github.com/periodo/periodo-validation/tree/master/shapes">git repository</a>.</p>
+</section>
+<section>
+<h2 id="validating-a-dataset">Validating a dataset</h2>
+<p>Defining shapes is useless unless there is something we can run that will automatically check whether some RDF graph conforms to them. Fortunately, Holger Knublauch has made an <a href="https://github.com/TopQuadrant/shacl/">open source SHACL validator</a> available, which we wrapped in a <a href="https://github.com/periodo/periodo-validation#usage">command line utility</a> for validating PeriodO data. This allows us to test the effects of adding new assumptions to, or removing existing assumptions from, the currently published set. For example, the following command will validate the currently published PeriodO data using any shapes found in the <code>shapes</code> directory, adding the assumptions from the file <code>added.ttl</code> and removing the assumptions found in the file <code>removed.ttl</code>:</p>
+<pre><code>./validate --shapes shapes --shapes added.ttl --remove removed.ttl</code></pre>
+<p>For a project like PeriodO, where the assumptions we make about the data we’re creating are tentative and intended to evolve over time, it’s very useful to be able to separate the management of the data from the management of those assumptions: we can then layer on assumptions over time as we reach consensus (or remove them if that consensus dissolves). Hopefully the shapes we’re publishing will also be useful for projects using PeriodO data and wanting a “schema.”</p>
+</section>
+    </main>
+
+    <footer>
+      <a href="http://www.neh.gov/">
+        <!--[if gte IE 9]><!-->
+<img class="logo" alt="National Endownment for the Humanities" src="../../images/neh-logo.svg" onerror="this.src='/images/neh-logo.png';this.onerror=null;">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<img class="logo" alt="National Endownment for the Humanities" src="/images/neh-logo.png">
+<![endif]-->
+
+      </a>
+      <a style="float: right" href="http://www.imls.gov/">
+        <!--[if gte IE 9]><!-->
+<img class="logo" alt="Institute of Museum and Library Services" src="../../images/imls-logo.svg" onerror="this.src='/images/imls-logo.png';this.onerror=null;">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<img class="logo" alt="Institute of Museum and Library Services" src="/images/imls-logo.png">
+<![endif]-->
+
+      </a>
+    </footer>
+  </body>
+</html>

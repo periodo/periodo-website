@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Un índice de definiciones de períodos para enlazar y vizualizar datos.">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PeriodO &ndash; Resumen Técnico</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" />
+  </head>
+  <body>
+    <nav class="choose-language">
+      <ul class="menu-list">
+        <li>
+          <a href=" /technical-overview/ ">English</a>
+        </li>
+      </ul>
+    </nav>
+    <nav>
+      <ul class="menu-list">
+        <li class>
+          <a href="../es/">Descargar</a>
+        </li>
+        <li class>
+          <a href="../guide/">Guide</a>
+        </li>
+        <li class>
+          <a href="../motivacion/">Motivación</a>
+        </li>
+        <li class="menu-selected">
+          <a href="../resumen-tecnico/">Resumen técnico</a>
+        </li>
+        <li class>
+          <a href="../publications/">Publications</a>
+        </li>
+        <li class>
+          <a href="../contact/">Contact</a>
+        </li>
+        <li class>
+          <a href="../contributors/">Thanks</a>
+        </li>
+        <li>
+          <a href="https://twitter.com/perio_do">
+            <!--[if gte IE 9]><!-->
+<img class="mark" alt="PeriodO tweeter account" src="../images/tweeter-mark.svg" onerror="this.src='/images/tweeter-mark.png';this.onerror=null;">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<img class="mark" alt="PeriodO tweeter account" src="/images/tweeter-mark.png">
+<![endif]-->
+
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/periodo">
+            <!--[if gte IE 9]><!-->
+<img class="mark" alt="PeriodO repositories at GitHub" src="../images/github-mark.svg" onerror="this.src='/images/github-mark.png';this.onerror=null;">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<img class="mark" alt="PeriodO repositories at GitHub" src="/images/github-mark.png">
+<![endif]-->
+
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <header>
+      <a href="../es/">
+        <h1>
+          <!--[if gte IE 9]><!-->
+<img class="logo" alt="PeriodO" src="../images/logo.svg" onerror="this.src='/images/logo.png';this.onerror=null;">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<img class="logo" alt="PeriodO" src="/images/logo.png">
+<![endif]-->
+
+        </h1>
+      </a>
+      <p>
+        <span>Un índice de definiciones de</span>
+        <span>períodos para enlazar</span>
+        <span>y vizualizar datos.</span>
+      </p>
+    </header>
+
+    <main>
+      
+      <nav class="toc" role="navigation">
+        <ul>
+<li><a href="#linked-data">Linked Data</a></li>
+<li><a href="#definiciones-de-períodos">Definiciones de períodos</a>
+<ul>
+<li><a href="#etiquetas-y-documentación">Etiquetas y documentación</a></li>
+<li><a href="#fuente">Fuente</a></li>
+<li><a href="#extensión-temporal">Extensión temporal</a></li>
+<li><a href="#extensión-espacial">Extensión espacial</a></li>
+</ul></li>
+<li><a href="#colecciones-de-períodos">Colecciones de períodos</a></li>
+<li><a href="#identificadores">Identificadores</a></li>
+<li><a href="#serialización-de-datos">Serialización de datos</a></li>
+<li><a href="#interfaz-de-usuario">Interfaz de usuario</a></li>
+</ul>
+      </nav>
+      
+      <!-- note: MUST leave blank lines after paragraphs -->
+<section>
+<h2 id="linked-data">Linked Data</h2>
+<p>El índice PeriodO documenta definiciones de nombres de períodos históricos. Cada entrada en el índice identifica la definición de un solo período. Para que se incluya en el índice, la definición debe:</p>
+<ul>
+<li>darle un nombre al período,</li>
+<li>imponerle límites temporales al período,</li>
+<li>estar asociada implícita o explícitamente a una región geográfica, y</li>
+<li>haber sido publicada formal o informalmente en una fuente citable.</li>
+</ul>
+<p>Se le ha puesto mucho cuidado a la labor de asignarle a las definiciones de períodos identificadores estables que puedan resolverse a <a href="#definiciones-de-per%C3%ADodos">representaciones RDF</a> de definiciones de período. PeriodO presenta definiciones de período como conceptos <a href="http://www.w3.org/TR/skos-primer/">SKOS</a>. Estos se agrupan en esquemas de conceptos que comparten la misma fuente bibliográfica. La extensión temporal se expresa como citas directas de la fuente, y también via aproximaciones estructuradas de esta expresión modeladas usando la ontología <a href="http://www.w3.org/TR/owl-time/">OWL-Time</a>. De la misma manera la extensión espacial se representa a través de una cita textual (donde se provea) y un conjunto de identificadores que se refieren a entidades espaciales en recursos externos como <a href="http://wiki.dbpedia.org">DBpedia</a>.</p>
+<p>Ejemplos:</p>
+<ul>
+<li><p><a href="http://n2t.net/ark:/99152/p05krdxmkzt"><code>http://n2t.net/ark:/99152/p05krdxmkzt</code></a> identifica “la edad media” (Dark Age) como la definen Davis y Alcock en la página 97 de <a href="http://www.worldcat.org/oclc/37663433"><em>Sandy Pylos: an archaeological history from Nestor to Navarino</em></a> (ver la <a href="http://n2t.net/ark:/99152/p05krdxmkzt.json">representación JSON</a>). Esto es un ejemplo de una <em>definición de período</em>.</p></li>
+<li><p><a href="http://n2t.net/ark:/99152/p06v8w4"><code>http://n2t.net/ark:/99152/p06v8w4</code></a> identifica todas las definiciones de períodos de la base de datos de excavaciones arqueológicas <a href="http://fastionline.org">FastiOnline</a> (ver la <a href="http://n2t.net/ark:/99152/p06v8w4.json">representación JSON</a>). Esto es un ejemplo de una <em>colección de períodos</em>.</p></li>
+</ul>
+</section>
+<section>
+<h2 id="definiciones-de-períodos">Definiciones de períodos</h2>
+<p>El conjunto de datos PeriodO es esencialmente una colección de definiciones de período.</p>
+<section>
+<h3 id="etiquetas-y-documentación">Etiquetas y documentación</h3>
+<p>Una definición de período es un <a href="http://www.w3.org/TR/skos-reference/#concepts"><code>skos:Concept</code></a>, “una idea o noción,” según la Referencia SKOS. Utilizamos varias propiedades SKOS para describir definiciones de período:</p>
+<ul>
+<li><p><a href="http://www.w3.org/TR/skos-reference/#prefLabel"><code>skos:prefLabel</code></a> se usa para el nombre del período exactamente como se da en la fuente original. El valor de esta propiedad es un <a href="http://www.w3.org/TR/xmlschema11-2/#string">xsd:string</a> simple literal, sin etiqueta de idioma.</p></li>
+<li><p><a href="http://www.w3.org/TR/skos-reference/#altLabel"><code>skos:altLabel</code></a> se usa para nombres de período en idiomas específicos, asignados por los curadores de PeriodO. El valor de esta propiedad es un <a href="http://www.w3.org/TR/rdf11-concepts/#dfn-language-tagged-string">string con etiqueta de lenguaje</a>. La etiqueta de idioma consiste de (por lo menos)</p>
+<ol type="1">
+<li><p>una <a href="http://tools.ietf.org/html/bcp47#section-2.2.1">sub-etiqueta de idioma principal</a>, y</p></li>
+<li><p>una <a href="http://tools.ietf.org/html/bcp47#section-2.2.3">script subtag</a>.</p></li>
+</ol>
+<p>Siempre habrá por lo menos una <code>skos:altLabel</code>, con etiqueta de idioma <code>en</code>. Si la definición en la fuente no fue escrita en inglés, siempre habrá otra <code>skos:altLabel</code> con etiqueta de idioma indicando el idioma y secuencia de comandos de la definición. El idioma de la definición de la fuente se indica a través de una propiedad <a href="http://www.dublincore.org/documents/dces/#language"><code>dcelements:language</code></a> cuyo valor es una etiqueta de idioma como se describe arriba.</p></li>
+<li><p><a href="http://www.w3.org/TR/skos-reference/#note"><code>skos:note</code></a> se utiliza para notas sobre la definición de período tomada de o atribuida a la fuente original. Por ejemplo, la definición original de Pleiades de “El ascenso otomano (D.C 1300-1453) incluye la nota “termina con la conquista de Constantinopla.” El valor de esta propiedad es un <a href="http://www.w3.org/TR/xmlschema11-2/#string"><code>xsd:string</code></a> simple, literal, sin etiqueta de idioma.</p></li>
+<li><p><a href="http://www.w3.org/TR/skos-reference/#editorialNote"><code>skos:editorialNote</code></a> se usa para notas administrativas o editoriales que añaden curadores de PeriodO. Estas <em>no</em> aparecen en la fuente original. El valor de esta propiedad es un <a href="http://www.w3.org/TR/xmlschema11-2/#string"><code>xsd:string</code></a> simple, literal, sin etiqueta de idioma.</p></li>
+<li><p><a href="http://www.w3.org/TR/skos-reference/#inScheme"><code>skos:inScheme</code></a> se usa para vincular una definición de período a la <a href="#colecciones-de-per%C3%ADodos">colección de período</a> a la que pertenence.</p></li>
+</ul>
+</section>
+<section>
+<h3 id="fuente">Fuente</h3>
+<p>Usualmente la información sobre la fuente de una definición de período se provee con las propiedades de la <a href="#colecciones-de-per%C3%ADodos">colección de períodos</a> a la que pertenece. Sin embargo, en algunos casos puede existir información bibliográfica adicional que sea específica a una definición individual. En estos casos, utilizamos un <a href="http://dublincore.org/documents/dcmi-terms/#terms-source"><code>dcterms:source</code></a> para brindar dicha información adicional, y <a href="http://dublincore.org/documents/dcmi-terms/#terms-isPartOf"><code>dcterms:isPartOf</code></a> para enlazar la fuente de la definición a la fuente de la colección a la que pertenece. Por ejemplo, se indicaría la página específica del que proviene una definición de la siguiente manera:</p>
+<pre><code>&lt;p0tns5v4kdf&gt;
+    dcterms:source [
+        dcterms:isPartOf &lt;http://www.worldcat.org/oclc/63807908&gt; ;
+        bibo:locator &quot;page 25&quot;
+    ] .</code></pre>
+<p>(<code>bibo</code> es <a href="http://bibliontology.com">Bibliographic Ontology</a>.)</p>
+</section>
+<section>
+<h3 id="extensión-temporal">Extensión temporal</h3>
+<p>Utilizamos propiedades de <a href="https://www.w3.org/TR/owl-time/">Time Ontology</a> para describir la extensión temporal de las definiciones de períodos. Una definición de período es un <a href="https://www.w3.org/TR/owl-time/#time:ProperInterval"><code>time:ProperInterval</code></a>, un intervalo de tiempo con puntos de inicio y final distintos. Asumimos que estos puntos de inicio y final (inmediatos) nunca pueden identificarse precisamente, por eso es que nuestras descripciones se enfocan en describir los intervalos que abren y cierran el período:</p>
+<ul>
+<li><p><a href="https://www.w3.org/TR/owl-time/#time:intervalStartedBy"><code>time:intervalStartedBy</code></a> vincula la definición de período a un intervalo de tiempo (anónimo) que tiene el mismo punto de inicio (desconocido) que el período, y un punto final (desconocido) que viene antes del punto final del período. A esto nos referimos como el intervalo de <code>inicio</code> del período.</p></li>
+<li><p><a href="https://www.w3.org/TR/owl-time/#time:intervalFinishedBy"><code>time:intervalFinishedBy</code></a> vincula la definición de período a un intervalo de tiempo (anónimo) que tiene el mismo punto final (desconocido) que el período, y un punto de inicio (desconocido) que viene después del punto de inicio del período. A esto nos referimos como el intervalo de <code>fin</code> del período.</p></li>
+</ul>
+<figure>
+<!--[if gte IE 9]><!-->
+<img class="figure" alt="Un diagrama que muestra la relación entre la extensión temporal de un período y sus intervalos de inicio y fin" src="../images/start-stop-intervals-es.svg" onerror="this.src='/images/start-stop-intervals-es.png';this.onerror=null;">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<img class="figure" alt="Un diagrama que muestra la relación entre la extensión temporal de un período y sus intervalos de inicio y fin" src="/images/start-stop-intervals-es.png">
+<![endif]-->
+
+<figcaption>
+La relación entre la extensión temporal de un período<br>y sus intervalos de inicio y fin
+</figcaption>
+</figure>
+<p>Describimos los intervalos de inicio y fin de dos maneras. Ambas maneras de describirlos son requeridas; o sea, so n complementarias, no alternativas:</p>
+<ol type="1">
+<li><p><a href="http://www.w3.org/TR/skos-reference/#prefLabel"><code>skos:prefLabel</code></a> se usa para describir textualmente el intervalo exactamente como se da en la fuente original, por ejemplo “final del siglo uno a.C.” El valo de esta propiedad es un <a href="http://www.w3.org/TR/xmlschema11-2/#string">xsd:string</a> simple y literal sin etiqueta de idioma.</p></li>
+<li><p><a href="https://www.w3.org/TR/owl-time/#time:hasDateTimeDescription"><code>time:hasDateTimeDescription</code></a> se usa para describir el intervalo de una manera más estructurada. Esta propiedad vincula el intervalo a un <a href="https://www.w3.org/TR/owl-time/#time:DateTimeDescription"><code>time:DateTimeDescripion</code></a> (anónimo). Estas descripciones estructuradas son creadas por curadores de PeriodO.</p></li>
+</ol>
+<p>Actualmente utilizamos las siguientes propiedades en nuestras descripciones datetime:</p>
+<ul>
+<li><p><a href="https://www.w3.org/TR/owl-time/#time:year"><code>time:year</code></a> (año) para descripciones de intervalos que se pueden representar con un solo año. Por ejemplo, un intervalo con la descripción textual “600 aC” se puede describir con una descripción datetime que tenga un valor <code>time:year</code> de <code>-0599</code>.</p></li>
+<li><p><a href="http://n2t.net/ark:/99152/p0v#earliestYear"><code>periodo:earliestYear</code></a> y <a href="http://n2t.net/ark:/99152/p0v#latestYear"><code>periodo:latestYear</code></a> para descripciones de intervalos que deben ser representados como rangos. Por ejemplo, un intervalo con la descripción textual “siglo ocho d.C.” se puede describir con una descripción datetime que tenga un valor <code>periodo:earliestYear</code> de <code>-0799</code> y un valor <code>periodo:latestYear</code> de -<code>0700</code>.</p></li>
+</ul>
+<p>El datatype para los valores de <code>time:year</code>, <code>periodo:earliestYear</code> y <code>periodo:latestYear</code> es <a href="http://www.w3.org/TR/xmlschema11-2/#gYear"><code>xsd:gYear</code></a>. Nótese que:</p>
+<ol type="1">
+<li><p>Los valores <code>xsd:gYear</code> pueden tener <a href="http://www.w3.org/TR/xmlschema11-2/#partial-implementation">cualquier cantidad de dígitos</a>.</p></li>
+<li><p>Los valores <code>xsd:gYear</code> <a href="http://www.w3.org/TR/xmlschema11-2/#dateTime-value-space">pueden ser cero</a>. El valor <code>0000</code> se interpreta como 1 aC.</p></li>
+<li><p>Los valores <code>xsd:gYear</code> representan años del calendario Gregoriano y <a href="http://www.w3.org/TR/xmlschema11-2/#gYear">“no son, por lo general, convertibles a valores simples correspondientes a años en otros calendarios.”</a> Nos sentimos cómodos con esta limitación porque utilizamos estos valores solamente para el propósito de ordenar y visualizar las extensiones temporales de los intervalos. La <code>skos:prefLabel</code> de un intervalo no debe considerarse una descripción autoritaria.</p></li>
+</ol>
+<p>En el futuro puede que usemos propiedades adicionales en nuestras descripciones, por ejemplo para describir intervalos con granularidades más finas de un año.</p>
+</section>
+<section>
+<h3 id="extensión-espacial">Extensión espacial</h3>
+<p>Utilizamos las siguientes propiedades para describir las extensiones espaciales de las definiciones de períodos:</p>
+<ul>
+<li><p><a href="http://n2t.net/ark:/99152/p0v#spatialCoverageDescription"><code>periodo:spatialCoverageDescription</code></a> se usa para describir textualmente la extensión espacial exactamene como se da en la fuente original, por ejemplo “Oriente Próximo y Grecia.” El valor de esta propiedad es un <a href="http://www.w3.org/TR/xmlschema11-2/#string">xsd:string</a> simple, literal, sin etiqueta de idioma.</p></li>
+<li><p><a href="http://dublincore.org/documents/dcmi-terms/#terms-spatial"><code>dcterms:spatial</code></a> se usa para vincular una definición de período a descripciones de localidades en índices como DBpedia/Wikidata, GeoNames, o Pleiades.</p></li>
+</ul>
+</section>
+</section>
+<section>
+<h2 id="colecciones-de-períodos">Colecciones de períodos</h2>
+<p>Una colección de períodos es simplemente un grupo de definiciones de períodos que comparten una misma fuente. Usamos <a href="http://dublincore.org/documents/dcmi-terms/#terms-source"><code>dcterms:source</code></a> para vincular colecciones de períodos con descripciones bibliográficas de sus fuentes. En la medida de lo posible, nos apoyamos en bases de datos externas como WorldCat y CrossRef para procesar metadatos.</p>
+<p>Una colección de períodos es un <a href="http://www.w3.org/TR/skos-reference/#schemes"><code>skos:ConceptScheme</code></a>, “un agregado de uno o más conceptos SKOS.” Que dos definiciones de períodos pertenezcan a la misma colección de períodos no implica una relación semántica entre ellas, más allá de compartir la misma fuente. Particularmente, las definiciones de período que pertenece a una misma colección de períodos no constituyen un <em>periodización</em>, o sea, una división de tiempo histórico única, coherente y continua. En el futuro planeamos añadir propiedades para indicar si un grupo de definiciones de período constituye una periodización.</p>
+<p>El <a href="http://www.w3.org/TR/void/#root-resource">root resource</a> de los grupos de datos de PeriodO es un <a href="http://www.w3.org/TR/rdf-schema/#ch_bag"><code>rdf:Bag</code></a> (colección no ordenada) de colecciones de período.</p>
+</section>
+<section>
+<h2 id="identificadores">Identificadores</h2>
+<p>A cada definición de período se le atribuye su propio <a href="http://en.wikipedia.org/wiki/Uniform_resource_identifier">Uniform Resource Identifier</a> (URI) (basado en la web y resoluble) en forma de <a href="https://tools.ietf.org/html/draft-kunze-ark-18">Archival Resource Key</a> (ARK), acuñado a través del sistema de la Biblioteca Digital de California, <a href="http://ezid.cdlib.org/">EZID</a>. Estas ARKs son resolubles a representaciones de definiciones de períodos individuales, estructuradas y legibles a máquina.</p>
+<p>En la medida de lo posible se identifican fuentes con URIs de <a href="http://www.worldcat.org">WorldCat</a> o DOIs de <a href="http://www.crossref.org">CrossRef</a>, y los creadores se identifican con URIs de <a href="http://viaf.org">Virtual Authority File</a>.</p>
+</section>
+<section>
+<h2 id="serialización-de-datos">Serialización de datos</h2>
+<p>Las definiciones de períodos en el índice PeriodO se publican como <a href="http://json-ld.org/">JSON-LD</a>, una forma serializada del <a href="http://www.w3.org/RDF/">Resoruce Description Format</a> (RDF) utilizada para describir Linked Data. Todo el <a href="http://n2t.net/ark:/99152/p0d.json">conjunto de datos</a> está disponible en forma de archivo JSON para que pueda volver a utilizarse fácilmente en otros proyectos.</p>
+</section>
+<section>
+<h2 id="interfaz-de-usuario">Interfaz de usuario</h2>
+<p>Un <a href="https://client.perio.do">browser-based client</a> provee herramientas de búsqueda, visualización e ingreso de datos. También provee una interfaz para administrar las versiones distribuidas y el desarrollo colaborativo del conjunto de datos PeriodO. Toda la historia editorial del índice PerodO se publica como un conjunto de datos separado utilizando la ontología <a href="http://www.w3.org/TR/prov-primer/">PROV</a>.</p>
+</section>
+    </main>
+
+    <footer>
+      <a href="http://www.neh.gov/">
+        <!--[if gte IE 9]><!-->
+<img class="logo" alt="National Endownment for the Humanities" src="../images/neh-logo.svg" onerror="this.src='/images/neh-logo.png';this.onerror=null;">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<img class="logo" alt="National Endownment for the Humanities" src="/images/neh-logo.png">
+<![endif]-->
+
+      </a>
+      <a style="float: right" href="http://www.imls.gov/">
+        <!--[if gte IE 9]><!-->
+<img class="logo" alt="Institute of Museum and Library Services" src="../images/imls-logo.svg" onerror="this.src='/images/imls-logo.png';this.onerror=null;">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<img class="logo" alt="Institute of Museum and Library Services" src="/images/imls-logo.png">
+<![endif]-->
+
+      </a>
+    </footer>
+  </body>
+</html>
