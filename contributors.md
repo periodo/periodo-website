@@ -8,8 +8,8 @@ section ul {
     list-style-type: none;
 }
 section li {
-    line-height: 1.2em;
-    height: 1.6em;
+    line-height: 1.6rem;
+    margin-bottom: 1rem;
 }
 </style>
 
@@ -33,7 +33,7 @@ section li {
   [Stefanie Carter](https://orcid.org/0000-0002-0773-6139),
   [Thomas Rover](https://orcid.org/0000-0003-1524-6006), and
   [Will Hanley](https://history.fsu.edu/person/will-hanley) submitted early patches to the dataset.
-  
+
 </section>
 
 <section>

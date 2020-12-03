@@ -14,7 +14,7 @@ header {
     background-color: #336e9e;
     clear: both;
     font-size: 150%;
-    padding: 1em;
+    padding: 1rem;
 }
 h1,
 h2,
@@ -23,10 +23,10 @@ p {
 }
 h3 {
     margin: 0;
-    padding-top: 1em;
+    padding-top: 1rem;
 }
 header h1 {
-    margin-bottom: -0.5em;
+    margin-bottom: -0.5rem;
 }
 main {
     background-color: #ffffff;
@@ -37,7 +37,7 @@ a {
 .menu-list a {
     color: #656464;
     display: block;
-    padding: 1em;
+    padding: 1rem;
     text-decoration: none;
     white-space: nowrap;
 }
@@ -48,6 +48,9 @@ a {
     color: #336e9e;
     text-decoration: none;
     white-space: nowrap;
+}
+.references a {
+    word-break: break-all;
 }
 a:hover {
     color: #ffffff;
@@ -64,7 +67,7 @@ footer a:hover {
     display: none;
 }
 .mark {
-    margin-bottom: -0.25em;
+    margin-bottom: -0.25rem;
 }
 .choose-language {
     background-color: #f3f3f3;
@@ -85,7 +88,7 @@ nav::-webkit-scrollbar {
 .toc {
     background-color: #f3f3f3;
     display: inline-block;
-    line-height: 1.4em;
+    line-height: 1.4rem;
     margin: 20px 0 0 20px;
     padding: 20px;
 }
@@ -95,20 +98,17 @@ nav::-webkit-scrollbar {
     padding: 0;
 }
 .toc li ul {
-    margin-left: 1.1em;
+    margin-left: 1.1rem;
 }
 .download {
-    font-size: 1.1em;
+    font-size: 1.1rem;
 }
-p,
-dt,
-.figure,
-.gist {
-    line-height: 1.6em;
-    padding-top: 1em;
+p {
+    line-height: 1.6rem;
+    padding-top: 1rem;
 }
 table {
-    margin-top: 1em;
+    margin-top: 1rem;
 }
 th {
     text-align: center;
@@ -121,61 +121,56 @@ td.center {
     text-align: center;
 }
 figure {
-    margin: 1.5em 0 1em;
+    margin: 1.5rem 0 1rem;
 }
-.figure {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+figure img {
+    max-width: calc(100% - 16px);
+    height: auto;
 }
 figcaption {
     font-size: smaller;
     font-style: italic;
-    margin-top: 0.5em;
+    margin-top: 0.5rem;
     text-align: center;
 }
 code {
     font-style: normal;
-}
-.figure figcaption::before {
-    content: "Figure " counter(figure) ": ";
-    counter-increment: figure;
+    max-width: 10px;
 }
 pre {
     border: 1px solid;
-    padding: 1em;
-}
-p > code {
-    background-color: #f3f3f3;
+    padding: 1rem;
+    overflow-x: scroll;
+    max-width: calc(100vw - 100px);
 }
 blockquote {
     background-color: #f3f3f3;
-    padding: 0 1em 1em;
+    padding: 0 1rem 1rem;
 }
 .button {
     background-color: #336e9e;
     color: #ffffff;
     display: inline-block;
     font-weight: bold;
-    margin: 1em 0.5em 0 0;
-    padding: 0.5em 1em;
+    margin: 1rem 0.5rem 0 0;
+    padding: 0.5rem 1rem;
     text-decoration: none;
 }
 .button:hover {
     background: linear-gradient(#336e9e, #265378);
 }
 section {
-    max-width: 50em;
-    padding: 1em;
+    max-width: 50rem;
+    padding: 1rem;
 }
 .references {
-    margin-top: -2.5em;
-    max-width: 50em;
-    padding: 1em;
+    margin-top: -2rem;
+    max-width: 50rem;
+    padding: 1rem;
 }
 .references p {
-    margin-left: 1.2em;
-    text-indent: -1.2em;
+    margin-left: 1.2rem;
+    text-indent: -1.2rem;
 }
 .screenshot {
     border: 1px solid #c1c1c1;
@@ -198,16 +193,16 @@ section {
 }
 .anchor {
     clear: both;
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
 }
 footer {
     background-color: #f3f3f3;
     padding: 20px;
 }
 
-@media (min-width: 72em) {
+@media (min-width: 72rem) {
     .toc {
         position: fixed;
-        left: 52em;
+        left: 52rem;
     }
 }
