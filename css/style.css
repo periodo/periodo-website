@@ -36,6 +36,9 @@ main {
 a {
     color: #336e9e;
 }
+li a {
+    word-break: break-all;
+}
 .menu-list a {
     color: #656464;
     display: block;
