@@ -27,7 +27,7 @@ The map can be zoomed using the **+** and **-** buttons or keys and panned by dr
      alt="Comparing timeline styles"
      width="800">
 <figcaption>
-Comparing periods' temporal extents<br>as a histogram (top) or stacked bars (bottom)
+Comparing periods' temporal extents as a histogram (top) or stacked bars (bottom)
 </figcaption>
 </figure>
 
@@ -65,7 +65,7 @@ Selecting the “Доба пізньої бронзи” (Late Bronze Age) perio
      alt="Focusing on the spatial extent of a period"
      width="800">
 <figcaption>
-Looking at the spatial extent of the “Early Urnfield” period in Hungary (highlighted in red),<br>in the context of the spatial extents of other periods from the same authority (highlighted in purple)
+Looking at the spatial extent of the “Early Urnfield” period in Hungary (highlighted in red), in the context of the spatial extents of other periods from the same authority (highlighted in purple)
 </figcaption>
 </figure>
 
@@ -77,7 +77,7 @@ When you have a period selected in the period list, it will be highlighted in re
      alt="Focusing on the temporal extent of a period"
      width="800">
 <figcaption>
-Looking at the temporal extent of the “Early Urnfield” period in Hungary (highlighted in red),<br>in the context of the temporal extents of other periods from the same authority
+Looking at the temporal extent of the “Early Urnfield” period in Hungary (highlighted in red), in the context of the temporal extents of other periods from the same authority
 </figcaption>
 </figure>
 
