@@ -107,19 +107,6 @@ p {
     line-height: 1.6rem;
     padding-top: 1rem;
 }
-table {
-    margin-top: 1rem;
-}
-th {
-    text-align: center;
-    vertical-align: middle;
-}
-td.right {
-    text-align: right;
-}
-td.center {
-    text-align: center;
-}
 figure {
     margin: 1.5rem 0 1rem;
 }
