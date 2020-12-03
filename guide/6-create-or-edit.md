@@ -21,11 +21,11 @@ You will see the **Browse periods** page, but there will be no periods to browse
 First you need to provide some a citable description of the authoritative source—information that could be used to find it online or in a library. 
 
 <figure>
-<img class="screenshot center"
+<img class="screenshot"
      src="/images/copy-permalink.png"
      alt="Copying a permalink from WorldCat catalog"
-     width="672"
-     height="256">
+     width="800"
+     height="326">
 <figcaption>
 Copying the permalink for <span style="font-style: normal">Age of Fracture</span> from the WorldCat catalog
 </figcaption>
