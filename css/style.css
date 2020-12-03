@@ -124,7 +124,7 @@ figure {
     margin: 1.5rem 0 1rem;
 }
 figure img {
-    max-width: calc(100% - 16px);
+    max-width: calc(100% - 32px);
     height: auto;
 }
 figcaption {
