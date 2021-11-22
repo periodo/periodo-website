@@ -18,7 +18,7 @@ deploy: _site
 	git -C $< add .
 	git -C $< commit -m "Generated on $(shell date)"
 	git -C $< remote add origin "git@github.com:periodo/periodo-website.git"
-	git -C $< push -f origin master:master
+	git -C $< push -f origin main:main
 
 .PHONY: clean
 clean:
