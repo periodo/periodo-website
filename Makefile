@@ -22,4 +22,4 @@ deploy: _site
 
 .PHONY: clean
 clean:
-	rm -rf _site _cache .stack-work
+	rm -rf _site _cache .stack-work stack.yaml.lock
