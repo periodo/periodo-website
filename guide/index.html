@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="A gazetteer of periods for linking and visualizing data.">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PeriodO &ndash; Guide to using PeriodO</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" />
+  </head>
+  <body>
+    <nav class="choose-language">
+      <ul class="menu-list">
+        <li>
+          <a href=" /es/ ">Español</a>
+        </li>
+      </ul>
+    </nav>
+    <nav>
+      <ul class="menu-list">
+        <li class>
+          <a href="../en/">Download</a>
+        </li>
+        <li class="menu-selected">
+          <a href="../guide/">Guide</a>
+        </li>
+        <li class>
+          <a href="../motivation/">Motivation</a>
+        </li>
+        <li class>
+          <a href="../technical-overview/">Technical overview</a>
+        </li>
+        <li class>
+          <a href="../publications/">Publications</a>
+        </li>
+        <li class>
+          <a href="../contact/">Contact</a>
+        </li>
+        <li class>
+          <a href="../contributors/">Thanks</a>
+        </li>
+        <li>
+          <a href="https://github.com/periodo">
+            <!--[if gte IE 9]><!-->
+<img class="mark" alt="PeriodO repositories at GitHub" src="../images/github-mark.svg" onerror="this.src='/images/github-mark.png';this.onerror=null;">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<img class="mark" alt="PeriodO repositories at GitHub" src="/images/github-mark.png">
+<![endif]-->
+
+          </a>
+        </li>
+        <li>
+          <a href="https://hcommons.social/@periodo">
+            <!--[if gte IE 9]><!-->
+<img class="mark" alt="PeriodO updates" src="../images/tweeter-mark.svg" onerror="this.src='/images/tweeter-mark.png';this.onerror=null;">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<img class="mark" alt="PeriodO updates" src="/images/tweeter-mark.png">
+<![endif]-->
+
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <header>
+      <a href="../en/">
+        <h1>
+          <!--[if gte IE 9]><!-->
+<img class="logo" alt="PeriodO" src="../images/logo.svg" onerror="this.src='/images/logo.png';this.onerror=null;">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<img class="logo" alt="PeriodO" src="/images/logo.png">
+<![endif]-->
+
+        </h1>
+      </a>
+      <p>
+        <span>A gazetteer of periods for linking</span>
+        <span>and visualizing data.</span>
+      </p>
+    </header>
+
+    <main>
+      
+      <nav class="toc" role="navigation">
+  <ul>
+    
+    <li><a href="#open-the-canonical-dataset">Open the canonical periods</a></li>
+    
+    <li><a href="#select-periods">Select periods of interest</a></li>
+    
+    <li><a href="#browse-periods">Browse selected periods</a></li>
+    
+    <li><a href="#browse-authorities">Browse source authorities</a></li>
+    
+    <li><a href="#get-structured-data">Get periods as structured data</a></li>
+    
+    <li><a href="#create-or-edit">Create or edit your own periods</a></li>
+    
+    <li><a href="#contribute">Contribute to the canonical periods</a></li>
+    
+  </ul>
+</nav>
+<div>
+  
+  <section>
+    <h2 id="open-the-canonical-dataset">Open the canonical periods</h2>
+    <p>The <a href="https://client.perio.do">PeriodO client</a> runs in your browser. You can use it to browse or edit any dataset that conforms to the PeriodO data model. But most people are probably interested in looking at the <em>canonical</em> dataset of periods curated by the PeriodO project.</p>
+<p>When you first open the client, you are prompted to select an existing data source or specify the location of a new data source. The client supports loading data from three kinds of sources:</p>
+<ul>
+<li><p>A <em>web</em> source is a URL (web address starting with <code>https</code>). Data loaded from the web (including the canonical dataset) can only be browsed, not directly edited.</p></li>
+<li><p>A <em>file</em> source is a local (on your computer) JSON file. Data loaded from files are also browse-only.</p></li>
+<li><p>An <em>in-browser</em> source is a <a href="#create-or-edit">database</a> running in your browser. Data from an in-browser source can be edited as well as browsed.</p></li>
+</ul>
+<p>Initially you should see only one data source: the canonical PeriodO dataset (the one downloadable at <a href="http://n2t.net/ark:/99152/p0d.json"><code>http://n2t.net/ark:/99152/p0d.json</code></a>).</p>
+<figure>
+<img class="screenshot" src="../images/select-data-source.png" alt="Selecting a data source" width="800" height="280">
+<figcaption>
+</figcaption>
+</figure>
+<p>Clicking on the name of the data source (<strong>Canonical</strong>) will load its data into the client and show the <strong>Browse periods</strong> page.</p>
+  </section>
+  
+  <section>
+    <h2 id="select-periods">Select periods of interest</h2>
+    <p>At the top of the <strong>Browse periods</strong> page you can set some filters to select the set of periods you’re interested in looking at. Each filter changes the currently selected set of periods.</p>
+<p>To select periods by name or label, enter some text in the search box under <strong>Filter periods &gt; By label</strong>. If the <strong>Match labels</strong> option is selected, only periods with preferred (original) labels matching the entered text will be selected. If the <strong>Match labels + alternate labels</strong> option is selected, periods with alternate (translated) labels matching the entered text will also be selected.</p>
+<figure>
+<img class="screenshot" src="../images/search-by-name.png" alt="Selecting periods by label" width="800" height="178">
+<figcaption>
+Selecting periods with <code>bronz</code> in their labels
+</figcaption>
+</figure>
+<p>You can also use regular expressions to select periods by label.</p>
+<figure>
+<img class="screenshot" src="../images/search-by-name-regex.png" alt="Selecting periods using a regular expression" width="800" height="124.5">
+<figcaption>
+Selecting periods with either <code>plague</code> or <code>pandemic</code> in their labels
+</figcaption>
+</figure>
+<p>To select periods that start within a specific range of time, you can use the <strong>By time</strong> filter. By default <strong>Browse periods</strong> only shows periods that start after 50,000 BC, since the very long time periods of the distant past are difficult to visualize alongside the shorter periods of human history. Drag the slider handles at each end of selected range to change it.</p>
+<figure>
+<img class="screenshot" src="../images/select-by-time.png" alt="Selecting periods that start within a specific range" width="800" height="146">
+<figcaption>
+Selecting periods that start between 0 and 1950 AD
+</figcaption>
+</figure>
+<p>To select periods related to specific places, you have two options. The first option is to select periods that PeriodO curators have explicitly linked to places identified in <a href="https://www.wikidata.org/">Wikidata</a>. The second option is to select periods based on how the of the period was described by the source authority.</p>
+<p>To select periods that PeriodO curators have linked to Wikidata places, click or tap <strong>Select places</strong> under <strong>Filter periods &gt; By place</strong>. A map and a search box will appear.</p>
+<figure>
+<img class="screenshot" src="../images/filter-by-place.png" alt="Selecting periods by linked place" width="800" height="681">
+<figcaption>
+Selecting periods linked with the Wikidata records for Spain or France
+</figcaption>
+</figure>
+<p>Enter some text to see a list of matching place names. Select a place name to add it to the selection. Adding multiple places to the selection will show periods linked to <em>any</em> of those places. To remove a place from the selection, click the <strong>X</strong> following the place name, or use <code>Tab</code> to highlight the place name and then press <code>Delete</code>. The spatial coverage of the places in the selection will be shown on the map until you click <strong>Done</strong>.</p>
+<p>To select periods based on how the spatial coverage of the period was described by the source authority, use the <strong>Spatial coverage</strong> facet list under <strong>By authority, language or spatial coverage</strong>. These three facet lists all work similarly. Each facet list shows—with respect to some property (or <em>facet</em> ) of the PeriodO data model—all the different values that the periods in the currently selected set have associated with that property.</p>
+<p>The number or <em>count</em> before each value shows the number of periods in the currently selected set that have that particular value associated with them. Clicking on a value in the list will narrow the currently selected set of periods to show only the periods having that value. Clicking multiple values will select periods having <em>any</em> of the selected values. If any values in a facet list are selected, the count before each <em>un</em>selected value is the number of periods that would be added to the selected set if that value were to be selected. Click a selected value again to unselect it. Click <strong>Clear</strong> to unselect all the selected values.</p>
+<figure>
+<img class="screenshot" src="../images/using-facet-lists.png" alt="Selecting periods using facet lists" width="800" height="268">
+<figcaption>
+Looking at Priestley’s descriptions of his periods’ spatial coverages
+</figcaption>
+</figure>
+<p>For example, if <code>Joseph Priestley. A new chart of history</code> is selected in the <strong>Authority</strong> facet list, the <strong>Spatial coverage</strong> facet list will show all the different ways that Priestley described the spatial coverages of the periods in his chart. The list is ordered by <em>count</em>, with the most common spatial coverage description first and the least common one last.</p>
+<figure>
+<img class="screenshot" src="../images/spatial-coverage-no-value.png" alt="Some periods do not have a spatial coverage description" width="800" height="265.5">
+<figcaption>
+The British Museum does not specify the spatial coverage of most of its periods
+</figcaption>
+</figure>
+<p>Note that the most common spatial coverage description is <code>(no value)</code>! Some source authorities, such as the British Museum, do not explicitly describe the spatial coverage of their periods. This is one reason why PeriodO curators augment the source authority’s spatial coverage description with links to Wikidata places.</p>
+<p>To look for a specific value in a facet list, it is easier if the list is ordered alphabetically: click the <strong>⚙</strong> button at the top of the list and select <strong>Order by label</strong>.</p>
+<p>The <strong>Spatial coverage</strong> facet can also be used to select periods that PeriodO curators have linked to Wikidata places. To see all the different Wikidata places linked to periods in the currently selected set, click the <strong>⚙</strong> button at the top of the list and select <strong>Use spatial coverage linked places</strong>.</p>
+<figure>
+<img class="screenshot" src="../images/filter-by-authority.png" alt="Selecting periods by authority" width="800" height="267">
+<figcaption>
+Selecting periods from the ARIADNE and FASTI authorities
+</figcaption>
+</figure>
+<p>To select periods defined by specific authorities, locate and select them in the <strong>Authority</strong> facet list. In addition to ordering the authorities by count or by label, you can also order them by publication year. Click the <strong>⚙</strong> button at the top of the list and select <strong>Order by publication year</strong>.</p>
+<p>If you just want to look at the periods from a single authority, it is easier to <a href="#browse-authorities">browse authorities</a>.</p>
+<figure>
+<img class="screenshot" src="../images/filter-by-language.png" alt="Selecting periods by language" width="800" height="265">
+<figcaption>
+Selecting periods with Turkish or Ukrainian names
+</figcaption>
+</figure>
+<p>Selecting periods by language works just like the other facet lists: click on one or more languages in the <strong>Language</strong> facet list to show only periods with preferred labels in those languages.</p>
+<p>Multiple filters can be set simultaneously, and only periods that match <em>all</em> of the filters will be selected. For example on may select periods that <strong>1)</strong> have <code>bronz</code> in their labels, <strong>2)</strong> are linked with the Wikidata records for Spain or France, and <strong>3)</strong> are defined by the ARIADNE authority. The results will include only periods that satisfy all three of these criteria.</p>
+<figure>
+<img class="screenshot" src="../images/multiple-selection-criteria.png" alt="Using multiple criteria to select periods" width="800" height="679">
+<figcaption>
+Using multiple criteria to select periods
+</figcaption>
+</figure>
+<p>The current selection filters are reflected in the URL. This means that after using the filters to select a set of periods, the URL in the browser’s address bar can be copied and pasted to share the selected set of periods with someone else. (Note that this will only work if you are browsing the canonical PeriodO dataset or another web source.)</p>
+<p>To reset all the selection filters to their default values, click the PeriodO logo at the top of the page.</p>
+<p>To collapse and hide the selection filter controls, click the <strong>Filter periods</strong> header.</p>
+  </section>
+  
+  <section>
+    <h2 id="browse-periods">Browse selected periods</h2>
+    <p>The currently selected set of periods is displayed both as regions on a map and as as spans on a timeline.</p>
+<figure>
+<img class="screenshot" src="../images/map-view.png" alt="Seeing the spatial coverage of a set of periods" width="800" height="537">
+<figcaption>
+Looking at the combined spatial coverage of periods defined by the Levantine Ceramics Project
+</figcaption>
+</figure>
+<p>Use the map to get a sense of the combined spatial coverage of the selected periods, as specified by the Wikidata places they are linked to. The regions highlighted in purple indicate the spatial extents of all the Wikidata places linked to by the selected set of periods.</p>
+<p>The map display should be interpreted cautiously, as not all periods are linked to Wikidata places, and not all Wikidata places are currently mappable (meaning we do not yet have an authoritative source for the geometry of their spatial extents.) Learn more about the <a href="https://github.com/periodo/periodo-places#readme">PeriodO place name gazetteers</a>.</p>
+<p>The map can be zoomed using the <strong>+</strong> and <strong>-</strong> buttons or keys and panned by dragging. Hide the map by clicking the <strong>Spatial coverage</strong> header.</p>
+<figure>
+<img class="screenshot" src="../images/timeline-styles.png" alt="Comparing timeline styles" width="800" height="410">
+<figcaption>
+Comparing periods’ temporal extents as a histogram (top) or stacked bars (bottom)
+</figcaption>
+</figure>
+<p>Use the timeline to compare the temporal extents of the selected periods. There are two styles of timeline. The histogram style shows, for each unit of time, how many of the selected periods include that unit. The stacked bars style shows the temporal extent of each period as a horizontal bar.</p>
+<p>Hide the timeline by clicking the <strong>Temporal coverage</strong> header.</p>
+<figure>
+<img class="screenshot" src="../images/browse-period-list.png" alt="Browsing a list of selected periods" width="800" height="370">
+<figcaption>
+Browsing periods linked to the Wikidata record for Syria
+</figcaption>
+</figure>
+<p>Below the timeline you will see a scrollable list of the currently selected <strong>Periods</strong>. The list can be sorted by clicking on the column headers.</p>
+<figure>
+<img class="screenshot" src="../images/period-details.png" alt="Viewing detailed information about a selected period" width="800" height="748">
+<figcaption>
+Selecting the “Доба пізньої бронзи” (Late Bronze Age) period to view its details
+</figcaption>
+</figure>
+<p>Hovering over a period in the list will display (below the list) detailed information about that period and the authority that defined it. Clicking on a period to select it will keep the detailed view focused on it. You can then use the up and down arrow keys to change the selected period.</p>
+<figure>
+<img class="screenshot" src="../images/map-focus.png" alt="Focusing on the spatial extent of a period" width="800" height="540">
+<figcaption>
+Looking at the spatial extent of the “Early Urnfield” period in Hungary (highlighted in red), in the context of the spatial extents of other periods from the same authority (highlighted in purple)
+</figcaption>
+</figure>
+<p>When you have a period selected in the period list, it will be highlighted in red in both the map and the timeline view.</p>
+<figure>
+<img class="screenshot" src="../images/timeline-focus.png" alt="Focusing on the temporal extent of a period" width="800" height="374">
+<figcaption>
+Looking at the temporal extent of the “Early Urnfield” period in Hungary (highlighted in red), in the context of the temporal extents of other periods from the same authority
+</figcaption>
+</figure>
+<p>Following the <strong>view</strong> link for a period in the <strong>Periods</strong> list will take you to the <strong>Period &gt; View</strong> page for that period.</p>
+<figure>
+<img class="screenshot" src="../images/period-view.png" alt="Viewing an individual period" width="800" height="600">
+<figcaption>
+Viewing an individual period
+</figcaption>
+</figure>
+<p>Viewing a period shows some key points about it: preferred label, temporal extent, and spatial coverage, all as given by the source authority, to which a <strong>Defined by</strong> link is provided. Any notes from the original author or the editors who added the period are shown here too.</p>
+<p>Every period in the canonical dataset has been assigned a stable, permanent URL, also known as a <strong>Permalink</strong>. Right-click on this link to copy it. You should always use the permalink when referring to a period or sharing it with others—URLs displayed in the browser address bar may change over time, but permalinks are (relatively) guaranteed to be resolvable for the long term.</p>
+<p>Following a PeriodO period permalink in a web browser should lead to the <strong>Period &gt; View</strong> page for that period.</p>
+<p>To <strong>Download</strong> the period as structured data (JSON or Turtle), click on the appropriate link.</p>
+<p>When viewing a period, click the name of the authority that defined the period (after <strong>Defined by</strong>) or click on <strong>Authority &gt; View</strong> in the navigation menu to navigate to the authority.</p>
+  </section>
+  
+  <section>
+    <h2 id="browse-authorities">Browse source authorities</h2>
+    <p>To find and view specific authorities, use the <strong>Browse authorities</strong> page. The list of authorities can be sorted by clicking on the column headers. Narrow the list by using the search box to show only matching authorities.</p>
+<figure>
+<img class="screenshot" src="../images/browse-authorities.png" alt="Browsing the list of authorities" width="800" height="664">
+<figcaption>
+Looking at authorities with the word <code>cultural</code> in their names, ordered by publication year
+</figcaption>
+</figure>
+<p>Following the <strong>view</strong> link for an authority in the list will take you to the <strong>Authority &gt; View</strong> page for that period.</p>
+<figure>
+<img class="screenshot" src="../images/authority-view.png" alt="Viewing an authority" width="800" height="600">
+<figcaption>
+Viewing an individual authority
+</figcaption>
+</figure>
+<p>Navigating to an individual authority will show its name, creators, and other citable information. Any notes from the original author or the editors who added the authority are shown here too, if they are relevant to the authority as a whole.</p>
+<p>As with periods, every authority in the canonical dataset also has been assigned a <strong>Permalink</strong>. Again, you should always use the permalink when referring to an authority or sharing it with others.</p>
+<p>To <strong>Download</strong> the authority as structured data (JSON or Turtle), click on the appropriate link.</p>
+<p>The rest of the <strong>Authority &gt; View</strong> page works just like <a href="#browse-periods">browsing periods</a>, except that now all the periods belong to a single authority.</p>
+  </section>
+  
+  <section>
+    <h2 id="get-structured-data">Get periods as structured data</h2>
+    <p>The canonical PeriodO dataset can be downloaded as a JSON-LD file:</p>
+<p><a href="http://n2t.net/ark:/99152/p0d.json"><code>http://n2t.net/ark:/99152/p0d.json</code></a></p>
+<p>As a Turtle file:</p>
+<p><a href="http://n2t.net/ark:/99152/p0d.ttl"><code>http://n2t.net/ark:/99152/p0d.ttl</code></a></p>
+<p>Or as a CSV file:</p>
+<p><a href="http://n2t.net/ark:/99152/p0d.csv"><code>http://n2t.net/ark:/99152/p0d.csv</code></a></p>
+<p>You can also download individual authorities and periods as structured data: navigate to any individual period or authority and use the <strong>Download</strong> links.</p>
+<p>Depending on how they are followed, PeriodO permalinks will lead either to a structured data representation of the linked period or authority, or to a view of that data loaded in the PeriodO client.</p>
+<p>For example:</p>
+<ul>
+<li><p>Following the permalink for <code>Energy epoch four: flesh</code> (<a href="http://n2t.net/ark:/99152/p0323gxv8wc"><code>http://n2t.net/ark:/99152/p0323gxv8wc</code></a>) in a browser will open the <strong>Period &gt; View</strong> page in the client showing the the details of that period.</p></li>
+<li><p>Specifying an <code>accept: application/json</code> HTTP header and requesting the same permalink will return a JSON-LD representation of the period:</p>
+<pre><code>curl -s -L -H 'accept: application/json' \
+http://n2t.net/ark:/99152/p0323gxv8wc \
+| riot --syntax=jsonld --count
+
+stdin           : Triples = 22</code></pre></li>
+<li><p>Specifying an <code>accept: text/turtle</code> HTTP header and requesting the same permalink will return a Turtle representation of the period:</p>
+<pre><code>curl -s -L -H 'accept: text/turtle' \
+http://n2t.net/ark:/99152/p0323gxv8wc \
+| riot --syntax=turtle --count
+
+stdin           : Triples = 22</code></pre></li>
+<li><p>To link directly to the JSON-LD representation of the period, append <code>.json</code> to the end of the permalink: <a href="http://n2t.net/ark:/99152/p0323gxv8wc.json"><code>http://n2t.net/ark:/99152/p0323gxv8wc.json</code></a></p></li>
+<li><p>To link directly to the Turtle representation of the period, append <code>.ttl</code> to the end of the permalink: <a href="http://n2t.net/ark:/99152/p0323gxv8wc.ttl"><code>http://n2t.net/ark:/99152/p0323gxv8wc.ttl</code></a></p></li>
+<li><p>To see a syntax-highlighted view of the JSON-LD or Turtle representation of the period, append <code>.html</code> to the end of the permalink: <a href="http://n2t.net/ark:/99152/p0323gxv8wc.ttl.html"><code>http://n2t.net/ark:/99152/p0323gxv8wc.ttl.html</code></a></p></li>
+</ul>
+  </section>
+  
+  <section>
+    <h2 id="create-or-edit">Create or edit your own periods</h2>
+    <figure>
+<img class="screenshot" src="../images/add-editable-data-source.png" alt="Adding an editable in-browser dataset" width="800" height="395">
+<figcaption>
+Adding an editable data source in which to create a description of<br>the period “Age of Fracture”—also the title of historian<br>Daniel Rodgers’ 2011 book, in which he defines it
+</figcaption>
+</figure>
+<p>To edit or create new periods and authorities, you must create a local, in-browser database. To do this, first navigate to <strong>Home &gt; Data sources</strong>. Under <strong>Add data source</strong>, set the <strong>Type</strong> to <strong>In-browser (editable)</strong>, give your data source a label and (optionally) a description, and click <strong>Add</strong>.</p>
+<p>You will see the <strong>Browse periods</strong> page, but there will be no periods to browse because initially your data source will be empty. Before you can add a new period, you first need to create an <em>authority</em> or source for the definition of the period. Every period belongs to an authority, even if it was informally published. Navigate to <strong>Data source &gt; Add authority</strong> to create a new authority.</p>
+<p>First you need to provide some a citable description of the authoritative source—information that could be used to find it online or in a library.</p>
+<figure>
+<img class="screenshot" src="../images/copy-permalink.png" alt="Copying a permalink from WorldCat catalog" width="800" height="326">
+<figcaption>
+Copying the permalink for <span style="font-style: normal">Age of Fracture</span> from the WorldCat catalog
+</figcaption>
+</figure>
+<p>If the source is a book or some other kind of artifact held by a library anywhere in the world, you can easily provide this information by looking it up in the <a href="https://worldcat.org/">WorldCat</a> catalog. Search for the item in WorldCat, and navigate to the item’s catalog page. Copy the <strong>Permalink</strong> in the upper right-hand corner.</p>
+<figure>
+<img class="screenshot" src="../images/linked-data-1.png" alt="Loading a citable description of a source from WorldCat" width="800" width="395">
+<figcaption>
+Pasting the permalink for <span style="font-style: normal">Age of Fracture</span>into the PeriodO client
+</figcaption>
+</figure>
+<p>Paste the link you copied from WorldCat into the <strong>Most published sources</strong> tab in the PeriodO client interface. Then click the <strong>⟳</strong> button to load a citable description directly from WorldCat.</p>
+<figure>
+<img class="screenshot" src="../images/linked-data-2.png" alt="Loading a citable description of a source from WorldCat" width="800" height="338">
+<figcaption>
+Confirming a citable description loaded from WorldCat
+</figcaption>
+</figure>
+<p>If the source is a scholarly article or other artifact that has been assigned a <a href="https://en.wikipedia.org/wiki/Digital_object_identifier">digital object identifier</a> or DOI, you can also copy and paste the DOI into the <strong>Most published sources</strong> tab to load a citable description directly from the <a href="https://search.crossref.org/">CrossRef</a> database.</p>
+<p>If the source is something less formally published, such as a web page, you’ll need to enter a citable description manually. Click the <strong>Other sources</strong> tab to do this. Try to enter as much descriptive information as possible.</p>
+<figure>
+<img class="screenshot" src="../images/not-linked-data.png" alt="Manually entering a citable description of an authority" width="800" height="720">
+<figcaption>
+Manually entering a citable description of an authority
+</figcaption>
+</figure>
+<p>If the source is a page-numbered text, and all of the periods that it defines are on a single page (for example in a table), you can also put that page number in the <strong>Locator</strong> field (whether or not you manually entered the other citable information). If the periods defined by the authority are on different pages, don’t put that information here—put it with the description of each period.</p>
+<p>If there is anything to else important to note about the authority that isn’t specific to one of the periods it defines, put it in the <strong>Editorial notes</strong>.</p>
+<p>Press <strong>Save</strong> to create your new authority. You will be navigated to <strong>Authority &gt; View</strong> and should see your new authority with no periods in it.</p>
+<figure>
+<img class="screenshot" src="../images/new-empty-authority.png" alt="Viewing a new, empty authority" width="800" height="413">
+<figcaption>
+Viewing a new, empty authority
+</figcaption>
+</figure>
+<p>To add a period to the empty authority, navigate to <strong>Authority &gt; Add period</strong>.</p>
+<figure>
+<img class="screenshot" src="../images/edit-period-labels.png" alt="Editing period labels" width="800" height="275">
+<figcaption>
+Editing period labels
+</figcaption>
+</figure>
+<p>Under <strong>Original label</strong>, give the name of the period as it is given in the authoritative source. If the original label is in English, you needn’t provide any <strong>Alternate labels</strong> unless alternate names are given in the source.</p>
+<p>If the original label is not in English, you should add at least one alternate label in English. You can specify the language for each label, and if the language is one with multiple written scripts, you should specify the script as well.</p>
+<figure>
+<img class="screenshot" src="../images/broader-narrower-periods.png" alt="Specifying relations to broader and narrower periods" width="800" height="554">
+<figcaption>
+Specifying relations to broader and narrower periods:<br>
+the Early Minoan Period is part of the Bronze Age Period and has parts I, II, and III
+</figcaption>
+</figure>
+<p>Periods are commonly arranged into hierarchies. You can create hierarchies when adding or editing a period either by referencing a broader period that the currenrt one is <strong>Part of</strong>, or by listing narrower periods that the current one contains (<strong>Has parts</strong>). (You need not do both; indicating a relationship pointing from broader to narrower will also establish a relationship from narrower to broader, and vice versa.) Note that hierarchies can only contain periods from the same authority, so it is only possible to add broader or narrower links once you have added at least one other period to an authority.</p>
+<div id="derived-from" class="anchor">
+
+</div>
+<p>Periods are often defined as modifications of periods defined by others. PeriodO records these relationships as <strong>Derived from</strong> links. Unlike broader and narower relations, derivation relations can (and usually should) relate periods from different authorities. To add derivation relations to periods from a different authority, that authority needs to be <a href="#import-changes">included in your editable data source</a>.</p>
+<p>To remove any related period, click the <strong>X</strong> beside its name.</p>
+<figure>
+<img class="screenshot" src="../images/spatial-coverage.png" alt="Describing the spatial coverage of a period" width="800" height="692">
+<figcaption>
+Describing the spatial coverage of a period
+</figcaption>
+</figure>
+<p>The <strong>Spatial coverage</strong> of a period can be described in two complementary ways. Under <strong>Description</strong>, give the spatial coverage as it is described in the source. This description should be taken verbatim from the text of source, in whatever form it may appear: table header, figure caption, etc. If there is absolutely no mention in the source of a spatial region to which the period is relevant, you can leave the description blank.</p>
+<p>Under <strong>Coverage area</strong>, you can select (from <a href="https://en.wikipedia.org/wiki/Gazetteer">placename gazetteers</a>) specific places that correspond to the description you entered. Even if there is no mention in the source of a spatial region to which the period is relevant, you still should be able to infer such a region from what you know about the source: select places that correspond to this inferred region. The places you have selected will appear as a list of gray boxes labeled with place names. To remove a place from the list, click the <strong>X</strong> on the box.</p>
+<p>If you cannot find a place you would like to add to the coverage area, please <a href="../contact/">contact us</a> and we’ll add it to our placename gazetteers.</p>
+<figure>
+<img class="screenshot" src="../images/parsed-dates.png" alt="Describing the temporal coverage of a period" width="800" height="444">
+<figcaption>
+These descriptions of when the period starts and stops<br>have been automatically parsed into standardized forms.
+</figcaption>
+</figure>
+<p>To describe the <strong>Temporal coverage</strong> of a period, first look at how it is described in the source. Typically, periods will be defined as extending from some (possibly vague) <strong>Start</strong> time to some (possibly vague) <strong>Stop</strong> time. For example, a source might defined a period as extending from “1000 BCE” to “500 BCE”, or from the “end of the 1st century AD” to the “start of the 5th century”. In such cases, you would enter each part of the description—taken verbatim from the source—as the <strong>Label</strong> for the start and stop, respectively.</p>
+<p>After you have entered a label for the start or stop of the period, the interface will attempt to automatically translate what you’ve entered into a range of standardized year values. For example, a label of “1000 BCE” would be translated to the standardized year <code>-0999</code>, while a label of “start of the 5th century” would be translated to the range of standardized years from <code>0401</code> to <code>0434</code>.</p>
+<p>Depending on what the label is, the interface may not be able to translate it into a standardized form. In that case, uncheck the <strong>Parse dates automatically</strong> box and enter the standardized forms yourself. If either the start or the stop of the period is a range of dates—expressing some uncertainty or vagueness about when it started or stopped—check the <strong>Year range (not a single year)</strong> box to enter that range.</p>
+<figure>
+<img class="screenshot" src="../images/temporal-coverage.png" alt="Describing the temporal coverage of a period" width="800" height="444">
+<figcaption>
+Manually entering standardized year values<br>inferred from a description of temporal coverage.
+</figcaption>
+</figure>
+<p>In some cases a source will describe the temporal coverage of a period using a single phrase, rather than separately describing the start and the stop. In a case like this, enter the description as the label for the start, but leave the label for the stop blank. Then turn off automatic date parsing, and fill in the standardized values for the start and the stop. For example a period described as covering the “last quarter of the twentieth century” would correspond to a range from starting in <code>1975</code> and stopping in <code>1999</code>, even though the textual description does not explicitly distinguish these two endpoints.</p>
+<p>If the period is defined at a particular location in the authoritative source—for example a specific page or figure in a text—put that information in the <strong>Locator</strong> field. If the authoritative source is a website, and period is defined on a particular page in that website, put the URL of that page in the <strong>URL</strong> field.</p>
+<p>Finally, you can add explanatory notes about the period. The <strong>Note</strong> field is for explanatory text taken directly from the source.</p>
+<figure>
+<img class="screenshot" src="../images/edit-note.png" alt="Text excerpted from a source document into a note" width="800" height="242">
+<figcaption>
+Text excerpted from a source document<br>that helps one better understand the period definition
+</figcaption>
+</figure>
+<p>The <strong>Editorial note</strong> field is for explaining decisions made by the author of the PeriodO record (that’s you!). For example, explanations of judgment calls about alternate labels, spatial coverage, or temporal coverage could go here.</p>
+<p>Click the <strong>Save</strong> button to finish adding your new period. You will be navigated to the authority view, which should now list your single new period.</p>
+<h3 id="import-changes">
+Editing existing periods
+</h3>
+<p>Rather than creating your own periods and authorities from scratch, you may want to edit periods from the canonical dataset or from a file that someone shared with you. Or you may want to <a href="#derived-from">derive</a> new periods from canonical ones.</p>
+<p>To work from a file, you first need to add the file as a (read-only) data source. Navigate to <strong>Home &gt; Data sources</strong> and under <strong>Add data source</strong> set the <strong>type</strong> to <strong>File</strong>. Give your data source a name, click <strong>Choose File</strong>, and select the file with the dataset you wish to load. Click <strong>Add</strong> and your new data source will be created.</p>
+<p>Now you will import into your editable, in-browser database the periods you want to edit or from which you want to derive new periods. (See <a href="#create-or-edit">how to create an editable database</a>.) Navigate to <strong>Data source &gt; Import changes</strong>. Select from which of the <strong>Available data sources</strong> you would like to import data. If you created a new data source from a file, or if you created other in-browser data sources, you should see them listed here; otherwise you can import changes from the canonical dataset.</p>
+<p>After you’ve made your selection, you will see a list of the differences or <em>changes</em> between the data source you’re currently editing and the data source from which you want to import data. If the data source you’re editing is empty, these changes will look like a list of new authorities.</p>
+<figure>
+<img class="screenshot" src="../images/selecting-changes.png" alt="Importing authorities and periods from the canonical dataset" width="800" height="884">
+<figcaption>
+Importing authorities and periods from the canonical dataset.<br>
+The “Life in biblical Israel” authority is selected to be imported,<br>
+and it is expanded to show the details of the authority description.
+</figcaption>
+</figure>
+<p>Select the changes you would like to add to the data source you’re editing, scroll down to the bottom, and click <strong>Continue</strong>. You will see a summary with only the changes you selected. Click <strong>Accept changes</strong> to confirm, and the changes will be applied. Now you can edit any period by first browsing to it and then navigating to <strong>Period &gt; Edit</strong>. If you add a new period to this data source, you will be able to refer to the imported periods as sources from which the new period is <a href="#derived-from">derived</a>.</p>
+  </section>
+  
+  <section>
+    <h2 id="contribute">Contribute to the canonical periods</h2>
+    <p>Anyone can submit new periods or corrections to existing periods to be considered for inclusion in the canonical dataset. To do this, first either <a href="#create-or-edit">create or edit some periods</a>. Then, navigate to <strong>Data source &gt; Submit changes</strong>.</p>
+<p>You will be prompted to select a web-based data source to submit your changes to. Typically this will be the canonical data source. After you’ve made your selection, you will see a <strong>Log in with your ORCID</strong> link.</p>
+<figure>
+<img class="center" src="../images/orcid-login.png" alt="The ORCID login form" width="612" height="700">
+<figcaption>
+The ORCID login form
+</figcaption>
+</figure>
+<p>An <a href="https://en.wikipedia.org/wiki/ORCID">ORCID</a> is a unique code for identifying scholarly authors and contributors. It is free to register for an ORCID. Click the login link to enter your ORCID and ORCID account password, or to register for a new ORCID account. PeriodO will never see your ORCID account password: you are logging into <code>orcid.org</code>, which then provides a temporary token allowing us to authenticate you.</p>
+<p>After successfully logging into the ORCID site, you should see the message <strong>Currently signed in as</strong> followed by whatever name you have registered with ORCID.</p>
+<p>Click <strong>Continue</strong> to see a list of the differences or “changes” between the data source that contains your new or corrected periods and the data source to which you want to submit them.</p>
+<figure>
+<img class="screenshot" src="../images/submit-changes.png" alt="Confirming selected changes before submission" width="800" height="380">
+<figcaption>
+Confirming selected changes before submission
+</figcaption>
+</figure>
+<p>Select the changes you would like to submit, scroll down to the bottom, and click <strong>Continue</strong>. You will see a summary with only the changes you selected. Click <strong>Submit changes</strong> to confirm, and you should see the message <strong>Submitted changes</strong>. Thanks for your contribution! We will take a look at it ASAP and may contact you with questions.</p>
+<p>To check on the status of your submission, navigate to <strong>Home &gt; Data sources</strong> and select the web data source to which you submitted your changes (again, typically this will be the canonical data source). Then navigate to <strong>Data source &gt; Review submitted changes</strong> to see a list of all the submissions that have been made. Your new submission should be on top (unless someone else submitted changes in the meantime). Each submission shows the date and time it was made, who made it, and its status: <strong>Open</strong> means no decision has been made, <strong>Merged</strong> means the changes were accepted, and <strong>Rejected</strong> means the changes were rejected.</p>
+<figure class="center">
+<img class="screenshot" src="../images/submitted-changes.png" alt="Viewing comments on submitted changes to the canonical periods" width="800" height="909">
+<figcaption>
+Viewing comments on submitted changes to the canonical periods
+</figcaption>
+</figure>
+<p>Click on a submission’s status to see any comments that have been made about the submission, or to download the submitted changes as JSON. (You may also see controls to accept or reject the changes, but unless you are authorized to make changes to the web data source to which the changes were submitted, your acceptance or rejection will fail.)</p>
+  </section>
+  
+</div>
+
+    </main>
+
+    <footer>
+      <a href="http://www.neh.gov/">
+        <!--[if gte IE 9]><!-->
+<img class="logo" alt="National Endownment for the Humanities" src="../images/neh-logo.svg" onerror="this.src='/images/neh-logo.png';this.onerror=null;">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<img class="logo" alt="National Endownment for the Humanities" src="/images/neh-logo.png">
+<![endif]-->
+
+      </a>
+      <a style="float: right" href="http://www.imls.gov/">
+        <!--[if gte IE 9]><!-->
+<img class="logo" alt="Institute of Museum and Library Services" src="../images/imls-logo.svg" onerror="this.src='/images/imls-logo.png';this.onerror=null;">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<img class="logo" alt="Institute of Museum and Library Services" src="/images/imls-logo.png">
+<![endif]-->
+
+      </a>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="A gazetteer of periods for linking and visualizing data.">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PeriodO &ndash; change-policy</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" />
+  </head>
+  <body>
+    <nav class="choose-language">
+      <ul class="menu-list">
+        <li>
+          <a href=" /es/ ">Español</a>
+        </li>
+      </ul>
+    </nav>
+    <nav>
+      <ul class="menu-list">
+        <li class>
+          <a href="../en/">Download</a>
+        </li>
+        <li class>
+          <a href="../guide/">Guide</a>
+        </li>
+        <li class>
+          <a href="../motivation/">Motivation</a>
+        </li>
+        <li class>
+          <a href="../technical-overview/">Technical overview</a>
+        </li>
+        <li class>
+          <a href="../publications/">Publications</a>
+        </li>
+        <li class>
+          <a href="../contact/">Contact</a>
+        </li>
+        <li class>
+          <a href="../contributors/">Thanks</a>
+        </li>
+        <li>
+          <a href="https://github.com/periodo">
+            <!--[if gte IE 9]><!-->
+<img class="mark" alt="PeriodO repositories at GitHub" src="../images/github-mark.svg" onerror="this.src='/images/github-mark.png';this.onerror=null;">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<img class="mark" alt="PeriodO repositories at GitHub" src="/images/github-mark.png">
+<![endif]-->
+
+          </a>
+        </li>
+        <li>
+          <a href="https://hcommons.social/@periodo">
+            <!--[if gte IE 9]><!-->
+<img class="mark" alt="PeriodO updates" src="../images/tweeter-mark.svg" onerror="this.src='/images/tweeter-mark.png';this.onerror=null;">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<img class="mark" alt="PeriodO updates" src="/images/tweeter-mark.png">
+<![endif]-->
+
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <header>
+      <a href="../en/">
+        <h1>
+          <!--[if gte IE 9]><!-->
+<img class="logo" alt="PeriodO" src="../images/logo.svg" onerror="this.src='/images/logo.png';this.onerror=null;">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<img class="logo" alt="PeriodO" src="/images/logo.png">
+<![endif]-->
+
+        </h1>
+      </a>
+      <p>
+        <span>A gazetteer of periods for linking</span>
+        <span>and visualizing data.</span>
+      </p>
+    </header>
+
+    <main>
+      
+      <h1 id="kinds-of-changes">Kinds of changes</h1>
+<p>This document describes the kinds of changes that may be made to the canonical PeriodO dataset. Note that any of these allowed changes will trigger new versions of the authorities or periods that they modify. In addition to the changes described below, new properties using predicates <em>not</em> listed below may be added at any time.</p>
+<h2 id="changes-to-authorities">Changes to authorities</h2>
+<h3 id="dctermssource"><code>dcterms:source</code></h3>
+<p>There must be one <code>dcterms:source</code> value. The value of <code>dcterms:source</code> must be a bibliographic description. It should change only if it is determined that a spelling, punctuation, or other clerical error was made when creating the bibliographic description of the original source, or if additional bibliographic information is added (e.g. a DOI is assigned to a journal article that previously did not have one).</p>
+<h2 id="changes-to-periods">Changes to periods</h2>
+<h3 id="skospreflabel"><code>skos:prefLabel</code></h3>
+<p>There must be one <code>skos:prefLabel</code> value. The value of <code>skos:prefLabel</code> should change only if it is determined that a spelling, punctuation, or other clerical error was made when transcribing the name of the period exactly as given in the original source.</p>
+<h3 id="skosaltlabel"><code>skos:altLabel</code></h3>
+<p>There must be one or more <code>skos:altLabel</code> values. New <code>skos:altLabel</code> values may be added at any time. Existing <code>skos:altLabel</code> values should not be removed except to correct spelling, punctuation, or other clerical mistakes.</p>
+<h3 id="skosnote"><code>skos:note</code></h3>
+<p>There may be one <code>skos:note</code> value. If there is not a <code>skos:note</code> value, one may be added at any time. The value of <code>skos:note</code> should change only if it is determined that a spelling, punctuation, or other clerical error was made, or to add more notes taken from the source.</p>
+<h3 id="skoseditorialnote"><code>skos:editorialNote</code></h3>
+<p>There may be one <code>skos:editorialNote</code> value. If there is not a <code>skos:editorialNote</code> value, one may be added at any time. The value of <code>skos:editorialNote</code> may change at any time.</p>
+<h3 id="skosinscheme"><code>skos:inScheme</code></h3>
+<p>There must be one <code>skos:inScheme</code> value, and it must never change.</p>
+<h3 id="dctermssource-1"><code>dcterms:source</code></h3>
+<p>There may be one <code>dcterms:source</code> value. The value of <code>dcterms:source</code> should change only if it is determined that a spelling, punctuation, or other clerical error was made when specifying bibliographic information specific to an individual period.</p>
+<h3 id="timeintervalstartedby-and-timeintervalfinishedby"><code>time:intervalStartedBy</code> and <code>time:intervalFinishedBy</code></h3>
+<p>There must be one <code>time:intervalStartedBy</code> value and one <code>time:intervalFinishedBy</code> value. These values must be temporal intervals. See below for policy on changes to temporal intervals.</p>
+<h3 id="periodospatialcoveragedescription"><code>periodo:spatialCoverageDescription</code></h3>
+<p>There may be one <code>skos:spatialCoverageDescription</code> value. If there is not a <code>skos:spatialCoverageDescription</code> value, one may be added at any time. The value of <code>skos:spatialCoverageDescription</code> should change only if it is determined that a spelling, punctuation, or other clerical error was made when transcribing the spatial coverage description from the original source.</p>
+<h3 id="dctermsspatial"><code>dcterms:spatial</code></h3>
+<p>There must be at least one <code>dcterms:spatial</code> value. New <code>dcterms:spatial</code> values may be added, and existing ones may be removed, at any time.</p>
+<h2 id="changes-to-temporal-intervals-of-periods">Changes to temporal intervals of periods</h2>
+<h3 id="skospreflabel-1"><code>skos:prefLabel</code></h3>
+<p>There must be one <code>skos:prefLabel</code> value. The value of <code>skos:prefLabel</code> should change only if it is determined that a spelling, punctuation, or other clerical error was made when transcribing the description of the interval exactly as given in the original source.</p>
+<h3 id="timehasdatetimedescription"><code>time:hasDateTimeDescription</code></h3>
+<p>There must be one <code>time:hasDateTimeDescription</code> value. This value must be a date-time description. See below for policy on changes to date-time descriptions.</p>
+<h2 id="changes-to-date-time-descriptions-of-temporal-intervals">Changes to date-time descriptions of temporal intervals</h2>
+<p>Typically the values of <code>time:year</code>, <code>periodo:earliestYear</code>, and <code>periodo:latestYear</code> will not change. However, in the future PeriodO curators may decide that it necessary to make a systematic change to the way textual descriptions of temporal intervals are interpreted as structured date-time descriptions. Such a systematic change could cause these values to change. However, the PeriodO curators will not make such a change without first consulting with the PeriodO board of advisors and other interested parties.</p>
+    </main>
+
+    <footer>
+      <a href="http://www.neh.gov/">
+        <!--[if gte IE 9]><!-->
+<img class="logo" alt="National Endownment for the Humanities" src="../images/neh-logo.svg" onerror="this.src='/images/neh-logo.png';this.onerror=null;">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<img class="logo" alt="National Endownment for the Humanities" src="/images/neh-logo.png">
+<![endif]-->
+
+      </a>
+      <a style="float: right" href="http://www.imls.gov/">
+        <!--[if gte IE 9]><!-->
+<img class="logo" alt="Institute of Museum and Library Services" src="../images/imls-logo.svg" onerror="this.src='/images/imls-logo.png';this.onerror=null;">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<img class="logo" alt="Institute of Museum and Library Services" src="/images/imls-logo.png">
+<![endif]-->
+
+      </a>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="A gazetteer of periods for linking and visualizing data.">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PeriodO &ndash; Technical Overview</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" />
+  </head>
+  <body>
+    <nav class="choose-language">
+      <ul class="menu-list">
+        <li>
+          <a href=" /resumen-tecnico/ ">Español</a>
+        </li>
+      </ul>
+    </nav>
+    <nav>
+      <ul class="menu-list">
+        <li class>
+          <a href="../en/">Download</a>
+        </li>
+        <li class>
+          <a href="../guide/">Guide</a>
+        </li>
+        <li class>
+          <a href="../motivation/">Motivation</a>
+        </li>
+        <li class="menu-selected">
+          <a href="../technical-overview/">Technical overview</a>
+        </li>
+        <li class>
+          <a href="../publications/">Publications</a>
+        </li>
+        <li class>
+          <a href="../contact/">Contact</a>
+        </li>
+        <li class>
+          <a href="../contributors/">Thanks</a>
+        </li>
+        <li>
+          <a href="https://github.com/periodo">
+            <!--[if gte IE 9]><!-->
+<img class="mark" alt="PeriodO repositories at GitHub" src="../images/github-mark.svg" onerror="this.src='/images/github-mark.png';this.onerror=null;">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<img class="mark" alt="PeriodO repositories at GitHub" src="/images/github-mark.png">
+<![endif]-->
+
+          </a>
+        </li>
+        <li>
+          <a href="https://hcommons.social/@periodo">
+            <!--[if gte IE 9]><!-->
+<img class="mark" alt="PeriodO updates" src="../images/tweeter-mark.svg" onerror="this.src='/images/tweeter-mark.png';this.onerror=null;">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<img class="mark" alt="PeriodO updates" src="/images/tweeter-mark.png">
+<![endif]-->
+
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <header>
+      <a href="../en/">
+        <h1>
+          <!--[if gte IE 9]><!-->
+<img class="logo" alt="PeriodO" src="../images/logo.svg" onerror="this.src='/images/logo.png';this.onerror=null;">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<img class="logo" alt="PeriodO" src="/images/logo.png">
+<![endif]-->
+
+        </h1>
+      </a>
+      <p>
+        <span>A gazetteer of periods for linking</span>
+        <span>and visualizing data.</span>
+      </p>
+    </header>
+
+    <main>
+      
+      <nav class="toc" role="navigation">
+        <ul>
+<li><a href="#linked-data" id="toc-linked-data">Linked Data</a></li>
+<li><a href="#periods" id="toc-periods">Periods</a>
+<ul>
+<li><a href="#labels-and-documentation" id="toc-labels-and-documentation">Labels and documentation</a></li>
+<li><a href="#source" id="toc-source">Source</a></li>
+<li><a href="#temporal-extent" id="toc-temporal-extent">Temporal extent</a></li>
+<li><a href="#spatial-extent" id="toc-spatial-extent">Spatial extent</a></li>
+</ul></li>
+<li><a href="#authorities" id="toc-authorities">Authorities</a></li>
+<li><a href="#identifiers" id="toc-identifiers">Identifiers</a></li>
+<li><a href="#data-serialization" id="toc-data-serialization">Data Serialization</a></li>
+<li><a href="#user-interface" id="toc-user-interface">User Interface</a></li>
+</ul>
+      </nav>
+      
+      <!-- note: MUST leave blank lines after paragraphs -->
+<section>
+<h2 id="linked-data">Linked Data</h2>
+<p>The PeriodO period gazetteer documents definitions of historical periods. Each entry of the gazetteer identifies the definition of a single period. To be included in the gazetteer, a period must</p>
+<ul>
+<li>give the period a name,</li>
+<li>impose some temporal bounds on the period,</li>
+<li>have some implicit or explicit association with a geographical region, and</li>
+<li>have been formally or informally published in some citable source.</li>
+</ul>
+<p>Much care has been put into giving periods stable identifiers that can be resolved to <a href="../data-model/">RDF representations</a> of periods. PeriodO models periods as <a href="http://www.w3.org/TR/skos-primer/">SKOS</a> concepts. These are grouped into concept schemes sharing the same bibliographic source. Temporal extent is expressed via a direct textual quotation from the source, as well as via a structured approximation of this expression modeled using the <a href="http://www.w3.org/TR/owl-time/">OWL-Time</a> ontology. Similarly spatial extent is represented both by a textual quote (where one was given) and a set of identifiers referring to spatial entities in external resources such as <a href="http://wiki.dbpedia.org">DBpedia</a>.</p>
+<p>Examples:</p>
+<ul>
+<li><p>
+<a href="http://n2t.net/ark:/99152/p05krdxmkzt"><code>http://n2t.net/ark:/99152/p05krdxmkzt</code></a> identifies the “Dark Age” as defined by Davis and Alcock on page 97 of <a href="http://www.worldcat.org/oclc/37663433"><em>Sandy Pylos: an archaeological history from Nestor to Navarino</em></a> (see the <a href="http://n2t.net/ark:/99152/p05krdxmkzt.json">JSON representation</a>). This is an example of a <em>period</em>.
+</p></li>
+<li><p>
+<a href="http://n2t.net/ark:/99152/p06v8w4"><code>http://n2t.net/ark:/99152/p06v8w4</code></a> identifies all the periods from the <a href="http://fastionline.org">FastiOnline</a> database of archaeological excavations (see the <a href="http://n2t.net/ark:/99152/p06v8w4.json">JSON representation</a>). This is an example of an <em>authority</em>.
+</p></li>
+</ul>
+</section>
+<section>
+<h2 id="periods">Periods</h2>
+<p>The PeriodO dataset is essentially a collection of periods.</p>
+<section>
+<h3 id="labels-and-documentation">Labels and documentation</h3>
+<p>A period is a <a href="http://www.w3.org/TR/skos-reference/#concepts"><code>skos:Concept</code></a>, “an idea or notion,” as the SKOS Reference puts it. We use a number of SKOS properties to describe periods:</p>
+<ul>
+<li><p><a href="http://www.w3.org/TR/skos-reference/#prefLabel"><code>skos:prefLabel</code></a> is used for the name of the period exactly as given in the original source. The value of this property is a simple literal <a href="http://www.w3.org/TR/xmlschema11-2/#string">xsd:string</a>, with no language tag.</p></li>
+<li><p><a href="http://www.w3.org/TR/skos-reference/#altLabel"><code>skos:altLabel</code></a> is used for language-specific names of the period, assigned by PeriodO curators. The value of this property is a <a href="http://www.w3.org/TR/rdf11-concepts/#dfn-language-tagged-string">language-tagged string</a>. The language tag consists of (at least)</p>
+<ol type="1">
+<li><p>
+a three-character <a href="http://tools.ietf.org/html/bcp47#section-2.2.1">primary language subtag</a>, as defined in <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes">ISO 639-2</a> or <a href="https://en.wikipedia.org/wiki/ISO_639-3">ISO 639-3</a>, and
+</p></li>
+<li><p>
+a four-character <a href="http://tools.ietf.org/html/bcp47#section-2.2.3">script subtag</a>, as defined in <a href="http://www.unicode.org/iso15924/codelists.html">ISO 15924</a>.
+</p></li>
+</ol>
+<p>There will always be at least one <code>skos:altLabel</code>, with the language tag <code>eng-latn</code>. If the source of the period was not written in English, there will always be another <code>skos:altLabel</code> with a language tag indicating the language and script of the source of the period. The language of the source of the period is indicated via a <a href="http://dublincore.org/documents/dcmi-terms/#terms-language"><code>dc:language</code></a> property, the value of which is a language tag as described above.</p></li>
+<li><p><a href="http://www.w3.org/TR/skos-reference/#note"><code>skos:note</code></a> is used for notes about the period taken from or attributed to the original source. For example, the original Pleiades definition of “Ottoman Rise (AD 1300-1453)” includes the note “ends with the conquest of Constantinople.” The value of this property is a simple literal <a href="http://www.w3.org/TR/xmlschema11-2/#string"><code>xsd:string</code></a>, with no language tag.</p></li>
+<li><p><a href="http://www.w3.org/TR/skos-reference/#editorialNote"><code>skos:editorialNote</code></a> is used for administrative or editorial notes added by the PeriodO curators; these do <em>not</em> appear in the original source. The value of this property is a simple literal <a href="http://www.w3.org/TR/xmlschema11-2/#string"><code>xsd:string</code></a>, with no language tag.</p></li>
+<li><p><a href="http://www.w3.org/TR/skos-reference/#inScheme"><code>skos:inScheme</code></a> is used to link a period to the <a href="#authorities">authority</a> of which it is a part.</p></li>
+</ul>
+</section>
+<section>
+<h3 id="source">Source</h3>
+<p>Usually the bibliographic information about the source of a period is provided through properties of the <a href="#authorities">authority</a> to which it belongs. However, in some cases there may be additional bibliographic information that is specific to an individual period. In these cases, we use a <a href="http://dublincore.org/documents/dcmi-terms/#terms-source"><code>dcterms:source</code></a> to provide this additional information, and <a href="http://dublincore.org/documents/dcmi-terms/#terms-isPartOf"><code>dcterms:isPartOf</code></a> to link the source of the period to the source of the authority to which it belongs. For example, we might use the following to indicate that the specific book page from which a period was sourced:</p>
+<pre><code>&lt;p0tns5v4kdf&gt;
+    dcterms:source [
+        dcterms:isPartOf &lt;http://www.worldcat.org/oclc/63807908&gt; ;
+        bibo:locator &quot;page 25&quot;
+    ] .</code></pre>
+<p>(<code>bibo</code> is the <a href="http://bibliontology.com">Bibliographic Ontology</a>.)</p>
+</section>
+<section>
+<h3 id="temporal-extent">Temporal extent</h3>
+<p>We use properties from the <a href="http://www.w3.org/TR/owl-time/">Time Ontology</a> to describe the temporal extent of periods. A period is a <a href="http://www.w3.org/TR/owl-time/#relations"><code>time:ProperInterval</code></a>, an interval of time with different beginning and end points. We assume that these (instantaneous) beginning and end points can never be precisely identified, hence our descriptions focus on describing the intervals that start and finish the period:</p>
+<ul>
+<li><p><a href="http://www.w3.org/TR/owl-time/#relations"><code>time:intervalStartedBy</code></a> links the period to an (anonymous) time interval that has the same (unknown) beginning point as the period, and an (unknown) end point that comes before the end point of the period. We call this the <em>start</em> interval for the period.</p></li>
+<li><p><a href="http://www.w3.org/TR/owl-time/#relations"><code>time:intervalFinishedBy</code></a> links the period to an (anonymous) time interval that has the same (unknown) end point as the period, and an (unknown) beginning point that comes after the beginning point of the period. We call this the <em>stop</em> interval for the period.</p></li>
+</ul>
+<figure>
+<!--[if gte IE 9]><!-->
+<img class="figure" alt="Diagram showing the relation between a period’s temporal extent and its start and stop intervals" src="../images/start-stop-intervals-en.svg" onerror="this.src='/images/start-stop-intervals-en.png';this.onerror=null;">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<img class="figure" alt="Diagram showing the relation between a period’s temporal extent and its start and stop intervals" src="/images/start-stop-intervals-en.png">
+<![endif]-->
+
+<figcaption>
+The relation between a period’s temporal extent and its start and stop intervals
+</figcaption>
+</figure>
+<p>We describe the start and stop intervals in two ways. Both ways of describing the interval are required; these are complementary descriptions, not alternatives:</p>
+<ol type="1">
+<li><p><a href="http://www.w3.org/TR/skos-reference/#prefLabel"><code>skos:prefLabel</code></a> is used to textually describe the interval exactly as given in the original source, for example “end of the first century BC”. The value of this property is a simple literal <a href="http://www.w3.org/TR/xmlschema11-2/#string">xsd:string</a>, with no language tag.</p></li>
+<li><p><a href="http://www.w3.org/TR/owl-time/#calclock"><code>time:hasDateTimeDescription</code></a> is used to describe the interval in a more structured fashion. This property links the interval to an (anonymous) <a href="http://www.w3.org/TR/owl-time/#calclock"><code>time:DateTimeDescription</code></a>. These structured descriptions are created by PeriodO curators.</p></li>
+</ol>
+<p>Currently we use the following properties in our datetime descriptions:</p>
+<ul>
+<li><p><a href="http://www.w3.org/TR/owl-time/#calclock"><code>time:year</code></a> for descriptions of intervals that can be represented with a single year. For example, an interval with the textual description “600 BC” can be described with a datetime description having a <code>time:year</code> value of <code>-0599</code>.</p></li>
+<li><p><a href="http://n2t.net/ark:/99152/p0v#earliestYear"><code>periodo:earliestYear</code></a> and <a href="http://n2t.net/ark:/99152/p0v#latestYear"><code>periodo:latestYear</code></a> for descriptions of intervals that need to be represented as ranges. For example, an interval with the textual description “eight century BC” can be described with a datetime description having a <code>periodo:earliestYear</code> value of <code>-0799</code> and a <code>periodo:latestYear</code> value of <code>-0700</code>.</p></li>
+</ul>
+<p>The datatype for values of <code>time:year</code>, <code>periodo:earliestYear</code>, and <code>periodo:latestYear</code> is <a href="http://www.w3.org/TR/xmlschema11-2/#gYear"><code>xsd:gYear</code></a>. Note that:</p>
+<ol type="1">
+<li><p>
+<code>xsd:gYear</code> values can have <a href="http://www.w3.org/TR/xmlschema11-2/#partial-implementation">any number of digits</a>.
+</p></li>
+<li><p>
+<code>xsd:gYear</code> values <a href="http://www.w3.org/TR/xmlschema11-2/#dateTime-value-space">may be zero</a>. The value <code>0000</code> is interpreted as 1 BCE.
+</p></li>
+<li><p>
+<code>xsd:gYear</code> values represent Gregorian calendar years and <a href="http://www.w3.org/TR/xmlschema11-2/#gYear">“are not, in general, convertible to simple values corresponding to years in other calendars.”</a> We are comfortable with this limitation because we use these values only for the purposes of ordering and visualizing temporal extents of intervals. The <code>skos:prefLabel</code> of an interval should be considered the authoritative description.
+</p></li>
+</ol>
+<p>We may use additional properties in our datetime descriptions in the future, for example to describe intervals at a finer temporal granularity than a year.</p>
+</section>
+<section>
+<h3 id="spatial-extent">Spatial extent</h3>
+<p>We use the following properties to describe the spatial extent of periods:</p>
+<ul>
+<li><p><a href="http://n2t.net/ark:/99152/p0v#spatialCoverageDescription"><code>periodo:spatialCoverageDescription</code></a> is used to textually describe the spatial extent exactly as given in the original source, for example “Near East and Greece”. The value of this property is a simple literal <a href="http://www.w3.org/TR/xmlschema11-2/#string">xsd:string</a>, with no language tag.</p></li>
+<li><p><a href="http://dublincore.org/documents/dcmi-terms/#terms-spatial"><code>dcterms:spatial</code></a> is used to link a period to descriptions of locations in gazetteers such as DBpedia/Wikidata, GeoNames, or Pleiades.</p></li>
+</ul>
+</section>
+</section>
+<section>
+<h2 id="authorities">Authorities</h2>
+<p>An authority is simply a set of periods that share a source. We use <a href="http://dublincore.org/documents/dcmi-terms/#terms-source"><code>dcterms:source</code></a> to link authorities to bibliographic descriptions of their sources. Where possible we rely on external bibliographic databases such as WorldCat and CrossRef for bibliographic metadata.</p>
+<p>An authority is a <a href="http://www.w3.org/TR/skos-reference/#schemes"><code>skos:ConceptScheme</code></a>, “an aggregation of one or more SKOS concepts”. Belonging to the same authority does not imply any semantic relationship between periods, other than sharing a source. In particular, the periods belonging to an authority do not constitute a <em>periodization</em>, meaning a single coherent, continuous division of historical time. In the future we plan to add additional properties for indicating when a set of periods constitute a periodization.</p>
+<p>The <a href="http://www.w3.org/TR/void/#root-resource">root resource</a> of the PeriodO dataset is an <a href="http://www.w3.org/TR/rdf-schema/#ch_bag"><code>rdf:Bag</code></a> (unordered collection) of authorities.</p>
+</section>
+<section>
+<h2 id="identifiers">Identifiers</h2>
+<p>Each period is given its own Web-based, resolvable <a href="http://en.wikipedia.org/wiki/Uniform_resource_identifier">Uniform Resource Identifier</a> (URI) in the form of a <a href="https://tools.ietf.org/html/draft-kunze-ark-18">Archival Resource Key</a> (ARK), minted through the <a href="http://ezid.cdlib.org/">EZID</a> system of the California Digital Library. These ARKs are resolvable to structured, machine-readable representations of individual periods.</p>
+<p>Wherever possible bibliographic sources are identified with <a href="http://www.worldcat.org">WorldCat</a> URIs or <a href="http://www.crossref.org">CrossRef</a> DOIs, and creators are identified with <a href="http://viaf.org">Virtual International Authority File</a> URIs.</p>
+</section>
+<section>
+<h2 id="data-serialization">Data Serialization</h2>
+<p>Periods in the PeriodO gazetteer are published as <a href="http://json-ld.org/">JSON-LD</a>, a serialized form of the <a href="http://www.w3.org/RDF/">Resource Description Format</a> (RDF) used to describe Linked Data. The <a href="http://n2t.net/ark:/99152/p0d.json">entire dataset</a> is available for download as a single JSON file, so that it can be more easily reused by other projects.</p>
+</section>
+<section>
+<h2 id="user-interface">User Interface</h2>
+<p>A <a href="https://client.perio.do">browser-based client</a> provides search, visualization, and data entry tools. It also provides an interface for managing distributed versioning and collaborative development of the PeriodO dataset. The entire editorial history of the PeriodO gazetteer is published as a separate dataset using the <a href="http://www.w3.org/TR/prov-primer/">PROV</a> ontology.</p>
+</section>
+    </main>
+
+    <footer>
+      <a href="http://www.neh.gov/">
+        <!--[if gte IE 9]><!-->
+<img class="logo" alt="National Endownment for the Humanities" src="../images/neh-logo.svg" onerror="this.src='/images/neh-logo.png';this.onerror=null;">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<img class="logo" alt="National Endownment for the Humanities" src="/images/neh-logo.png">
+<![endif]-->
+
+      </a>
+      <a style="float: right" href="http://www.imls.gov/">
+        <!--[if gte IE 9]><!-->
+<img class="logo" alt="Institute of Museum and Library Services" src="../images/imls-logo.svg" onerror="this.src='/images/imls-logo.png';this.onerror=null;">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<img class="logo" alt="Institute of Museum and Library Services" src="/images/imls-logo.png">
+<![endif]-->
+
+      </a>
+    </footer>
+  </body>
+</html>
